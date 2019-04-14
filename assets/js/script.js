@@ -1,3 +1,3 @@
 import $ from 'jquery';
 import '../css/style.css';
-import 'bootstrap';
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
