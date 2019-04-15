@@ -6,7 +6,7 @@
 .line{
     outline: solid #000 2px;
 }
-.nav{
+.nav1{
     display: flex;
     list-style-type: none;
    
@@ -28,6 +28,18 @@
     animation-timing-function: linear;
     
 }
+
+/* 斷點1024px 768px 480px 調整時螢幕比例放到100%觀看較準確 */
+
+@media (max-width: 480px) { 
+    .nav1{
+       display: none;
+       
+    }
+ }
+
+ 
+
 
 @keyframes tree-ani{
     0%{
