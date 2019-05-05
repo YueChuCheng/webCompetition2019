@@ -7,7 +7,7 @@
     "clean": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run clean && webpack --mode development",
-    "server": "webpack-dev-server"
+    "server": "webpack-dev-server --open=chrome"
   },
   "keywords": [],
   "author": "",
