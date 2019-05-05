@@ -1,0 +1,53 @@
+.main{
+    background-color: rgb(241, 186, 134);
+    width: 100vw;
+    height: 100vh;
+}
+.line{
+    outline: solid #000 2px;
+}
+.nav1{
+    display: flex;
+    list-style-type: none;
+   
+}
+
+.ft_black{
+    color: black ;
+    
+}
+
+
+.bg_ani{
+    height: 480px;
+    width: 100%;
+    background-image: url(../images/tree.png);
+    animation-name: tree-ani;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+
+/* 斷點1024px 768px 480px 調整時螢幕比例放到100%觀看較準確 */
+
+@media (max-width: 480px) { 
+    .nav1{
+       display: none;
+       
+    }
+ }
+
+ 
+
+
+@keyframes tree-ani{
+    0%{
+        background-position: 0px 0px;
+    }
+    100%{
+        background-position: 825px 0px;
+    }
+}
+
+

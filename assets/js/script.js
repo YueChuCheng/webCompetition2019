@@ -1,3 +1,8 @@
 import $ from 'jquery';
 import '../css/style.css';
-import 'bootstrap';
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
+import "../../node_modules/normalize.css/normalize.css";
+import tree from"../images/tree.png";
+
+$("#tree").attr("src", tree);
