@@ -37,7 +37,7 @@ img{
     height: 480px;
     width: 100%;
     background-image: url(../images/tree.png);
-    animation-name: tree-ani;
+    animation-name: cloud-ani;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -226,10 +226,22 @@ img{
     width: 100%;
     height: 100vh;
     background-image: url(../images/cloud.png);
-    animation:  tree-ani  10s linear infinite;
+    animation:  cloud-ani  10s linear infinite;
    
 
 }
+.div_g-pa{
+    z-index: 1000;
+    left: calc(100vw - 55vw);
+}
+.g-pa{
+    transform: scale(0);
+    height: 100vh;
+    animation: larger_pic 0.5s linear 2s forwards;
+      
+}
+
+
 
 /* 斷點1024px 768px 480px 調整時螢幕比例放到100%觀看較準確 */
 
@@ -384,7 +396,7 @@ img{
 }
 
 
-@keyframes tree-ani{
+@keyframes cloud-ani{
     0%{
         background-position: 0px 0px;
     }
@@ -393,4 +405,12 @@ img{
     }
 }
 
+@keyframes larger_pic{
+    0%{
+       transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
 

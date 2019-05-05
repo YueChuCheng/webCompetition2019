@@ -7,9 +7,9 @@ import tree from"../images/tree.png";
 import bgi from"../images/bg.png";
 
 import cloud from "../images/cloud.png";
-
+import g_pa from "../images/grandpa.png";
 
 $(".main_pic").attr("src", bgi);
-
 $(".cloud").attr("src", cloud);
 $("#tree").attr("src", tree);
+$(".g-pa").attr("src", g_pa);
