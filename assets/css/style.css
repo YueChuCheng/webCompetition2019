@@ -1,5 +1,20 @@
+/* 色票 紅#ff3f00  藍 #3abfff  深藍 #0573c8  */
+body{
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+img{
+    margin: 0;
+    padding: 0;
+}
+.outline{
+    outline: #000 solid 2px; 
+}
+
 .main{
-    background-color: rgb(241, 186, 134);
+    background-color: #ffffff;
     width: 100vw;
     height: 100vh;
 }
@@ -29,6 +44,193 @@
     
 }
 
+/* 動畫 */
+
+.left-1200{
+    margin-left:1200px;
+}
+.animate{
+    z-index: 100;
+}
+.animate1-1,.animate1-2{
+    
+    position: absolute;
+    background-color: #ff3f00;
+    border-radius: 50px;
+    height:80px;
+    width:250px;
+    transform:rotate(-52deg);
+    animation-name: big-rain;
+    animation-iteration-count: linear;
+    animation-duration: 1s;
+
+    /* finish */
+    top:550px;
+    left:-80px;
+}
+.animate1-1::before,.animate1-2::before {
+    content:"";   
+    position: absolute; 
+    border-radius: 50px;
+    background-color: #0573c8;
+    height:100px;
+    width:250px;
+    animation : big-rain_ns1 1s linear forwards;
+    top: -200px;
+    left:80px;
+   
+   
+    
+}
+
+.animate1-1::after,.animate1-2::after {
+    content:"";
+    position: absolute;
+    border-radius: 50px;
+    background-color: #3abfff;
+    height:100px;
+    width:250px;
+    animation : big-rain_ns2 1s linear forwards;
+    top: 300px;
+    left:-100px;
+}
+.animate1-2{
+    width:280px;
+    background-color: #3abfff;
+    animation : big-rain2 0.8s linear forwards;
+    top: -20px;
+    left:-800px;
+}
+.animate1-2::after {
+    content:"";
+    background-color: #0573c8;
+    animation : 1s linear forwards;
+    top:400px;
+    left:-400px;
+}
+
+.animate2-1{
+    transform: translate(50%);
+    position: absolute;
+    background-color: #ff3f00;
+    border-radius: 50px;
+    height:40px;
+    width:110px;
+    transform:rotate(-52deg);
+    animation : big-rain3 0.8s linear forwards;
+
+    /* finish */
+    top:400px;
+    left:-20px;
+}
+
+.animate2-2{
+    transform: translate(50%);
+    position: absolute;
+    background-color: #ff3f00;
+    border-radius: 30px;
+    height:30px;
+    width:80px;
+    transform:rotate(-52deg);
+    animation : big-rain4 1s linear forwards;
+
+    /* finish */
+    top:550px;
+    left:130px;
+
+}
+
+.animate2-3{
+    transform: translate(50%);
+    position: absolute;
+    background-color: #3abfff;
+    border-radius: 30px;
+    height:30px;
+    width:80px;
+    transform:rotate(-52deg);
+    animation : big-rain5 0.5s linear forwards;
+
+    /* finish */
+    top:70px;
+    left:370px;
+}
+.animate2-4{
+    transform: translate(50%);
+    position: absolute;
+    background-color: #3abfff;
+    border-radius: 30px;
+    height:30px;
+    width:80px;
+    transform:rotate(-52deg);
+    animation : big-rain6 0.8s linear forwards;
+
+    /* finish */
+    top:170px;
+    left:500px;
+    }
+.animate2-5{
+     transform: translate(50%);
+    position: absolute;
+    background-color:#ff3f00;
+    border-radius: 30px;
+    height:30px;
+    width:80px;
+    transform:rotate(-52deg);
+    animation : big-rain7 0.8s linear forwards;
+
+    /* finish */
+    top:450px;
+    left:300px;
+}
+.animate2-6{
+    transform: translate(50%);
+    position: absolute;
+    background-color: #0889e1;
+    border-radius: 30px;
+    height:30px;
+    width:80px;
+    transform:rotate(-52deg);
+    animation : big-rain9 0.8s linear forwards;
+
+    /* finish */
+    top:430px;
+    left:600px;
+}
+.main_page{
+    position: relative;
+    right:-1000px;
+    animation-delay: 1s;
+    animation: fadein 0.8s linear 1s forwards;
+   
+}
+
+.main_pic{  
+    float:right;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+    clear: both;
+}
+
+.ani_cloud{
+    z-index: 50;
+    position: relative;
+    left: calc(100vw - 60vw);
+    height: 100vh;
+    width: 60vw;
+}
+
+.ani_cloud-1{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/cloud.png);
+    animation:  tree-ani  10s linear infinite;
+   
+
+}
+
 /* 斷點1024px 768px 480px 調整時螢幕比例放到100%觀看較準確 */
 
 @media (max-width: 480px) { 
@@ -38,7 +240,148 @@
     }
  }
 
- 
+ @keyframes big-rain{
+    0%{
+        top:-150px;
+        left:300px;
+    }
+    100%{
+        top:550px;
+        left:-80px;
+    }
+}
+@keyframes big-rain_ns1{
+    0%{
+        top: -200px;
+        left:500px;
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        top: -200px;
+        left:80px;
+        opacity: 0;
+         
+    }
+}
+
+@keyframes big-rain_ns2{
+    0%{
+        top: 300px;
+        left:800px;
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        top: 300px;
+        left:-100px;
+        opacity: 0;
+    }
+}
+@keyframes big-rain2{
+    0%{
+        top:-800px;
+        left:-400px;
+    }
+    100%{
+        top: -20px;
+        left:-800px;
+    }
+}
+@keyframes big-rain3{
+    0%{
+        top:-200px;
+        left:300px;
+    }
+    100%{
+        top:400px;
+        left:-20px;
+    }
+}
+
+@keyframes big-rain4{
+    0%{
+        top:0px;
+        left:480px;
+    }
+    100%{
+        top:550px;
+        left:130px;
+    }
+}
+
+@keyframes big-rain5{
+    0%{
+        top:-200px;
+        left:600px;
+    }
+    100%{
+        top:70px;
+        left:370px;
+    }
+}
+
+
+@keyframes big-rain6{
+    0%{
+        top:-100px;
+        left:700px;
+    }
+    100%{
+        top:170px;
+        left:500px;
+    }
+}
+
+
+@keyframes big-rain7{
+    0%{
+        top:-100px;
+        left:600px;
+    }
+    100%{
+        top:450px;
+        left:300px;
+    }
+}
+
+@keyframes big-rain8{
+    0%{
+        top:-100px;
+        left:600px;
+    }
+    100%{
+        top:450px;
+        left:300px;
+    }
+}
+
+@keyframes big-rain9{
+    0%{
+        top:-100px;
+        left:900px;
+    }
+    100%{
+        top:430px;
+        left:600px;
+    }
+}
+
+@keyframes fadein{
+    0%{
+        right:-600px;
+        opacity: 0;
+    }
+    
+    100%{
+        right:0px;
+        opacity: 1;
+    }
+}
 
 
 @keyframes tree-ani{
@@ -46,7 +389,7 @@
         background-position: 0px 0px;
     }
     100%{
-        background-position: 825px 0px;
+        background-position: 1420px 0px;
     }
 }
 
