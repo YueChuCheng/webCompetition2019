@@ -20,6 +20,12 @@ import f_litchi from "../images/fruit/litchi.png";
 import f_peach from "../images/fruit/peach.png";
 import f_longan from "../images/fruit/longan.png";
 
+import nav_logo from "../images/nav_logo.png";
+import title_logo from "../images/title_logo.png";
+
+$(".title_logo").attr("src", title_logo);
+$(".nav_logo").attr("src", nav_logo);
+
 $(".main_pic").attr("src", bgi);
 $(".cloud").attr("src", cloud);
 $("#tree").attr("src", tree);
