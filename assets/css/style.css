@@ -1,6 +1,6 @@
 /* 色票 紅#ff3f00  藍 #3abfff  深藍 #0573c8  */
 body{
-    width: 100%;
+    width: 100vw;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -15,8 +15,8 @@ img{
 
 .main{
     background-color: #ffffff;
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw;
+    height: 100vh; */
 }
 .line{
     outline: solid #000 2px;
@@ -197,20 +197,21 @@ img{
     left:600px;
 }
 .main_page{
-    position: relative;
-    right:-1000px;
+
+    opacity: 0;
     animation-delay: 1s;
     animation: fadein 0.8s linear 1s forwards;
    
 }
 
 .main_pic{  
-    float:right;
+    position: absolute;
+    right:0;
     height: 100vh;
     margin: 0;
     padding: 0;
     z-index: -1;
-    clear: both;
+    
 }
 
 .ani_cloud{
@@ -241,8 +242,86 @@ img{
       
 }
 
+.bird{
+    z-index: 100;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../images/bird.png);
+    background-size: contain;
+    background-position-x: 90%;
+    
+}
+.fruit img{
+    width: 30%;
+    z-index: 10000;
+    animation-name:animate-f, idle;
+    animation-duration:2s, 2s;
+    animation-timing-function:linear, linear;
+    animation-delay:2s, 4s;
+    animation-iteration-count:1, infinite;
+    animation-fill-mode:forwards, forwards;
+}
+.animate-f1{   
+    position: absolute;
+    left: 72rem;
+    top: -42rem;    
+    animation-duration:2.5s, 2s;
+    
+}
 
+.animate-f2{   
+    position: absolute;
+    left: 82rem;
+    top: -58rem;
+    animation-duration:1s, 2s;
+ }
+ .animate-f3{   
+    position: absolute;
+    left: 92rem;
+    top: -48rem;
+ }
+ .animate-f4{   
+    position: absolute;
+    left: 83.5rem;
+    top: -42rem;
+ }
+ .animate-f5{   
+    position: absolute;
+    left: 93rem;
+    top: -30rem;
+ }
+ .animate-f6{   
+    position: absolute;
+    left: 105rem;
+    top: -60rem;
+ }
 
+ .animate-f7{   
+    position: absolute;
+    left: 115rem;
+    top: -34rem;
+ }
+
+ .animate-f8{   
+    position: absolute;
+    left: 121rem;
+    top: -55rem;
+ }
+ .animate-f9{   
+    position: absolute;
+    left: 118rem;
+    top: -25rem;
+ }
+ 
+ .animate-f10{   
+    position: absolute;
+    left: 92rem;
+    top: -20rem;
+ }
+ 
+ 
+ 
 /* 斷點1024px 768px 480px 調整時螢幕比例放到100%觀看較準確 */
 
 @media (max-width: 480px) { 
@@ -411,6 +490,31 @@ img{
     }
     100%{
         transform: scale(1);
+    }
+}
+
+@keyframes idle{
+    0%{
+        transform: translate(-50rem, 50rem);
+    }
+   
+    50%{
+        transform: translate(-50rem, 51rem);
+    }
+ 
+    100%{
+        transform: translate(-50rem, 50rem);
+    }
+}
+
+@keyframes animate-f{
+    0%{
+        transform: translate(0rem, 0rem);
+    
+    }
+    100%{
+        transform: translate(-50rem, 50rem);
+        
     }
 }
 
