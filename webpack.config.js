@@ -19,6 +19,21 @@ module.exports = {
                 }
             }
         },
+        {
+            
+            test: /\.css$/,
+            use: ExtractTextPlugin.extract({
+                use: [{
+                   loader: 'css-loader',
+                   options: {
+                      url: false
+                   }
+                }, {
+                   loader: 'postcss-loader'
+                }]
+             })
+            
+         },
     {
         test:/\.(jpe?g|png|gif|svg)$/,
         use: [
@@ -31,12 +46,6 @@ module.exports = {
             },
             'image-webpack-loader'
         ]
-    },
-    {
-        use: ExtractTextPlugin.extract({
-            use: 'css-loader'
-        }),
-        test:/\.css$/
     }
     ]
     },
