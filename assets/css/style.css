@@ -1,3 +1,4 @@
+
 /* 色票 紅#ff3f00  藍 #3abfff  深藍 #0573c8  */
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700&subset=chinese-traditional');
 *{
@@ -11,64 +12,42 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     
 }
-img{
-    margin: 0;
-    padding: 0;
-}
+
 .outline{
     outline: #000 solid 2px; 
 }
 
-.main{
-    background-color: #ffffff;
-    /* width: 100vw;
-    height: 100vh; */
-}
 
+
+
+
+
+/* nav start */
+nav{
+    z-index: 1000000;
+    margin-top:2%; 
+    font-size: 100%;  
+}
 .nav_logo{
-    margin-left:2rem; 
-    width: 250px;
+    position: relative;
+    left:10%; 
+    width: 40%;
 }
 
 
 .nav1{
-    display: flex;
     list-style-type: none;
-    margin-right: 8rem;
     
-   
+    margin-right: 15%;
 }
 
-.ft_black{
-    color: black ;
-    
-}
+/* nav end */
 
 
-.bg_ani{
-    height: 480px;
-    width: 100%;
-    background-image: url(../images/tree.png);
-    animation-name: cloud-ani;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    
-}
-.menu{
-    position: absolute;
-    z-index: 10000000;
-    margin-top:1rem;
-    
-}
-.title_logo{
-    position: absolute;
-    opacity: 0;
-    width: 300px;
-    top:11rem;
-    left:4rem;
-    animation: fadeIn-font 0.5s linear 4.5s forwards;
-}
+
+
+
+
 /* 動畫 */
 
 .left-1200{
@@ -221,6 +200,19 @@ img{
     top:430px;
     left:600px;
 }
+
+
+.title_logo{
+    position: absolute;
+    opacity: 0;
+    width: 20%;
+    margin-top:13%;
+    margin-left:6%;
+    animation: fadeIn-font 0.5s linear 4.5s forwards;
+}
+
+
+
 .main_page{
 
     opacity: 0;
@@ -250,19 +242,21 @@ img{
 .ani_cloud-1{
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-image: url(../images/cloud.png);
     animation:  cloud-ani  15s linear infinite;
    
 
 }
 .div_g-pa{
+    
     z-index: 1000;
     left: calc(100vw - 55vw);
+    height: 100%;
 }
 .g-pa{
     transform: scale(0);
-    height: 100vh;
+    width: 55%;
     animation: larger_pic 0.5s linear 2s forwards;
       
 }
@@ -281,7 +275,6 @@ img{
     width: 30%;
     z-index: 10000;
     animation-name:animate-f, idle;
-    animation-duration:2s, 2s;
     animation-timing-function:linear, linear;
     animation-delay:2s, 4s;
     animation-iteration-count:1, infinite;
@@ -289,60 +282,78 @@ img{
 }
 .animate-f1{   
     position: absolute;
-    left: 72rem;
-    top: -42rem;    
-    animation-duration:2.5s, 2s;
-    
+    margin-left: 25%;
+    margin-top: 13%; 
+    opacity: 0;
+    animation-duration:1.8s, 2s;
+       
 }
 
 .animate-f2{   
     position: absolute;
-    left: 82rem;
-    top: -58rem;
-    animation-duration:1s, 2s;
+    margin-left: 35%;
+    margin-top: -8%;
+    animation-duration:1.9s, 2s;
+    opacity: 0;
  }
  .animate-f3{   
     position: absolute;
-    left: 92rem;
-    top: -48rem;
+    margin-left: 47%;
+    margin-top: 2%;
+    opacity: 0;
+    animation-duration:2.1s, 2s;
  }
  .animate-f4{   
     position: absolute;
-    left: 83.5rem;
-    top: -42rem;
+    margin-left: 38%;
+    margin-top: 10%;
+    opacity: 0;
+    animation-duration:1.9s, 2s;
  }
  .animate-f5{   
     position: absolute;
-    left: 93rem;
-    top: -30rem;
+    margin-left: 47%;
+    margin-top: 24%;
+    opacity: 0;
+    animation-duration:2.2s, 2s;
  }
  .animate-f6{   
     position: absolute;
-    left: 105rem;
-    top: -60rem;
+    margin-left: 60%;
+    margin-top: -10%;
+    opacity: 0;
+    animation-duration:1.4s, 2s;
  }
 
  .animate-f7{   
     position: absolute;
-    left: 115rem;
-    top: -34rem;
+    margin-left: 74%;
+    margin-top:20%;
+    opacity: 0;
+    animation-duration:2.2s, 2s;
  }
 
  .animate-f8{   
     position: absolute;
-    left: 121rem;
-    top: -55rem;
+    margin-left: 80%;
+    margin-top: -6%;
+    opacity: 0;
+    animation-duration:1.6s, 2s;
  }
  .animate-f9{   
     position: absolute;
-    left: 118rem;
-    top: -25rem;
+    margin-left: 78%;
+    margin-top: 28%;
+    opacity: 0;
+    animation-duration:2s, 2s;
  }
  
  .animate-f10{   
     position: absolute;
-    left: 92rem;
-    top: -20rem;
+    margin-left: 48%;
+    margin-top: 35%;
+    opacity: 0;
+    animation-duration:1.3s, 2s;
  }
  
  
@@ -520,26 +531,27 @@ img{
 
 @keyframes idle{
     0%{
-        transform: translate(-50rem, 50rem);
+        transform: translate(0rem, 0rem);
     }
    
     50%{
-        transform: translate(-50rem, 51rem);
+        transform: translate(0rem, -1rem);
     }
  
     100%{
-        transform: translate(-50rem, 50rem);
+        transform: translate(0rem, 0rem);
     }
 }
 
 @keyframes animate-f{
     0%{
-        transform: translate(0rem, 0rem);
+        opacity: 1;
+        transform: translate(50rem,-50rem)
     
     }
     100%{
-        transform: translate(-50rem, 50rem);
-        
+        opacity: 1;
+        transform: translate(0rem,0rem)
     }
 }
 
