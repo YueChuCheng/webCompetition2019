@@ -1,0 +1,17 @@
+nav{
+    z-index: 1000000;
+    margin-top:2%; 
+    font-size: 100%;  
+}
+.nav_logo{
+    position: relative;
+    left:10%; 
+    width: 40%;
+}
+
+
+.nav1{
+    list-style-type: none;
+    
+    margin-right: 15%;
+}
