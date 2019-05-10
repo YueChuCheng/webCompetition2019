@@ -6,7 +6,6 @@ import "../../node_modules/normalize.css/normalize.css";
 import tree from"../images/tree.png";
 import bgi from"../images/bg.png";
 import bird from "../images/bird.png";
-import cloud from "../images/cloud.png";
 import g_pa from "../images/grandpa.png";
 
 import f_pa from "../images/fruit/P.png";
@@ -27,7 +26,6 @@ $(".title_logo").attr("src", title_logo);
 $(".nav_logo").attr("src", nav_logo);
 
 $(".main_pic").attr("src", bgi);
-$(".cloud").attr("src", cloud);
 $("#tree").attr("src", tree);
 $(".g-pa").attr("src", g_pa);
 $(".bird").attr("src", bird);
