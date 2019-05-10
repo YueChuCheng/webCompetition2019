@@ -565,7 +565,7 @@ nav{
             animation: fadeIn-font 0.5s linear 4.5s forwards;
 }
 .main_page{
-
+   
     opacity: 0;
     -webkit-animation-delay: 1s;
             animation-delay: 1s;
@@ -573,10 +573,11 @@ nav{
             animation: fadein 0.8s linear 1s forwards;
    
 }
-.main_pic{  
+.main_pic{ 
+    
     position: absolute;
     right:0;
-    height: 100%;
+    width: 58%;
     margin: 0;
     padding: 0;
     z-index: -1;
@@ -603,6 +604,7 @@ nav{
     opacity: 0;
     z-index: 1000;
     left: calc(100vw - 55vw);
+    margin-top:1.5%;
     height: 100%;
     -webkit-animation: g-pa_jumpin 0.5s linear 2s forwards;
             animation: g-pa_jumpin 0.5s linear 2s forwards;
@@ -614,20 +616,18 @@ nav{
   
    
             transform: scale(0);
-    height: auto;
     width: 55%;
     -webkit-animation: larger_pic 0.5s linear 2s forwards;
             animation: larger_pic 0.5s linear 2s forwards;
       
 }
 .bird{
-    z-index: 100;
+    z-index: 100000;
     position: absolute;
-    height: 100vh;
+    height: auto;
     width: 100%;
-    background-image: url(../images/bird.png);
-    background-size: contain;
-    background-position-x: 90%;
+    right: -5%;
+   
     
 }
 .fruit img{

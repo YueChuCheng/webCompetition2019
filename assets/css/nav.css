@@ -15,3 +15,18 @@ nav{
     
     margin-right: 15%;
 }
+
+.nav1_li{
+    display: flex;
+    justify-content: center;
+    width:100px;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    border-radius: 20px;
+}
+
+.nav1_li:hover{
+    cursor: pointer;
+    border: 1px solid rgb(36, 36, 36);
+    
+} 

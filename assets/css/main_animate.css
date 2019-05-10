@@ -40,7 +40,8 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(../images/cloud.png);
+    /* 需用絕對路徑否則dist找不到 */
+    background-image: url(../../assets/images/cloud.png);
     animation:  cloud-ani  15s linear infinite;
    
 
