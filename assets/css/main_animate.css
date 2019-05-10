@@ -10,17 +10,18 @@
 
 
 .main_page{
-
+   
     opacity: 0;
     animation-delay: 1s;
     animation: fadein 0.8s linear 1s forwards;
    
 }
 
-.main_pic{  
+.main_pic{ 
+    
     position: absolute;
     right:0;
-    height: 100%;
+    width: 58%;
     margin: 0;
     padding: 0;
     z-index: -1;
@@ -48,6 +49,7 @@
     opacity: 0;
     z-index: 1000;
     left: calc(100vw - 55vw);
+    margin-top:1.5%;
     height: 100%;
     animation: g-pa_jumpin 0.5s linear 2s forwards;
 }
@@ -55,19 +57,17 @@
   
    
     transform: scale(0);
-    height: auto;
     width: 55%;
     animation: larger_pic 0.5s linear 2s forwards;
       
 }
 
 .bird{
-    z-index: 100;
+    z-index: 100000;
     position: absolute;
-    height: 100vh;
+    height: auto;
     width: 100%;
-    background-image: url(../images/bird.png);
-    background-size: contain;
-    background-position-x: 90%;
+    right: -5%;
+   
     
 }
