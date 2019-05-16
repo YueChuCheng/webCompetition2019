@@ -43,7 +43,7 @@
     /* 需用絕對路徑否則dist找不到 */
     background-image: url(../../assets/images/cloud.png);
     animation:  cloud-ani  15s linear infinite;
-    background-size: 50vw 60vw;
+    background-size: 100% auto;
 
 }
 .div_g-pa{
@@ -66,7 +66,7 @@
 .bird{
     z-index: 100000;
     position: absolute;
-    height: 68vw;
+    height: 100vh;
     right: -5%;
    
     
