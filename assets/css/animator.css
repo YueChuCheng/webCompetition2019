@@ -118,3 +118,14 @@
         top:0px;
     }
 }
+
+@keyframes waves{
+    0%{
+        transform: rotate(45deg);
+        background-position: 0px 0px;
+    }
+    100%{
+        transform: rotate(45deg);
+        background-position: 0px 131px;
+    }
+}

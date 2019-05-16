@@ -25,6 +25,7 @@ import title_logo from "../images/title_logo.png";
 import rainbow from "../images/main_story/RB.png"
 import city from "../images/main_story/city.png"
 
+
 $(".title_logo").attr("src", title_logo);
 $(".nav_logo").attr("src", nav_logo);
 
@@ -46,3 +47,14 @@ $(".animate-f10").attr("src", f_juju);
 
 $(".RB").attr("src", rainbow);
 $(".city").attr("src", city);
+
+window.onscroll = myFunction;
+function myFunction() {
+    console.log(document.documentElement.scrollTop);
+    if(document.body.scrollTop >= 700 || document.documentElement.scrollTop >= 700){
+        $(".main_story").css("opacity", 1);
+        $(".story_rain").css("animation", "big-rain 1s linear forwards");
+        $(".story_rain").css("opacity", 1);
+    }
+
+}
