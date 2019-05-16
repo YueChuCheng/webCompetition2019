@@ -51,10 +51,10 @@
 
 @keyframes cloud-ani{
     0%{
-        background-position: 0px 0px;
+        background-position: 0% 0%;
     }
     100%{
-        background-position: 1420px 0px;
+        background-position: 1420% 0%;
     }
 }
 
