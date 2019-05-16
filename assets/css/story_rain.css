@@ -1,0 +1,57 @@
+.story_rain{
+    transform:rotate(-52deg);
+    z-index: 100;
+    position: absolute;
+    border-radius: 50px;
+    transform-origin:center center;    
+    height:1vw;
+    width:3vw;
+    background-color: #3abfff;
+    opacity: 0;
+
+}
+
+.animate-rain1{
+    margin-top:24%;
+    margin-left: 13%;
+}
+
+.animate-rain2{
+    margin-top:10%;
+    margin-left: 35%;
+}
+
+.animate-rain3{
+    margin-top:47%;
+    margin-left: 15%;
+}
+
+.animate-rain4{
+    margin-top:33%;
+    margin-left: 35%;
+}
+
+.animate-rain5{
+    margin-top:5%;
+    margin-left: 55%;
+}
+
+.animate-rain6{
+    margin-top:25%;
+    margin-left: 55%;
+}
+
+.animate-rain7{
+    margin-top:45%;
+    margin-left: 55%;
+}
+
+.animate-rain8{
+    margin-top:45%;
+    margin-left: 78%;
+}
+
+.animate-rain9{
+    margin-top:15%;
+    margin-left: 88%;
+}
