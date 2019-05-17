@@ -129,3 +129,20 @@
         background-position: 0px 131px;
     }
 }
+
+
+
+@keyframes story-rain{
+    0%{
+        
+      transform: translate(800px,-1000px) rotate(-52deg);
+     opacity: 0;
+     
+    }
+    100%{
+       
+        transform: translate(0px,0px) rotate(-52deg);
+        opacity: 1;
+        
+    }
+}
