@@ -3,6 +3,8 @@ import '../css/style.css';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import "../../node_modules/normalize.css/normalize.css";
+import ScrollMagic from"scrollmagic";
+
 import tree from"../images/tree.png";
 import bgi from"../images/bg.png";
 import bird from "../images/bird.png";
@@ -48,13 +50,41 @@ $(".animate-f10").attr("src", f_juju);
 $(".RB").attr("src", rainbow);
 $(".city").attr("src", city);
 
-window.onscroll = myFunction;
-function myFunction() {
-    console.log(document.documentElement.scrollTop);
-    if(document.body.scrollTop >= 700 || document.documentElement.scrollTop >= 700){
-        $(".main_story").css("opacity", 1);
-        $(".story_rain").css("animation", "big-rain 1s linear forwards");
-        $(".story_rain").css("opacity", 1);
-    }
+//window.onscroll = myFunction;
+//function myFunction() {
+//    console.log(document.documentElement.scrollTop);
+//    if(document.body.scrollTop >= 700 || document.documentElement.scrollTop >= 700){
+//        $(".main_story").css("opacity", 1);
+//        $(".story_rain").css("animation-name", "big-rain ");
+//        $(".story_rain").css("animation-timing-function", "linear ");
+//        $(".animate-rain1").css("animation-duration", "0.5s ");
+//        $(".animate-rain2").css("animation-duration", "1.8s ");
+//        $(".animate-rain3").css("animation-duration", "0.8s ");
+//        $(".animate-rain4").css("animation-duration", "1.6s ");
+//        $(".animate-rain5").css("animation-duration", "0.4s ");
+//        $(".animate-rain6").css("animation-duration", "1.2s ");
+//        $(".animate-rain7").css("animation-duration", "0.9s ");
+//        $(".animate-rain8").css("animation-duration", "1.6s ");
+//        $(".animate-rain9").css("animation-duration", "0.7s ");
+//        
+//        $(".story_rain").css("opacity", 1);
+//    }
+//   
+//}
 
-}
+let controller = new ScrollMagic.Controller();
+let controller2 = new ScrollMagic.Controller();
+
+new ScrollMagic.Scene({
+    triggerElement:'#story_Effect'
+    })
+    .setClassToggle("#story_Effect","showIn")
+    .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement:'.story_rain'
+        })
+        .setClassToggle(".story_rain","rain_ani")
+        .addTo(controller2);
+    
+
