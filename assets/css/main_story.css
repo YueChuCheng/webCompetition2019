@@ -71,5 +71,23 @@
     
 }
 
+.peach_ani{
+    
+    z-index: 1000;
+    position: absolute;
+    background-image: url(../../assets/images/main_story/peach.png);
+    background-repeat:no-repeat; 
+    background-size:auto 100% ;
+    width: 28.6vw;
+    height: 5vw;
+    margin-top:34.5%;
+    margin-left:60.5%;
+  
+    animation-name: swimming_p , idle_p;
+    animation-duration: 15s,3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
 
 

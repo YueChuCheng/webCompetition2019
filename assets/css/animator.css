@@ -146,3 +146,40 @@
         
     }
 }
+@keyframes swimming_p{
+    0%{
+        /* margin-left:0%; */
+        background-position-x: -30%;
+    }
+
+    100%{
+        /* margin-left:100%;  */
+        background-position-x: 130%;
+
+    }
+}
+
+@keyframes idle_p{
+    0%{
+        transform: translate(0%, 0%);
+    }
+   
+    50%{
+        transform: translate(0%, -8%);
+    }
+ 
+    100%{
+        transform: translate(0%, 0%);
+    }
+}
+
+@keyframes intro_waves{
+    0%{
+        
+        background-position-y:365px;
+    }
+    100%{
+      
+        background-position-y:0px;
+    }
+}
