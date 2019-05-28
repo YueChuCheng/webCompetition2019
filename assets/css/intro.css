@@ -62,3 +62,35 @@
     animation: intro_waves 8s linear 0s infinite  forwards;
     
 }
+.carousel-img{
+    z-index: 100;
+    margin-left:23%; 
+    width: 50vw;
+}
+li{
+    list-style: none;
+    cursor: pointer;
+}
+.l{
+    z-index: 10000 !important;
+    position: absolute;
+    margin-left: 23%;
+    margin-top: -16%;
+    height: 2vw;
+    width: 2vw;
+    background-image: url(../../assets/images/fruit_intro/bl.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.r{
+    z-index: 10000 !important;
+    position: absolute;
+    margin-left: 67.5%;
+    margin-top: -16%;
+    height: 2vw;
+    width: 2vw;
+    background-image: url(../../assets/images/fruit_intro/br.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}

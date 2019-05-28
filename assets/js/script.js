@@ -3,6 +3,9 @@ import '../css/style.css';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import "../../node_modules/normalize.css/normalize.css";
+import "../../node_modules/slick-carousel/slick/slick.js";
+import "../../node_modules/slick-carousel/slick/slick.css";
+import "../../node_modules/slick-carousel/slick/slick-theme.css";
 import ScrollMagic from"scrollmagic";
 
 import tree from"../images/tree.png";
@@ -84,3 +87,14 @@ new ScrollMagic.Scene({
     .addTo(controller3);
 
 
+    $('.slick').slick({
+        dots: true,             //顯示輪播圖片會顯示圓圈
+        infinite: true,         //重覆輪播
+        slidesToShow:1,         //輪播顯示個數
+        slidesToScroll: 1,      //輪播捲動個數
+        autoplay: true,         //autoplay : 自動播放
+        prevArrow: $('.prev'),
+      nextArrow: $('.next'),
+    });
+
+    
