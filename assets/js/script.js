@@ -3,6 +3,11 @@ import '../css/style.css';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import "../../node_modules/normalize.css/normalize.css";
+import "../../node_modules/slick-carousel/slick/slick.js";
+import "../../node_modules/slick-carousel/slick/slick.css";
+import "../../node_modules/slick-carousel/slick/slick-theme.css";
+import ScrollMagic from"scrollmagic";
+
 import tree from"../images/tree.png";
 import bgi from"../images/bg.png";
 import bird from "../images/bird.png";
@@ -22,8 +27,12 @@ import f_longan from "../images/fruit/longan.png";
 import nav_logo from "../images/nav_logo.png";
 import title_logo from "../images/title_logo.png";
 
-import rainbow from "../images/main_story/RB.png"
-import city from "../images/main_story/city.png"
+import rainbow from "../images/main_story/RB.png";
+import city from "../images/main_story/city.png";
+import s_peach from "../images/main_story/peach.png";
+import intro_o from "../images/fruit_intro/orange.png";
+import intro_rr from "../images/fruit_intro/dc.png";
+import intro_y from "../images/fruit_intro/lemon.png";
 
 
 $(".title_logo").attr("src", title_logo);
@@ -47,14 +56,45 @@ $(".animate-f10").attr("src", f_juju);
 
 $(".RB").attr("src", rainbow);
 $(".city").attr("src", city);
+$(".peach_ani").attr("src", s_peach);
 
-window.onscroll = myFunction;
-function myFunction() {
-    console.log(document.documentElement.scrollTop);
-    if(document.body.scrollTop >= 700 || document.documentElement.scrollTop >= 700){
-        $(".main_story").css("opacity", 1);
-        $(".story_rain").css("animation", "big-rain 1s linear forwards");
-        $(".story_rain").css("opacity", 1);
-    }
+$(".intro_o").attr("src", intro_o);
+$(".intro_rr").attr("src", intro_rr);
+$(".intro_y").attr("src", intro_y);
 
-}
+
+let controller = new ScrollMagic.Controller();
+let controller2 = new ScrollMagic.Controller();
+let controller3 = new ScrollMagic.Controller();
+let i=0;
+
+new ScrollMagic.Scene({
+    triggerElement:'#story_Effect'
+    })
+    .setClassToggle("#story_Effect","showIn")
+    .addTo(controller);
+
+new ScrollMagic.Scene({
+    triggerElement:'#story_Effect'
+    })
+    .setClassToggle(".story_rain","rain_ani")
+    .addTo(controller2);
+
+new ScrollMagic.Scene({
+    triggerElement:'.intro'
+    })
+    .setClassToggle(".intro","showIn")
+    .addTo(controller3);
+
+
+    $('.slick').slick({
+        dots: true,             //顯示輪播圖片會顯示圓圈
+        infinite: true,         //重覆輪播
+        slidesToShow:1,         //輪播顯示個數
+        slidesToScroll: 1,      //輪播捲動個數
+        autoplay: true,         //autoplay : 自動播放
+        prevArrow: $('.prev'),
+      nextArrow: $('.next'),
+    });
+
+    

@@ -1,4 +1,5 @@
 .story_rain{
+   
     transform:rotate(-52deg);
     z-index: 100;
     position: absolute;
@@ -7,51 +8,82 @@
     height:1vw;
     width:3vw;
     background-color: #3abfff;
-    opacity: 0;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+ 
+}
 
+.rain_ani{
+    
+    animation-name:big-rain ;
+    animation-timing-function:linear;
 }
 
 .animate-rain1{
+    
     margin-top:24%;
     margin-left: 13%;
+    animation-duration:0.5s;
+   
 }
 
 .animate-rain2{
+   
     margin-top:10%;
     margin-left: 35%;
+    animation-duration:1.8s;
 }
 
 .animate-rain3{
+   
     margin-top:47%;
     margin-left: 15%;
+    animation-duration:0.8s;
 }
 
 .animate-rain4{
+   
     margin-top:33%;
     margin-left: 35%;
+    animation-duration:1.6s;
+   
 }
 
 .animate-rain5{
+   
     margin-top:5%;
     margin-left: 55%;
+    animation-duration:0.4s;
+    
 }
 
 .animate-rain6{
+   
     margin-top:25%;
     margin-left: 55%;
+    animation-duration:1.2s;
+  
 }
 
 .animate-rain7{
+   
     margin-top:45%;
     margin-left: 55%;
+    animation-duration:0.9s;
+    
 }
 
 .animate-rain8{
+   
     margin-top:45%;
     margin-left: 78%;
+    animation-duration:1.6s;
+   
 }
 
 .animate-rain9{
+   
     margin-top:15%;
     margin-left: 88%;
+    animation-duration:0.7s;
+    
 }
