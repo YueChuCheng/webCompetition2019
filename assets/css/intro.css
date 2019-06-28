@@ -1,6 +1,5 @@
 .intro{
     opacity: 0;
-    margin-top: 15%;
     height: 50vw;
     padding: 5%;
     transition:all 1.8s;
@@ -55,6 +54,7 @@
     
     position: absolute;
     background-image: url(../../assets/images/fruit_intro/l2.png);
+    background-size: 100%;
     height: 15vw;
     width: 8.5%;
     margin-top: -5%;
@@ -64,18 +64,19 @@
 }
 .carousel-img{
     z-index: 100;
-    margin-left:23%; 
+    margin-left:22.5%; 
     width: 50vw;
 }
 li{
     list-style: none;
     cursor: pointer;
+    
 }
 .l{
+   
     z-index: 10000 !important;
-    position: absolute;
-    margin-left: 23%;
-    margin-top: -16%;
+    position: relative;
+ 
     height: 2vw;
     width: 2vw;
     background-image: url(../../assets/images/fruit_intro/bl.png);
@@ -84,13 +85,24 @@ li{
 }
 
 .r{
+    
     z-index: 10000 !important;
-    position: absolute;
-    margin-left: 67.5%;
-    margin-top: -16%;
+    position: relative;
+  
     height: 2vw;
     width: 2vw;
     background-image: url(../../assets/images/fruit_intro/br.png);
     background-repeat: no-repeat;
     background-size: contain;
+}
+.trun{
+    z-index: 10000 !important;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin:0 auto;
+    padding: 0;
+    margin-top:-16.5vw;
+    margin-left: 24vw;
+    width: 47vw;
 }
