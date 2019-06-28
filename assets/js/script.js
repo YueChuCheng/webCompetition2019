@@ -6,10 +6,10 @@ import "../../node_modules/normalize.css/normalize.css";
 import "../../node_modules/slick-carousel/slick/slick.js";
 import "../../node_modules/slick-carousel/slick/slick.css";
 import "../../node_modules/slick-carousel/slick/slick-theme.css";
-import ScrollMagic from"scrollmagic";
+import ScrollMagic from "scrollmagic";
 
-import tree from"../images/tree.png";
-import bgi from"../images/bg.png";
+import tree from "../images/tree.png";
+import bgi from "../images/bg.png";
 import bird from "../images/bird.png";
 import g_pa from "../images/grandpa.png";
 
@@ -33,6 +33,13 @@ import s_peach from "../images/main_story/peach.png";
 import intro_o from "../images/fruit_intro/orange.png";
 import intro_rr from "../images/fruit_intro/dc.png";
 import intro_y from "../images/fruit_intro/lemon.png";
+
+import shop_rain1 from "../images/shop/bc.png";
+import shop_rain2 from "../images/shop/rc.png";
+import shop_dot1 from "../images/shop/bdc.png";
+import shop_pic from "../images/shop/sf.png";
+
+
 
 
 $(".title_logo").attr("src", title_logo);
@@ -62,39 +69,52 @@ $(".intro_o").attr("src", intro_o);
 $(".intro_rr").attr("src", intro_rr);
 $(".intro_y").attr("src", intro_y);
 
+$(".shop_rain1").attr("src", shop_rain1);
+$(".shop_rain2").attr("src", shop_rain2);
+$(".shop_dot1").attr("src", shop_dot1);
+$(".shop_dot2").attr("src", shop_dot1);
+$(".shop_pic").attr("src", shop_pic);
+
+
 
 let controller = new ScrollMagic.Controller();
-let controller2 = new ScrollMagic.Controller();
-let controller3 = new ScrollMagic.Controller();
-let i=0;
+
+let i = 0;
 
 new ScrollMagic.Scene({
-    triggerElement:'#story_Effect'
-    })
-    .setClassToggle("#story_Effect","showIn")
+  triggerElement: '#story_Effect'
+})
+  .setClassToggle("#story_Effect", "showIn")
+  .addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: '#story_Effect'
+})
+  .setClassToggle(".story_rain", "rain_ani")
+  .addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: '.intro'
+})
+  .setClassToggle(".intro", "showIn")
+  .addTo(controller);
+
+
+  new ScrollMagic.Scene({
+    triggerElement: '.shop_page'
+  })
+    .setClassToggle(".shop_page", "showIn")
     .addTo(controller);
 
-new ScrollMagic.Scene({
-    triggerElement:'#story_Effect'
-    })
-    .setClassToggle(".story_rain","rain_ani")
-    .addTo(controller2);
-
-new ScrollMagic.Scene({
-    triggerElement:'.intro'
-    })
-    .setClassToggle(".intro","showIn")
-    .addTo(controller3);
 
 
-    $('.slick').slick({
-        dots: true,             //顯示輪播圖片會顯示圓圈
-        infinite: true,         //重覆輪播
-        slidesToShow:1,         //輪播顯示個數
-        slidesToScroll: 1,      //輪播捲動個數
-        autoplay: true,         //autoplay : 自動播放
-        prevArrow: $('.prev'),
-      nextArrow: $('.next'),
-    });
+$('.slick').slick({
+  dots: true,             //顯示輪播圖片會顯示圓圈
+  infinite: true,         //重覆輪播
+  slidesToShow: 1,         //輪播顯示個數
+  slidesToScroll: 1,      //輪播捲動個數
+  autoplay: true,         //autoplay : 自動播放
+  prevArrow: $('.prev'),
+  nextArrow: $('.next'),
+});
 
-    

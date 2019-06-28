@@ -1,0 +1,168 @@
+.shop_page{
+    /* 測試用高 */
+    height: auto;
+    opacity: 0;
+    transition:all 1.8s;
+   margin-bottom: 50%;
+}
+.shop_page.showIn{
+    opacity: 1;
+
+    
+}
+
+
+.shop_circle{
+    z-index: -1;
+    position: absolute;
+    height: 5vw;
+    width: 5vw;
+    background-color: antiquewhite;
+    border-radius: 50%;
+}
+.shop_circle1{
+    margin-left: 18vw;
+    margin-top:4vw;
+    height: 4vw;
+    width: 4vw;
+    background-color: #FF8A2A;
+}
+
+.shop_circle2{
+    margin-left: 51vw;
+    margin-top:20vw;
+    height: 7vw;
+    width: 7vw;
+    background-color: #FFDD56;
+}
+.shop_circle3{
+    margin-left: 87vw;
+    margin-top:11vw;
+    height: 2.5vw;
+    width: 2.5vw;
+    background-color: #FFDD56;
+}
+.shop_circle4{
+    margin-left: 89.5vw;
+    margin-top:8.5vw;
+    height: 1.5vw;
+    width: 1.5vw;
+    background-color: #FFDD56;
+}
+.shop_word{
+    position: absolute;
+    width: 20%;
+    padding: 0;
+    margin-left: 18%;
+    margin-top:13%;
+}
+.shop_title{
+    
+    position: relative;
+    
+}
+.shop_title h2{
+    z-index: 100 !important;
+    font-size: 3vw;
+}
+.shop_subtitle h3{
+    font-weight: 400 !important;
+    font-size: 1vw;
+}
+
+.shop_subtitle{
+    position: relative;
+    width: 60%;
+    margin-top:12%;
+    margin-left:5%;  
+}
+.shop_btn{
+    
+    border: solid #262626 1px;
+    border-radius: 50vw;
+    width: 48%;
+    height: 3.2vw;
+    margin-top:20%;
+    
+}
+
+.shop_btn a{
+  
+    font-size:1.5vw;
+}
+
+.shop_rain1{
+    position: absolute;
+    width: 6%;
+    margin-top:28%;
+    margin-left:11%;
+    
+}
+
+.shop_rain2{
+    position: absolute;
+    width:6%;
+    margin-top:34%;
+    margin-left:11%;
+
+}
+
+.shop_dot1{
+    position: absolute;
+    width: 10%;
+    margin-left: 35%;
+    margin-top: 10%;
+    
+}
+
+.shop_dot2{
+    position: absolute;
+    width: 12%;
+    margin-left: 80%;
+    margin-top: 4%;
+}
+
+.shop_pic{
+    z-index: 1000!important;
+    position: absolute;
+    width: 33%;
+    margin-left: 55%;
+    margin-top: 8%;
+}
+.shop_wave{
+    position:absolute;
+}
+.shop_wave1{
+    z-index:-10 !important; ;
+    height: 10%;
+    width: 4%;
+    background-image: url(../../assets/images/shop/rl1.png);
+    background-size: 100%;
+    background-repeat: repeat-y;
+    animation: waves 10s linear  infinite  ;
+    margin-left:21%;
+    margin-top:5%;
+}
+
+.shop_wave2{
+    z-index:-10 !important; ;
+    height: 12%;
+    width: 4%;
+    background-image: url(../../assets/images/shop/rl1.png);
+    background-size: 130%;
+    background-repeat: repeat-y;
+    animation: waves 10s linear  infinite  ;
+    margin-left:35%;
+    margin-top:16%;
+}
+
+.shop_wave3{
+    height: 32%;
+    width: 12%;
+    background-image: url(../../assets/images/shop/bl1.png);
+    background-size: 100%;
+    background-repeat: repeat-y;
+    animation: waves 10s linear  infinite  ;
+    margin-left:50%;
+    margin-top:23%;
+}
