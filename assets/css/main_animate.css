@@ -42,8 +42,9 @@
     height: 100%;
     /* 需用絕對路徑否則dist找不到 */
     background-image: url(../../assets/images/cloud.png);
-    animation:  cloud-ani  15s linear infinite;
-    background-size: 100% auto;
+
+    animation:  cloud-ani  10s linear infinite;
+    background-size:  800px auto;
 
 }
 .div_g-pa{
@@ -70,4 +71,13 @@
     right: -5%;
    
     
+}
+
+.home_subtitle{
+    position: absolute;
+    animation: fadeIn-font 0.5s linear 4.5s forwards;
+    margin-top:30%;
+    margin-left:11.5%;
+    opacity: 0;
+    font-size: 1.2vw;
 }

@@ -47,7 +47,6 @@ import winter from "../images/fruit_intro/winter.png";
 
 
 
-
 $(".title_logo").attr("src", title_logo);
 $(".nav_logo").attr("src", nav_logo);
 
@@ -97,18 +96,21 @@ new ScrollMagic.Scene({
   triggerElement: '#story_Effect'
 })
   .setClassToggle("#story_Effect", "showIn")
+  .reverse(false)
   .addTo(controller);
 
 new ScrollMagic.Scene({
   triggerElement: '#story_Effect'
 })
   .setClassToggle(".story_rain", "rain_ani")
+  .reverse(false)
   .addTo(controller);
 
 new ScrollMagic.Scene({
   triggerElement: '.intro'
 })
   .setClassToggle(".intro", "showIn")
+  .reverse(false)
   .addTo(controller);
 
 
@@ -116,6 +118,7 @@ new ScrollMagic.Scene({
     triggerElement: '.shop_page'
   })
     .setClassToggle(".shop_page", "showIn")
+    .reverse(false)
     .addTo(controller);
 
 
