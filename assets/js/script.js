@@ -45,6 +45,21 @@ import summer from "../images/fruit_intro/summer.png";
 import fall from "../images/fruit_intro/fall.png";
 import winter from "../images/fruit_intro/winter.png";
 
+import learnus_icon from "../images/learnus/logo.png";
+import learnus_title from "../images/learnus/typo.png";
+
+import learnus_Rwave from "../images/learnus/rw.png";
+import learnus_Bwave from "../images/learnus/bw.png";
+
+import boat from "../images/learnus/ship.png";
+
+import learn_bird from "../images/learnus/bird.png";
+
+
+
+
+
+
 
 
 $(".title_logo").attr("src", title_logo);
@@ -86,6 +101,14 @@ $(".summer").attr("src", summer);
 $(".fall").attr("src", fall);
 $(".winter").attr("src", winter);
 
+$(".learnus_icon").attr("src", learnus_icon);
+$(".learnus_title").attr("src", learnus_title);
+
+$(".learnus_Rwave").attr("src", learnus_Rwave);
+$(".learnus_Bwave").attr("src", learnus_Bwave);
+
+$(".boat").attr("src", boat);
+$(".learn_bird").attr("src", learn_bird);
 
 
 let controller = new ScrollMagic.Controller();
