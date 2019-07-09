@@ -79,6 +79,7 @@ li{
  
     height: 2vw;
     width: 2vw;
+    background-image: url(../../images/fruit_intro/bl.png);
     background-image: url(../../assets/images/fruit_intro/bl.png);
     background-size: contain;
     background-repeat: no-repeat;
