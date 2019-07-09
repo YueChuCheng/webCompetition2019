@@ -39,6 +39,12 @@ import shop_rain2 from "../images/shop/rc.png";
 import shop_dot1 from "../images/shop/bdc.png";
 import shop_pic from "../images/shop/sf.png";
 
+import fsp from "../images/fruit_intro/fs.png";
+import spring from "../images/fruit_intro/spring.png";
+import summer from "../images/fruit_intro/summer.png";
+import fall from "../images/fruit_intro/fall.png";
+import winter from "../images/fruit_intro/winter.png";
+
 
 
 
@@ -74,6 +80,12 @@ $(".shop_rain2").attr("src", shop_rain2);
 $(".shop_dot1").attr("src", shop_dot1);
 $(".shop_dot2").attr("src", shop_dot1);
 $(".shop_pic").attr("src", shop_pic);
+
+$(".fs").attr("src", fsp);
+$(".spring").attr("src", spring);
+$(".summer").attr("src", summer);
+$(".fall").attr("src", fall);
+$(".winter").attr("src", winter);
 
 
 
