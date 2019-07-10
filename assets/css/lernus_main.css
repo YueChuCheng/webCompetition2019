@@ -25,7 +25,7 @@
     justify-items: center;
     height: 100%;
     width: 8vw;
-    border: solid #000 0.5px;
+    border: solid #000 1px;
     border-radius: 50vw;
     font-size: 1.3vw;
 }

@@ -1,32 +1,46 @@
-nav{
-    z-index: 1000000;
-    margin-top:2%; 
-    font-size: 1.1vw;  
+
+
+.nav_main{
+    z-index: 100000;
+    position: absolute;
+    display: grid;
+    padding-right: 2vw;
+    width: 100vw;
+    text-align: center;
+    grid-template-rows: 80px;
+    grid-template-columns: auto 1fr; 
+    top:30px; 
+
 }
+
 .nav_logo{
     position: relative;
-    left:10%; 
-    width: 40%;
+    width: auto;
+    height: 100%;
+   
 }
 
+.nav_btn{
+    justify-self: end;
+    align-content: center;
+    display: grid;
+    grid-template-rows: 50px;
+    grid-template-columns: repeat(4,100px);  
+    grid-column-gap:30px;
 
-.nav1{
-    list-style-type: none;
-    
-    margin-right: 15%;
+}
+.nav_sec{
+    align-self: center;
+    font-size: 20px;
 }
 
-.nav1_li{
-    display: flex;
-    justify-content: center;
-    width:100px;
-    transition-duration: 0.2s;
-    transition-timing-function: linear;
-    border-radius: 20px;
-}
-
-.nav1_li:hover{
+.nav_sec:hover {
+    border: #000 solid 1px;
+    border-radius: 50vw;
     cursor: pointer;
-    border: 1px solid rgb(36, 36, 36);
+}
+
+@media screen and(max-width:768px){
     
-} 
+
+}

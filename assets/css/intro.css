@@ -1,57 +1,53 @@
-.intro{
+.intro {
     opacity: 0;
     height: 50vw;
     padding: 5%;
-    transition:all 1.8s;
+    transition: all 1.8s;
 }
 
-.intro.showIn{
+.intro.showIn {
     opacity: 1;
-    
 }
 
-
-.intro h3{
+.intro h3 {
     position: relative;
     font-size: 3vw;
 }
 
-.text_line1{
+.text_line1 {
     position: relative;
     margin-top: 1%;
 }
 
-.text{
+.text {
     font-size: 1vw;
 }
 
-
-.intro_o{
+.intro_o {
     position: absolute;
     width: 15%;
     height: auto;
     margin-top: -10%;
     margin-left: 10%;
-    animation: idle 2s linear 0s infinite  forwards;
-    
+    animation: idle 2s linear 0s infinite forwards;
 }
-.intro_rr{
+
+.intro_rr {
     position: absolute;
     width: 20%;
     margin-top: 15%;
     margin-left: 12%;
-    
 }
-.intro_y{
+
+.intro_y {
     position: absolute;
     width: 15%;
     margin-top: 20%;
     margin-left: 75%;
-    animation: idle 2s linear 0s infinite  forwards;
-    
+    animation: idle 2s linear 0s infinite forwards;
 }
-.intro_bw{
-    
+
+.intro_bw {
     position: absolute;
     background-image: url(../../assets/images/wave.png);
     background-size: auto 220px;
@@ -59,52 +55,84 @@
     width: 8.5%;
     margin-top: -5%;
     margin-left: 80%;
-    background-repeat: repeat-y; 
-    animation: intro_waves 12s linear 0s infinite  forwards;
-    
+    background-repeat: repeat-y;
+    animation: intro_waves 12s linear 0s infinite forwards;
 }
-.carousel-img{
+
+.carousel-img {
     z-index: 100;
-    margin-left:22.5%; 
+    margin-left: 22.5%;
     width: 50vw;
 }
-li{
+
+li {
     list-style: none;
     cursor: pointer;
-    
 }
-.l{
-   
+
+.l {
     z-index: 10000 !important;
     position: relative;
- 
-    height: 2vw;
-    width: 2vw;
+    height: 3vw;
+    width: 3vw;
     background-image: url(../../images/fruit_intro/bl.png);
     background-image: url(../../assets/images/fruit_intro/bl.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-.r{
-    
+.r {
     z-index: 10000 !important;
     position: relative;
-  
-    height: 2vw;
-    width: 2vw;
+    height: 3vw;
+    width: 3vw;
     background-image: url(../../assets/images/fruit_intro/br.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
-.trun{
+
+.trun {
     z-index: 10000 !important;
     position: relative;
     display: flex;
     justify-content: space-between;
-    margin:0 auto;
+    margin: 0 auto;
     padding: 0;
-    margin-top:-16.5vw;
+    margin-top: -16.5vw;
     margin-left: 24vw;
     width: 47vw;
 }
+
+.slick-dots li:nth-child(1) button::before {
+    
+    font-size: 3vw !important;
+    color: #FFDD56 !important;
+    opacity: 1;
+}
+
+.slick-dots li:nth-child(2) button::before {
+    font-size: 3vw !important;
+    color: #FF3F00 !important;
+    opacity: 1;
+}
+
+.slick-dots li:nth-child(3) button::before {
+    font-size: 3vw !important;
+    color: #FF8A2A !important;
+    opacity: 1;
+}
+
+.slick-dots li:nth-child(4) button::before {
+    font-size: 3vw !important;
+    color: #3BBFFF !important;
+    opacity: 1;
+}
+
+.slick-dots li:nth-child(5) button::before {
+    font-size: 3vw !important;
+    color: #04487E !important;
+    opacity: 1;
+}
+
+
+
