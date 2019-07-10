@@ -1,6 +1,7 @@
 
 
 .nav_main{
+    
     z-index: 100000;
     position: absolute;
     display: grid;
@@ -10,6 +11,7 @@
     grid-template-rows: 80px;
     grid-template-columns: auto 1fr; 
     top:30px; 
+   
 
 }
 
@@ -40,7 +42,9 @@
     cursor: pointer;
 }
 
-@media screen and(max-width:768px){
-    
+@media screen and (max-width: 480px) {
+    .nav_main{
+        display: none;
+    }
 
 }
