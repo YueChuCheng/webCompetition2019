@@ -1,85 +1,104 @@
-.fruit img{
-    width: 30%;
-    z-index: 10000;
-    animation-name:animate-f, idle;
-    animation-timing-function:linear, linear;
-    animation-delay:2s, 4s;
-    animation-iteration-count:1, infinite;
-    animation-fill-mode:forwards, forwards;
-}
-.animate-f1{   
-    position: absolute;
-    margin-left: 25%;
-    margin-top: 13%; 
-    opacity: 0;
-    animation-duration:1.8s, 2s;
-       
+.fruit img {
+   width: 30%;
+   z-index: 10000;
+   animation-name: animate-f, idle;
+   animation-timing-function: linear, linear;
+   animation-delay: 2s, 4s;
+   animation-iteration-count: 1, infinite;
+   animation-fill-mode: forwards, forwards;
 }
 
-.animate-f2{   
-    position: absolute;
-    margin-left: 35%;
-    margin-top: -8%;
-    animation-duration:1.9s, 2s;
-    opacity: 0;
- }
- .animate-f3{   
-    position: absolute;
-    margin-left: 47%;
-    margin-top: 2%;
-    opacity: 0;
-    animation-duration:2.1s, 2s;
- }
- .animate-f4{   
-    position: absolute;
-    margin-left: 38%;
-    margin-top: 10%;
-    opacity: 0;
-    animation-duration:1.9s, 2s;
- }
- .animate-f5{   
-    position: absolute;
-    margin-left: 47%;
-    margin-top: 24%;
-    opacity: 0;
-    animation-duration:2.2s, 2s;
- }
- .animate-f6{   
-    position: absolute;
-    margin-left: 60%;
-    margin-top: -10%;
-    opacity: 0;
-    animation-duration:1.4s, 2s;
- }
+.animate-f1 {
+   position: absolute;
+   margin-left: 25%;
+   margin-top: 13%;
+   opacity: 0;
+   animation-duration: 1.8s, 2s;
+}
 
- .animate-f7{   
-    position: absolute;
-    margin-left: 74%;
-    margin-top:20%;
-    opacity: 0;
-    animation-duration:2.2s, 2s;
- }
+.animate-f2 {
+   position: absolute;
+   margin-left: 35%;
+   margin-top: -8%;
+   animation-duration: 1.9s, 2s;
+   opacity: 0;
+}
 
- .animate-f8{   
-    position: absolute;
-    margin-left: 80%;
-    margin-top: -6%;
-    opacity: 0;
-    animation-duration:1.6s, 2s;
- }
- .animate-f9{   
-    position: absolute;
-    margin-left: 78%;
-    margin-top: 28%;
-    opacity: 0;
-    animation-duration:2s, 2s;
- }
- 
- .animate-f10{   
-    position: absolute;
-    margin-left: 48%;
-    margin-top: 35%;
-    opacity: 0;
-    animation-duration:1.3s, 2s;
- }
- 
+.animate-f3 {
+   position: absolute;
+   margin-left: 47%;
+   margin-top: 2%;
+   opacity: 0;
+   animation-duration: 2.1s, 2s;
+}
+
+.animate-f4 {
+   position: absolute;
+   margin-left: 38%;
+   margin-top: 10%;
+   opacity: 0;
+   animation-duration: 1.9s, 2s;
+}
+
+.animate-f5 {
+   position: absolute;
+   margin-left: 47%;
+   margin-top: 24%;
+   opacity: 0;
+   animation-duration: 2.2s, 2s;
+}
+
+.animate-f6 {
+   position: absolute;
+   margin-left: 60%;
+   margin-top: -10%;
+   opacity: 0;
+   animation-duration: 1.4s, 2s;
+}
+
+.animate-f7 {
+   width: 6% !important;
+   position: absolute;
+   margin-left: 85%;
+   margin-top: 30%;
+   opacity: 0;
+   animation-duration: 2.2s, 2s;
+}
+
+.animate-f8 {
+   width: 6% !important;
+   position: absolute;
+   margin-left: 95%;
+   margin-top: 5%;
+   opacity: 0;
+   animation-duration: 1.6s, 2s;
+}
+
+.animate-f9 {
+   width: 5% !important;
+   position: absolute;
+   margin-left: 88%;
+   margin-top: 42%;
+   opacity: 0;
+   animation-duration: 2s, 2s;
+}
+
+.animate-f10 {
+   position: absolute;
+   margin-left: 48%;
+   margin-top: 35%;
+   opacity: 0;
+   animation-duration: 1.3s, 2s;
+}
+
+@media screen and (max-width: 480px) {
+   .fruit img {
+      display: none;
+      animation: none;
+      width: 50%;
+   }
+   .ani {
+      opacity: 1;
+   }
+   
+}
