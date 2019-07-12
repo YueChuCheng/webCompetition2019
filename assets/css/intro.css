@@ -1,8 +1,9 @@
 .intro {
     opacity: 0;
     height: 50vw;
-    padding: 5%;
+    padding: 5% 0;
     transition: all 1.8s;
+    padding-left: 2%;
 }
 
 .intro.showIn {
@@ -104,7 +105,6 @@ li {
 }
 
 .slick-dots li:nth-child(1) button::before {
-    
     font-size: 3vw !important;
     color: #FFDD56 !important;
     opacity: 1;
@@ -134,5 +134,81 @@ li {
     opacity: 1;
 }
 
+.title, .text_line_sm {
+    justify-content: center!important;
+}
 
-
+@media screen and (max-width: 480px) {
+    .intro {
+        height: 100vh;
+        display: grid;
+        padding: 5vh 0vw !important;
+        grid-row-gap: 8%;
+        grid-template-rows: 1fr 2fr;
+    }
+    .intro_title_sm {
+        margin-bottom: 5vh;
+        justify-content: start!important;
+    }
+    .intro_title_sm h3 {
+        font-size: 30px;
+    }
+    .text {
+        font-size: 15px;
+    }
+    .intro_subtitle_sm {
+        justify-content: start!important;
+    }
+    .position-absolute_sm {
+        position: absolute;
+    }
+    .carousel-img {
+        width: 100%;
+        margin: 0;
+    }
+    .intro_text_sm {
+        padding-left: 15vw;
+        align-self: flex-end;
+    }
+    .slick-dots li:nth-child(1) button::before, .slick-dots li:nth-child(2) button::before, .slick-dots li:nth-child(3) button::before, .slick-dots li:nth-child(4) button::before, .slick-dots li:nth-child(5) button::before {
+        font-size: 9vw !important;
+    }
+    .intro_pic {
+        width: 100vw;
+        height: 100vh;
+    }
+    .intro_o {
+        z-index: -1;
+        width: 100px;
+        height: auto;
+        margin-top: -2vh;
+        margin-left: 5vw;
+        animation: none;
+    }
+    .intro_rr{
+        z-index: -1;
+        width: 130px;
+        height: auto;
+        margin-top: 58vh;
+        margin-left: -5vw;
+        animation: none;
+    }
+    .intro_y{
+        z-index: -1;
+        width: 150px;
+        height: auto;
+        margin-top: 70vh;
+        margin-left: 55vw;
+        animation: none;
+    }
+    .intro_bw{
+       
+        background-size: 100%;
+        height: 110px;
+        width: 50px;
+        margin-top: 12vh;
+        margin-left: 70vw;
+        background-repeat: repeat-y;
+        animation: none;
+    }
+}

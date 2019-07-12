@@ -1,18 +1,16 @@
-.shop_page{
+.shop_page {
     /* 測試用高 */
     height: auto;
     opacity: 0;
-    transition:all 1.8s;
-   margin-bottom: 50%;
+    transition: all 1.8s;
+    margin-bottom: 50%;
 }
-.shop_page.showIn{
+
+.shop_page.showIn {
     opacity: 1;
-
-    
 }
 
-
-.shop_circle{
+.shop_circle {
     z-index: -1;
     position: absolute;
     height: 5vw;
@@ -20,183 +18,329 @@
     background-color: antiquewhite;
     border-radius: 50%;
 }
-.shop_circle1{
+
+.shop_circle1 {
     margin-left: 18vw;
-    margin-top:4vw;
+    margin-top: 4vw;
     height: 4vw;
     width: 4vw;
     background-color: #FF8A2A;
 }
 
-.shop_circle2{
+.shop_circle2 {
     margin-left: 51vw;
-    margin-top:20vw;
+    margin-top: 20vw;
     height: 7vw;
     width: 7vw;
     background-color: #FFDD56;
 }
-.shop_circle3{
+
+.shop_circle3 {
     margin-left: 87vw;
-    margin-top:11vw;
+    margin-top: 11vw;
     height: 2.5vw;
     width: 2.5vw;
     background-color: #FFDD56;
 }
-.shop_circle4{
+
+.shop_circle4 {
     margin-left: 89.5vw;
-    margin-top:8.5vw;
+    margin-top: 8.5vw;
     height: 1.5vw;
     width: 1.5vw;
     background-color: #FFDD56;
 }
-.shop_word{
+
+.shop_word {
     position: absolute;
     width: 20%;
     padding: 0;
     margin-left: 18%;
-    margin-top:13%;
-}
-.shop_title{
-    
-    position: relative;
-    
-}
-.shop_title h2{
-    z-index: 100 !important;
-    font-size: 3vw;
-    margin-top:-13%;
-}
-.shop_subtitle h3{
-    font-weight: 400 !important;
-    font-size: 1.5vw;
-    margin-top:20%;
+    margin-top: 13%;
 }
 
-.shop_subtitle{
+.shop_title {
+    position: relative;
+}
+
+.shop_title h2 {
+    z-index: 100 !important;
+    font-size: 3vw;
+    margin-top: -13%;
+}
+
+.shop_subtitle h3 {
+    font-weight: 400 !important;
+    font-size: 1.5vw;
+    margin-top: 20%;
+}
+
+.shop_subtitle {
     position: relative;
     width: 100%;
-    margin-top:12%;
-    margin-left:5%;  
+    margin-top: 12%;
+    margin-left: 5%;
 }
-.shop_btn{
-    
+
+.shop_btn {
+    display: block;
     border: solid #262626 1px;
     border-radius: 50vw;
     width: 48%;
     height: 3.2vw;
-    margin-top:20%;
-    
+    margin-top: 20%;
 }
 
-.shop_btn a{
-  
-    font-size:1.5vw;
+.shop_btn a {
+    font-size: 1.5vw;
 }
 
-.shop_rain1{
+.shop_rain1 {
     position: absolute;
     width: 6%;
-    margin-top:28%;
-    margin-left:11%;
-    
+    margin-top: 28%;
+    margin-left: 11%;
 }
 
-.shop_rain2{
+.shop_rain2 {
     position: absolute;
-    width:6%;
-    margin-top:34%;
-    margin-left:11%;
-
+    width: 6%;
+    margin-top: 34%;
+    margin-left: 11%;
 }
 
-.shop_dot1{
+.shop_dot1 {
     position: absolute;
     width: 10%;
     margin-left: 40%;
     margin-top: 10%;
-    
 }
 
-.shop_dot2{
+.shop_dot2 {
     position: absolute;
     width: 12%;
     margin-left: 80%;
     margin-top: 4%;
 }
 
-.shop_pic{
+.shop_pic {
     z-index: 1000!important;
     position: absolute;
     width: 33%;
     margin-left: 55%;
     margin-top: 8%;
 }
-.shop_wave{
-    position:absolute;
+
+.shop_wave {
+    position: absolute;
 }
-.shop_wave1{
-    z-index:-10 !important; ;
+
+.shop_wave1 {
+    z-index: -10 !important;
+    ;
     height: 5vw;
     width: 4vw;
     background-image: url(../../assets/images/shop/rl1.png);
     background-size: 100%;
     background-repeat: repeat-y;
     background-size: auto 80px;
-    animation: shop_waves 10s linear  infinite  ;
-    margin-left:21%;
-    margin-top:5%;
+    animation: shop_waves 10s linear infinite;
+    margin-left: 21%;
+    margin-top: 5%;
 }
-@keyframes  shop_waves{
-    0%{
+
+@keyframes shop_waves {
+    0% {
         transform: rotate(45deg);
-        background-position-y:80px;
+        background-position-y: 80px;
     }
-    100%{
+    100% {
         transform: rotate(45deg);
-        background-position-y:0px;
+        background-position-y: 0px;
     }
 }
 
-.shop_wave2{
-    z-index:-10 !important; ;
+.shop_wave2 {
+    z-index: -10 !important;
+    ;
     height: 6vw;
     width: 4vw;
     background-image: url(../../assets/images/shop/rl1.png);
     background-size: 130%;
     background-repeat: repeat-y;
     background-size: auto 70px;
-    animation: shop_waves2 5s linear  infinite  ;
-    margin-left:40%;
-    margin-top:16%;
+    animation: shop_waves2 5s linear infinite;
+    margin-left: 40%;
+    margin-top: 16%;
 }
-@keyframes  shop_waves2{
-    0%{
+
+@keyframes shop_waves2 {
+    0% {
         transform: rotate(45deg);
-        background-position-y:70px;
+        background-position-y: 70px;
     }
-    100%{
+    100% {
         transform: rotate(45deg);
-        background-position-y:0px;
+        background-position-y: 0px;
     }
 }
-.shop_wave3{
+
+.shop_wave3 {
     height: 20vw;
     width: 12vw;
     background-image: url(../../assets/images/shop/bl1.png);
     background-size: auto 220px;
     background-repeat: repeat-y;
-    animation: shop_waves3 10s linear  infinite  ;
-    margin-left:50%;
-    margin-top:23%;
+    animation: shop_waves3 10s linear infinite;
+    margin-left: 50%;
+    margin-top: 23%;
 }
 
-@keyframes  shop_waves3{
-    0%{
+@keyframes shop_waves3 {
+    0% {
         transform: rotate(45deg);
-        background-position-y:220px;
+        background-position-y: 220px;
     }
-    100%{
+    100% {
         transform: rotate(45deg);
-        background-position-y:0px;
+        background-position-y: 0px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .shop_page {
+        height: 100vh;
+        display: grid !important;
+        grid-template-rows: 2fr 3fr;
+        width: 100vw;
+        padding: 0 7vw;
+    }
+    .shop_word {
+        position: relative;
+    }
+    .shop_div_pic {
+        position: relative;
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    .shop_div_pic img {
+        width: 100%;
+    }
+    .shop_pic {
+        margin: 0;
+    }
+    .shop_word {
+        padding-left: 7vw;
+        padding-bottom: 6vw;
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+        align-self: flex-end;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+    .shop_title h2 {
+        margin: 0;
+        font-size: 30px;
+    }
+    .shop_title {
+        align-self: flex-end;
+    }
+    .shop_subtitle {
+        display: grid;
+        grid-template-rows: 100%;
+        grid-template-columns: 3fr 2fr;
+        align-self: flex-end;
+        width: 100%;
+        margin: 0;
+    }
+    .shop_subtitle h3 {
+        margin: 0;
+        font-size: 14px;
+    }
+    .shop_btn {
+        margin: 0;
+        width: 80px;
+        height: 30px;
+    }
+    .shop_btn a {
+        font-size: 14px;
+    }
+    .shop_circle1 {
+        height: 30px;
+        width: 30px;
+        margin-left: 0vw;
+        margin-top: 15vh;
+    }
+    .shop_circle2 {
+        margin-left: -8vw;
+        margin-top: 30vh;
+        height: 70px;
+        width: 70px;
+    }
+    .shop_circle3 {
+        margin-left: 75vw;
+        margin-top: 92vh;
+        height: 30px;
+        width: 30px;
+    }
+    .shop_circle4 {
+        margin-left: 82vw;
+        margin-top: 85vh;
+        height: 20px;
+        width: 20px;
+    }
+    .shop_rain1 {
+        z-index: 10000;
+        width: 60px;
+        margin-top: 85vh;
+        margin-left: 0vw;
+    }
+    .shop_rain2 {
+        z-index: 10000;
+        width: 60px;
+        margin-top: 95vh;
+        margin-left: 0vw;
+    }
+    .shop_dot1 {
+        width: 90px;
+        margin-left: 68vw;
+        margin-top: 6vh;
+    }
+    .shop_dot2 {
+        width: 130px;
+        margin-left: 62vw;
+        margin-top: 80vh;
+    }
+    .shop_wave1 {
+        transform: rotate(45deg);
+        height: 60px;
+        width: 50px;
+        background-size: 100%;
+        animation: none;
+        margin-left: 2vw;
+        margin-top: 15vh;
+    }
+    .shop_wave2 {
+        transform: rotate(45deg);
+        height: 75px;
+        width: 50px;
+        background-size: 100%;
+        animation: none;
+        margin-left: 65vw;
+        margin-top: 13vh;
+    }
+    .shop_wave3 {
+        transform: rotate(45deg);
+        height: 160px;
+        width: 100px;
+        background-size: 100%;
+        animation: none;
+        margin-left: -10vw;
+        margin-top: 35vh;
+    }
+    .shop_page {
+      
+        margin-bottom: 0%;
     }
 }

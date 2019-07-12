@@ -87,3 +87,46 @@
     animation-duration:0.7s;
     
 }
+
+@media screen and (max-width: 480px) {
+
+    .story_rain{
+        animation: none;
+        height: 10px;
+        width: 35px;
+        z-index: -1;
+    }
+    .animate-rain1{
+
+        margin-top:27vh;
+        margin-left: 0vw;
+    }
+
+    .animate-rain2{
+
+        margin-top:5vh;
+        margin-left: 27vw;
+    }
+    .animate-rain3{
+
+        margin-top:50vh;
+        margin-left: -10vw;
+    }
+    .animate-rain4{
+
+        margin-top:33vh;
+        margin-left: 35vw;
+    }
+    .animate-rain5{
+        margin-top:8vh;
+        margin-left: 62vw;
+    }
+    .animate-rain6{
+        margin-top:50vh;
+        margin-left: 70vw;
+    }
+    .animate-rain7{
+        margin-top:30vh;
+        margin-left: 75vw;
+    }
+}

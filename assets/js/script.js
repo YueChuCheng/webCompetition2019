@@ -1,11 +1,12 @@
 import $ from 'jquery';
-import '../css/style.css';
+
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import "../../node_modules/normalize.css/normalize.css";
 import "../../node_modules/slick-carousel/slick/slick.js";
 import "../../node_modules/slick-carousel/slick/slick.css";
 import "../../node_modules/slick-carousel/slick/slick-theme.css";
+import '../css/style.css';
 import ScrollMagic from "scrollmagic";
 
 import tree from "../images/tree.png";
@@ -55,12 +56,16 @@ import boat from "../images/learnus/ship.png";
 
 import learn_bird from "../images/learnus/bird.png";
 
-
-
-
-
-
-
+import animate_f1_sm from "../images/cellphone_pic/f1.png";
+import animate_f2_sm from "../images/cellphone_pic/f2.png";
+import animate_f3_sm from "../images/cellphone_pic/f3.png";
+import animate_f4_sm from "../images/cellphone_pic/f4.png";
+import animate_f5_sm from "../images/cellphone_pic/f5.png";
+import animate_f6_sm from "../images/cellphone_pic/f6.png";
+import animate_f7_sm from "../images/cellphone_pic/f7.png";
+import animate_f8_sm from "../images/cellphone_pic/f8.png";
+import animate_f9_sm from "../images/cellphone_pic/f9.png";
+import animate_f10_sm from "../images/cellphone_pic/f10.png";
 
 $(".title_logo").attr("src", title_logo);
 $(".nav_logo").attr("src", nav_logo);
@@ -109,6 +114,18 @@ $(".learnus_Bwave").attr("src", learnus_Bwave);
 
 $(".boat").attr("src", boat);
 $(".learn_bird").attr("src", learn_bird);
+
+$(".animate_f1_sm ").attr("src", animate_f1_sm );
+$(".animate_f2_sm ").attr("src", animate_f2_sm );
+$(".animate_f3_sm ").attr("src", animate_f3_sm );
+$(".animate_f4_sm ").attr("src", animate_f4_sm );
+$(".animate_f5_sm ").attr("src", animate_f5_sm );
+$(".animate_f6_sm ").attr("src", animate_f6_sm );
+$(".animate_f7_sm ").attr("src", animate_f7_sm );
+$(".animate_f8_sm ").attr("src", animate_f8_sm );
+$(".animate_f9_sm ").attr("src", animate_f9_sm );
+$(".animate_f10_sm ").attr("src", animate_f10_sm );
+
 
 
 let controller = new ScrollMagic.Controller();

@@ -15,7 +15,7 @@
 
 .main_pic {
     position: absolute;
-    right: 0;
+    left: calc(100vw - 58%);
     width: 58%;
     margin: 0;
     padding: 0;
@@ -47,13 +47,16 @@
     /* left: calc(100vw - 55vw); */
     margin-top: 1.5%;
     height: 100%;
-    width: auto;
+    width: 100%;
     animation: g-pa_jumpin 0.5s linear 2s forwards;
+    display: grid;
+    justify-items: end;
 }
 
 .g-pa {
     position: relative;
-    left: calc(100vw - 55vw);
+    /* left: calc(100vw - 55vw); */
+    right: 0;
     transform: scale(0);
     width: 55%;
     animation: larger_pic 0.5s linear 2s forwards;
@@ -75,6 +78,10 @@
     font-size: 1.2vw;
 }
 
+.home_fruit_sm {
+    display: none;
+}
+
 @media screen and (max-width: 480px) {
     .home_main {
         padding: 0!important;
@@ -83,6 +90,9 @@
         width: 100vw;
         justify-content: end;
         grid-template-rows: 1fr 1fr;
+        grid-template-columns: 100vw;
+        background-image: url(../../assets/images/cellphone_pic/bgli.png);
+        background-size: cover;
     }
     .main_page {
         display: none;
@@ -102,12 +112,14 @@
         left: 0;
         opacity: 1;
         animation: none;
+        width: 100% !important;
     }
     .g-pa {
         align-items: flex-end;
         transform: scale(1);
         animation: none;
-        width: 90%;
+        width: auto;
+        height: 100%;
         left: 0;
     }
     .title_logo, .home_subtitle {
@@ -117,16 +129,134 @@
         animation: none;
         opacity: 1;
     }
+    .home_subtitle {
+        font-size: 3.5vw;
+    }
     .home_title {
-        margin-top: 20vh;
-        display: grid;
-        grid-template-rows: 3fr 1fr;
-        grid-template-columns: auto;
-        justify-items: center;
+        z-index: 10000;
+        margin-top: 15vh;
+        text-align: center;
         width: 100vw;
     }
     .title_logo {
         width: 40%;
         align-self: flex-end;
     }
+    .home_fruit_sm {
+        display: block;
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+    }
+    .ani_sm {
+        position: absolute;
+        width: 80px;
+    }
+    .animate_f1_sm {
+        margin-top: 38vh;
+        margin-left: 5vw;
+    }
+    .animate_f2_sm {
+        margin-top: 10vh;
+        margin-left: 21vw;
+       
+    }
+    .animate_f3_sm {
+        margin-top:88vh;
+        margin-left: 66vw;
+        width: 60px;
+       
+    }
+    .animate_f4_sm {
+        margin-top: 20vh;
+        margin-left: 75vw;
+       
+    }
+    .animate_f5_sm {
+        margin-top: 55vh;
+        margin-left: 23vw;
+        width: 100px;
+    }
+    .animate_f6_sm {
+        margin-top: 33vh;
+        margin-left: 68vw;
+        width: 70px;
+    }
+    .animate_f7_sm {
+        margin-top: 58vh;
+        margin-left: 75vw;
+        width: 70px;
+    }
+    .animate_f8_sm {
+        z-index: 1000;
+        margin-top: 88vh;
+        margin-left: 10vw;
+        width: 60px;
+    }
+    .animate_f9_sm {
+        z-index: 1000;
+        margin-top: 78vh;
+        margin-left: 85vw;
+        width: 60px;
+    }
+    .animate_f10_sm {
+        z-index: 1000;
+        margin-top: 83vh;
+        margin-left: 20vw;
+        width: 60px;
+    }
+
+    .animate_sm{
+        z-index: 1000;
+        position: absolute;
+        height: 40px;
+        width: 100px;
+        transform: rotate(-55deg);
+        border-radius: 50vw;
+        background-color: #000;
+    }
+    .animate_1_sm{
+        height: 60px;
+        width: 120px;
+        margin-top: 90vh;
+        margin-left: -10vw;
+        background-color: #ff3f00;
+    }
+
+    .animate_2_sm{
+        height: 30px;
+        width: 70px;
+        margin-top: 60vh;
+        margin-left: 0vw;
+        background-color: #ff3f00;
+    }
+    .animate_3_sm{
+        height: 30px;
+        width: 70px;
+        margin-top: 92vh;
+        margin-left: 30vw;
+        background-color: #ff3f00;
+    }
+    .animate_4_sm{
+        height: 20px;
+        width: 50px;
+        margin-top: 45vh;
+        margin-left: 87vw;
+        background-color: #3abfff;
+    }
+    .animate_5_sm{
+        height: 20px;
+        width: 50px;
+        margin-top: 32vh;
+        margin-left: 60vw;
+        background-color: #3abfff;
+    }
+    .animate_6_sm{
+        height: 55px;
+        width: 130px;
+        margin-top: 2.8vh;
+        margin-left: 65vw;
+        background-color: #3abfff;
+    }
+
 }
