@@ -47,7 +47,7 @@
     /* left: calc(100vw - 55vw); */
     margin-top: 1.5%;
     height: 100%;
-    width: 100%;
+    width: 100vw !important;
     animation: g-pa_jumpin 0.5s linear 2s forwards;
     display: grid;
     justify-items: end;
@@ -196,7 +196,7 @@
     .animate_f9_sm {
         z-index: 1000;
         margin-top: 78vh;
-        margin-left: 85vw;
+        margin-left: 83vw;
         width: 60px;
     }
     .animate_f10_sm {

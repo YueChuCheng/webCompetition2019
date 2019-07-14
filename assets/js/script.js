@@ -115,16 +115,16 @@ $(".learnus_Bwave").attr("src", learnus_Bwave);
 $(".boat").attr("src", boat);
 $(".learn_bird").attr("src", learn_bird);
 
-$(".animate_f1_sm ").attr("src", animate_f1_sm );
-$(".animate_f2_sm ").attr("src", animate_f2_sm );
-$(".animate_f3_sm ").attr("src", animate_f3_sm );
-$(".animate_f4_sm ").attr("src", animate_f4_sm );
-$(".animate_f5_sm ").attr("src", animate_f5_sm );
-$(".animate_f6_sm ").attr("src", animate_f6_sm );
-$(".animate_f7_sm ").attr("src", animate_f7_sm );
-$(".animate_f8_sm ").attr("src", animate_f8_sm );
-$(".animate_f9_sm ").attr("src", animate_f9_sm );
-$(".animate_f10_sm ").attr("src", animate_f10_sm );
+$(".animate_f1_sm ").attr("src", animate_f1_sm);
+$(".animate_f2_sm ").attr("src", animate_f2_sm);
+$(".animate_f3_sm ").attr("src", animate_f3_sm);
+$(".animate_f4_sm ").attr("src", animate_f4_sm);
+$(".animate_f5_sm ").attr("src", animate_f5_sm);
+$(".animate_f6_sm ").attr("src", animate_f6_sm);
+$(".animate_f7_sm ").attr("src", animate_f7_sm);
+$(".animate_f8_sm ").attr("src", animate_f8_sm);
+$(".animate_f9_sm ").attr("src", animate_f9_sm);
+$(".animate_f10_sm ").attr("src", animate_f10_sm);
 
 
 
@@ -154,12 +154,12 @@ new ScrollMagic.Scene({
   .addTo(controller);
 
 
-  new ScrollMagic.Scene({
-    triggerElement: '.shop_page'
-  })
-    .setClassToggle(".shop_page", "showIn")
-    .reverse(false)
-    .addTo(controller);
+new ScrollMagic.Scene({
+  triggerElement: '.shop_page'
+})
+  .setClassToggle(".shop_page", "showIn")
+  .reverse(false)
+  .addTo(controller);
 
 
 
@@ -173,3 +173,44 @@ $('.slick').slick({
   nextArrow: $('.next'),
 });
 
+let hm_click = 0;
+$(".hm_circle").click(function () {
+  hm_click++;
+  if (hm_click % 2 === 1) {
+    $(".hm_circle").css("transform", " rotate(90deg)");
+    $(".hm_circle").css("border", " solid #fff 1px");
+    $(".hm_dot").css("background-color", " #fff ");
+    $(".nav_main").css("animation", "nav_hm 0.5s linear forwards");
+    $(".nav_btn").css("opacity", "1");
+  }
+  else {
+    $(".hm_circle").css("transform", " rotate(0deg)");
+    $(".hm_circle").css("border", " solid #000 1px");
+    $(".hm_dot").css("background-color", " #000 ");
+    $(".nav_main").css("animation", "nav_hm_back 0.5s linear forwards");
+    $(".nav_btn").css("opacity", "0");
+  }
+
+});
+
+$(document).ready(function () {
+  $(window).resize(function () {
+    var wdth = $(window).width();
+
+    if (wdth > 480) {
+      $(".nav_btn ").css("opacity", "1");
+    }
+    if (wdth <= 480 && hm_click % 2 === 1) {
+      $(".nav_btn ").css("opacity", "1");
+      $(".hm_circle").css("transform", " rotate(90deg)");
+      $(".hm_circle").css("border", " solid #fff 1px");
+      $(".hm_dot").css("background-color", " #fff ");
+      $(".nav_main").css("animation", "nav_hm 0.5s linear forwards");
+      $(".nav_btn").css("opacity", "1");
+    }
+    if (wdth <= 480 && hm_click % 2 === 0) {
+     $(".nav_btn").css("opacity", "0");
+     $(".nav_main").css("animation", "none");
+    }
+  });
+});

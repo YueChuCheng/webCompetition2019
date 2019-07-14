@@ -3,6 +3,7 @@
 }
 
 .main_story {
+    width: 100vw;
     height: 50vw;
     opacity: 0;
     transition: all 1.8s;
@@ -112,6 +113,7 @@
     .main_story {
         margin: 0;
         height: 100vh;
+        width: 100vw;
         display: grid;
         padding: 0 7vw !important;
     }
