@@ -1,11 +1,12 @@
 import $ from 'jquery';
-import '../css/style.css';
+
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import "../../node_modules/normalize.css/normalize.css";
 import "../../node_modules/slick-carousel/slick/slick.js";
 import "../../node_modules/slick-carousel/slick/slick.css";
 import "../../node_modules/slick-carousel/slick/slick-theme.css";
+import '../css/style.css';
 import ScrollMagic from "scrollmagic";
 
 import tree from "../images/tree.png";
@@ -39,8 +40,32 @@ import shop_rain2 from "../images/shop/rc.png";
 import shop_dot1 from "../images/shop/bdc.png";
 import shop_pic from "../images/shop/sf.png";
 
+import fsp from "../images/fruit_intro/fs.png";
+import spring from "../images/fruit_intro/spring.png";
+import summer from "../images/fruit_intro/summer.png";
+import fall from "../images/fruit_intro/fall.png";
+import winter from "../images/fruit_intro/winter.png";
 
+import learnus_icon from "../images/learnus/logo.png";
+import learnus_title from "../images/learnus/typo.png";
 
+import learnus_Rwave from "../images/learnus/rw.png";
+import learnus_Bwave from "../images/learnus/bw.png";
+
+import boat from "../images/learnus/ship.png";
+
+import learn_bird from "../images/learnus/bird.png";
+
+import animate_f1_sm from "../images/cellphone_pic/f1.png";
+import animate_f2_sm from "../images/cellphone_pic/f2.png";
+import animate_f3_sm from "../images/cellphone_pic/f3.png";
+import animate_f4_sm from "../images/cellphone_pic/f4.png";
+import animate_f5_sm from "../images/cellphone_pic/f5.png";
+import animate_f6_sm from "../images/cellphone_pic/f6.png";
+import animate_f7_sm from "../images/cellphone_pic/f7.png";
+import animate_f8_sm from "../images/cellphone_pic/f8.png";
+import animate_f9_sm from "../images/cellphone_pic/f9.png";
+import animate_f10_sm from "../images/cellphone_pic/f10.png";
 
 $(".title_logo").attr("src", title_logo);
 $(".nav_logo").attr("src", nav_logo);
@@ -75,6 +100,32 @@ $(".shop_dot1").attr("src", shop_dot1);
 $(".shop_dot2").attr("src", shop_dot1);
 $(".shop_pic").attr("src", shop_pic);
 
+$(".fs").attr("src", fsp);
+$(".spring").attr("src", spring);
+$(".summer").attr("src", summer);
+$(".fall").attr("src", fall);
+$(".winter").attr("src", winter);
+
+$(".learnus_icon").attr("src", learnus_icon);
+$(".learnus_title").attr("src", learnus_title);
+
+$(".learnus_Rwave").attr("src", learnus_Rwave);
+$(".learnus_Bwave").attr("src", learnus_Bwave);
+
+$(".boat").attr("src", boat);
+$(".learn_bird").attr("src", learn_bird);
+
+$(".animate_f1_sm ").attr("src", animate_f1_sm);
+$(".animate_f2_sm ").attr("src", animate_f2_sm);
+$(".animate_f3_sm ").attr("src", animate_f3_sm);
+$(".animate_f4_sm ").attr("src", animate_f4_sm);
+$(".animate_f5_sm ").attr("src", animate_f5_sm);
+$(".animate_f6_sm ").attr("src", animate_f6_sm);
+$(".animate_f7_sm ").attr("src", animate_f7_sm);
+$(".animate_f8_sm ").attr("src", animate_f8_sm);
+$(".animate_f9_sm ").attr("src", animate_f9_sm);
+$(".animate_f10_sm ").attr("src", animate_f10_sm);
+
 
 
 let controller = new ScrollMagic.Controller();
@@ -85,26 +136,30 @@ new ScrollMagic.Scene({
   triggerElement: '#story_Effect'
 })
   .setClassToggle("#story_Effect", "showIn")
+  .reverse(false)
   .addTo(controller);
 
 new ScrollMagic.Scene({
   triggerElement: '#story_Effect'
 })
   .setClassToggle(".story_rain", "rain_ani")
+  .reverse(false)
   .addTo(controller);
 
 new ScrollMagic.Scene({
   triggerElement: '.intro'
 })
   .setClassToggle(".intro", "showIn")
+  .reverse(false)
   .addTo(controller);
 
 
-  new ScrollMagic.Scene({
-    triggerElement: '.shop_page'
-  })
-    .setClassToggle(".shop_page", "showIn")
-    .addTo(controller);
+new ScrollMagic.Scene({
+  triggerElement: '.shop_page'
+})
+  .setClassToggle(".shop_page", "showIn")
+  .reverse(false)
+  .addTo(controller);
 
 
 
@@ -118,3 +173,44 @@ $('.slick').slick({
   nextArrow: $('.next'),
 });
 
+let hm_click = 0;
+$(".hm_circle").click(function () {
+  hm_click++;
+  if (hm_click % 2 === 1) {
+    $(".hm_circle").css("transform", " rotate(90deg)");
+    $(".hm_circle").css("border", " solid #fff 1px");
+    $(".hm_dot").css("background-color", " #fff ");
+    $(".nav_main").css("animation", "nav_hm 0.5s linear forwards");
+    $(".nav_btn").css("opacity", "1");
+  }
+  else {
+    $(".hm_circle").css("transform", " rotate(0deg)");
+    $(".hm_circle").css("border", " solid #000 1px");
+    $(".hm_dot").css("background-color", " #000 ");
+    $(".nav_main").css("animation", "nav_hm_back 0.5s linear forwards");
+    $(".nav_btn").css("opacity", "0");
+  }
+
+});
+
+$(document).ready(function () {
+  $(window).resize(function () {
+    var wdth = $(window).width();
+
+    if (wdth > 480) {
+      $(".nav_btn ").css("opacity", "1");
+    }
+    if (wdth <= 480 && hm_click % 2 === 1) {
+      $(".nav_btn ").css("opacity", "1");
+      $(".hm_circle").css("transform", " rotate(90deg)");
+      $(".hm_circle").css("border", " solid #fff 1px");
+      $(".hm_dot").css("background-color", " #fff ");
+      $(".nav_main").css("animation", "nav_hm 0.5s linear forwards");
+      $(".nav_btn").css("opacity", "1");
+    }
+    if (wdth <= 480 && hm_click % 2 === 0) {
+     $(".nav_btn").css("opacity", "0");
+     $(".nav_main").css("animation", "none");
+    }
+  });
+});

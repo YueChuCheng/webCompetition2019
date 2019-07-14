@@ -6,7 +6,7 @@ module.exports = {
     output:{
         path:path.join(__dirname,"./dist"),
         filename:'bundle[chunkhash].js',
-        publicPath:'/'
+        //publicPath:'/'
     },
     module:{
         rules:[{
@@ -40,7 +40,7 @@ module.exports = {
             {
                 loader: 'url-loader',
                 options: {
-                    limit:40000000,
+                    limit:400,
                     outputPath:'./images'
                 }
             },

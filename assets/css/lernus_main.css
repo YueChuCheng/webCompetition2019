@@ -1,0 +1,336 @@
+.lernus_main {
+    position: relative;
+    padding: 0;
+    /* take off */
+    display: grid;
+    grid-template-rows: 5vw 10vw 3vw;
+    grid-template-columns: 100%;
+    grid-row-gap: 10%;
+    justify-content: center;
+    justify-items: center;
+    padding-top: 10%;
+}
+
+.learnus_icon {
+    height: 100%;
+}
+
+.learnus_title {
+    height: 100%;
+}
+
+.learnus_btn {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+    width: 8vw;
+    border: solid #000 1px;
+    border-radius: 50vw;
+    font-size: 1.3vw;
+}
+
+.learnus_Rwave {
+    position: absolute;
+    height: auto;
+    width: 100vw;
+    z-index: -1;
+    top: 45vw;
+    left: 0;
+    animation: learnus_wave 5s linear infinite;
+}
+
+@keyframes learnus_wave {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2vw);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.learnus_Bwave {
+    position: absolute;
+    height: auto;
+    width: 100vw;
+    z-index: 100;
+    bottom: 0;
+    top: 48vw;
+    animation: learnus_wave2 5s linear 1s infinite;
+}
+
+@keyframes learnus_wave2 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4vw);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    background-color: #3abfff;
+    width: 100vw;
+    height: 5vw;
+    margin-top: 26vw;
+    z-index: 100000;
+}
+
+.boat {
+    height: auto;
+    width: 10vw;
+    position: absolute;
+    z-index: 50;
+    top: 125%;
+    left: 0;
+    animation: learnus_boat 20s linear infinite;
+}
+
+@keyframes learnus_boat {
+    0% {
+        top: 125%;
+        left: -10%;
+        transform: scale(1.3);
+    }
+    11.5% {
+        top: 118%;
+    }
+    25% {
+        top: 133%;
+        transform: scale(1);
+    }
+    37.5% {
+        top: 130%;
+        transform: scale(1);
+    }
+    50% {
+        top: 118%;
+        left: 50%;
+        transform: scale(1.2);
+    }
+    62.5% {
+        top: 112%;
+    }
+    75% {
+        top: 138%;
+        transform: scale(1);
+    }
+    100% {
+        top: 120%;
+        left: 100%;
+        transform: scale(1.2);
+    }
+}
+
+.learn_bird {
+    
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.learn_bird1 {
+    height: 2vw;
+    margin-top: 8%;
+    margin-left: -60%;
+    animation: learn_bird 5.8s linear infinite;
+}
+
+.learn_bird2 {
+    height: 2vw;
+    margin-top: 5%;
+    margin-left: -30%;
+    animation: learn_bird 6.3s linear 1s infinite;
+}
+
+.learn_bird3 {
+    height: 2vw;
+    margin-top: 8%;
+    margin-left: -23%;
+    animation: learn_bird 5.5s linear infinite;
+}
+
+.learn_bird4 {
+    height: 2.8vw;
+    margin-top: 30%;
+    margin-left: 28%;
+    animation: learn_bird 6.6s linear 1.5s infinite;
+}
+
+.learn_bird5 {
+    height: 2.8vw;
+    margin-top: 34%;
+    margin-left: 33%;
+    animation: learn_bird 6s linear infinite;
+}
+
+.learn_bird6 {
+    height: 2.8vw;
+    margin-top: 32%;
+    margin-left: 45%;
+    animation: learn_bird 5.8s linear 1.2s infinite;
+}
+
+@keyframes learn_bird {
+    0% {
+        opacity: 0;
+        transform: translate(20vw, 20vw);
+    }
+    25% {
+        opacity: 1;
+        transform: translate(0vw, 0vw);
+    }
+    75% {
+        opacity: 1;
+        transform: translate(0vw, 0vw);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-20vw, -20vw);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .lernus_main {
+        height: 60vh;
+      
+        display: grid;
+        grid-template-rows: 60px 100px 50px;
+        grid-template-columns: 100%;
+        grid-row-gap: 20px;
+        justify-content: center;
+        justify-items: center;
+        padding-top: 10vh;
+        align-self: center;
+    }
+    .learnus_Rwave {
+      
+        top: 72vh;
+    }
+    .learnus_Bwave {
+      
+        top: 75vh;
+     
+    }
+    
+    footer {
+        margin: 0;
+        height: 8vh;
+        align-self: flex-end;
+        
+    }
+    .lernus_sm{
+        display: grid;
+        grid-template-rows:1fr auto ;
+        height: 110vh;
+    }
+    .learnus_btn{
+        height: 50px;
+        width: 130px;
+        font-size: 20px;
+    }
+    .boat {
+        height: auto;
+        width: 60px;
+        position: absolute;
+        z-index: 50;
+        top: 0%;
+        left: 0;
+        margin-top: -10vh;
+        margin-left: 0;
+        animation: learnus_boat 20s linear infinite;
+    }
+    .learnus_icon{
+        height: 60px;
+    }
+    .learnus_title{
+        height: 100px;
+    }
+    .learn_bird{
+        opacity: 1;
+    }
+    .learn_bird1 {
+        height: 25px;
+        margin-top: 0vh;
+        margin-left: -80vw;
+        animation: learn_bird 5.8s linear infinite;
+    }
+    
+    .learn_bird2 {
+        height: 25px;
+        margin-top: -8vh;
+        margin-left: -40vw;
+        animation: learn_bird 6.3s linear 1s infinite;
+    }
+    
+    .learn_bird3 {
+        height: 25px;
+        margin-top: -4vh;
+        margin-left: -20vw;
+        animation: learn_bird 5.5s linear infinite;
+    }
+    
+    .learn_bird4 {
+        height: 30px;
+        margin-top: 50vh;
+        margin-left: 28vw;
+        animation: learn_bird 6.6s linear 1.5s infinite;
+    }
+    
+    .learn_bird5 {
+        height: 30px;
+        margin-top: 55vh;
+        margin-left: 35vw;
+        animation: learn_bird 6s linear infinite;
+    }
+    
+    .learn_bird6 {
+        height: 30px;
+        margin-top: 53vh;
+        margin-left: 60vw;
+        animation: learn_bird 5.8s linear 1.2s infinite;
+    }
+    @keyframes learnus_boat {
+        0% {
+            top: 125%;
+            left: -10%;
+            transform: scale(1.3);
+        }
+        11.5% {
+            top: 118%;
+        }
+        25% {
+            top: 123%;
+            transform: scale(1);
+        }
+        37.5% {
+            top: 125%;
+            transform: scale(1);
+        }
+        50% {
+            top: 118%;
+            left: 50%;
+            transform: scale(1.2);
+        }
+        62.5% {
+            top: 120%;
+        }
+        75% {
+            top: 128%;
+            transform: scale(1);
+        }
+        100% {
+            top: 118%;
+            left: 100%;
+            transform: scale(1.2);
+        }
+    }
+}

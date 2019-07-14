@@ -170,3 +170,15 @@
     margin-left:35%;
     transform:rotate(-52deg);
 }
+
+
+@media screen and (max-width: 480px) {
+    .animate{
+        display: none;
+        animation: none;
+    }
+    .home_animate{
+        display: none;
+        
+    }
+}

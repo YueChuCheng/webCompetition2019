@@ -54,7 +54,7 @@
         background-position: 0px 0px;
     }
     100%{
-        background-position: 1420px 0px;
+        background-position: 800px 0px;
     }
 }
 
@@ -176,7 +176,7 @@
 @keyframes intro_waves{
     0%{
         
-        background-position-y:365px;
+        background-position-y:220px;
     }
     100%{
       
