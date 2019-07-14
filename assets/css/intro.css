@@ -195,7 +195,7 @@ li {
     }
     .intro_y{
         z-index: -1;
-        width: 150px;
+        width: 40vw;
         height: auto;
         margin-top: 70vh;
         margin-left: 55vw;

@@ -102,6 +102,10 @@
 }
 
 @media screen and (max-width: 480px) {
+    .story_animate{
+        width: 0%;
+        height: 0%;
+    }
     .sm_none {
         display: none !important;
         visibility: hidden;
