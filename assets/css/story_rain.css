@@ -92,13 +92,13 @@
 
     .story_rain{
         animation: none;
-        height: 10px;
-        width: 35px;
+        height: 2.8vw;
+        width: 8vw;
         z-index: -1;
     }
     .animate-rain1{
 
-        margin-top:27vh;
+        margin-top:31vh;
         margin-left: 0vw;
     }
 
@@ -109,12 +109,12 @@
     }
     .animate-rain3{
 
-        margin-top:50vh;
+        margin-top:57vh;
         margin-left: -10vw;
     }
     .animate-rain4{
 
-        margin-top:33vh;
+        margin-top:42vh;
         margin-left: 35vw;
     }
     .animate-rain5{
@@ -123,10 +123,18 @@
     }
     .animate-rain6{
         margin-top:50vh;
-        margin-left: 70vw;
+        margin-left: 85vw;
     }
     .animate-rain7{
         margin-top:30vh;
         margin-left: 75vw;
+    }
+    .animate-rain8{
+        margin-top:95vh;
+        margin-left: 68vw;
+    }
+    .animate-rain9{
+        margin-top:95vh;
+        margin-left: 20vw;
     }
 }

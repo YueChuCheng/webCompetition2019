@@ -258,45 +258,45 @@ footer {
         opacity: 1;
     }
     .learn_bird1 {
-        height: 25px;
+        height: 5.5vw;
         margin-top: 0vh;
         margin-left: -80vw;
-        animation: learn_bird 5.8s linear infinite;
+        /* animation: learn_bird 5.8s linear infinite; */
     }
     
     .learn_bird2 {
-        height: 25px;
+        height:  5.5vw;
         margin-top: -8vh;
         margin-left: -40vw;
-        animation: learn_bird 6.3s linear 1s infinite;
+        /* animation: learn_bird 6.3s linear 1s infinite; */
     }
     
     .learn_bird3 {
-        height: 25px;
+        height: 5.5vw;
         margin-top: -4vh;
         margin-left: -20vw;
-        animation: learn_bird 5.5s linear infinite;
+        /* animation: learn_bird 5.5s linear infinite; */
     }
     
     .learn_bird4 {
-        height: 30px;
-        margin-top: 50vh;
-        margin-left: 28vw;
-        animation: learn_bird 6.6s linear 1.5s infinite;
+        height:  6.5vw;
+        margin-top: 55vh;
+        margin-left: 38vw;
+        /* animation: learn_bird 6.6s linear 1.5s infinite; */
     }
     
     .learn_bird5 {
-        height: 30px;
-        margin-top: 55vh;
-        margin-left: 35vw;
-        animation: learn_bird 6s linear infinite;
+        height:  6.5vw;
+        margin-top: 60vh;
+        margin-left: 48vw;
+        /* animation: learn_bird 6s linear infinite; */
     }
     
     .learn_bird6 {
-        height: 30px;
-        margin-top: 53vh;
-        margin-left: 60vw;
-        animation: learn_bird 5.8s linear 1.2s infinite;
+        height:  6.5vw;
+        margin-top: 56vh;
+        margin-left: 70vw;
+        /* animation: learn_bird 5.8s linear 1.2s infinite; */
     }
     @keyframes learnus_boat {
         0% {
