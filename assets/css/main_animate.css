@@ -133,9 +133,10 @@
         font-size: 3.5vw;
     }
     .home_title {
+        display: grid;
+        justify-items: center;
         z-index: 10000;
         margin-top: 15vh;
-        text-align: center;
         width: 100vw;
     }
     .title_logo {
