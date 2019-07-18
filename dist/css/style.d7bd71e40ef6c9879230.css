@@ -704,6 +704,7 @@ body {
   
 }
 .nav_logo {
+    cursor: pointer;
     position: relative;
     width: auto;
     height: 100%;
@@ -760,14 +761,14 @@ body {
         grid-template-rows: repeat(4, auto);
         grid-template-columns: 100px;
         grid-column-gap: 30px;
-        grid-row-gap: 10px;
+        grid-row-gap: 15px;
         grid-row: 2/3;
         grid-column: 2/3;
         margin-top: 10px;
         margin-right: 20px;
     }
     .nav_sec {
-        font-size: 25px;
+        font-size: 18px;
         color: #fff;
     }
     .nav_main {
@@ -775,7 +776,7 @@ body {
         width: 100vw;
         height: 100vh;
         padding-right: 0vw;
-        background-image: url(../images/cellphone_pic/mbs.png);
+        background-image: url(../assets/images/cellphone_pic/mbs.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position-x: 100vw;
@@ -1083,7 +1084,7 @@ body {
     width: 100%;
     height: 100%;
     /* 需用絕對路徑否則dist找不到 */
-    background-image: url(../images/cloud.png);
+    background-image: url(../../assets/images/cloud.png);
     -webkit-animation: cloud-ani 10s linear infinite;
             animation: cloud-ani 10s linear infinite;
     background-size: 800px auto;
@@ -1138,7 +1139,7 @@ body {
         justify-content: end;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 100vw;
-        background-image: url(../images/cellphone_pic/bgli.png);
+        background-image: url(../../assets/images/cellphone_pic/bgli.png);
         background-size: cover;
     }
     .main_page {
@@ -1184,9 +1185,10 @@ body {
         font-size: 3.5vw;
     }
     .home_title {
+        display: grid;
+        justify-items: center;
         z-index: 10000;
         margin-top: 15vh;
-        text-align: center;
         width: 100vw;
     }
     .title_logo {
@@ -2069,7 +2071,7 @@ body {
     position: absolute;
     height: 8vw;
     width: 6%;
-    background-image: url(../images/wave.png);
+    background-image: url(../../assets/images/wave.png);
     background-size: auto 130px;
     -webkit-animation: story_waves 5s linear infinite;
             animation: story_waves 5s linear infinite;
@@ -2373,7 +2375,7 @@ body {
 }
 .intro_bw {
     position: absolute;
-    background-image: url(../images/wave.png);
+    background-image: url(../../assets/images/wave.png);
     background-size: auto 220px;
     height: 15vw;
     width: 8.5%;
@@ -2388,6 +2390,9 @@ body {
     margin-left: 22.5%;
     width: 50vw;
 }
+.fs,.spring,.summer,.fall,.winter{
+    cursor: pointer;
+}
 li {
     list-style: none;
     cursor: pointer;
@@ -2397,8 +2402,8 @@ li {
     position: relative;
     height: 3vw;
     width: 3vw;
-    background-image: url(../images/fruit_intro/bl.png);
-    background-image: url(../assets/images/fruit_intro/bl.png);
+    background-image: url(../../images/fruit_intro/bl.png);
+    background-image: url(../../assets/images/fruit_intro/bl.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -2407,7 +2412,7 @@ li {
     position: relative;
     height: 3vw;
     width: 3vw;
-    background-image: url(../images/fruit_intro/br.png);
+    background-image: url(../../assets/images/fruit_intro/br.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -2650,7 +2655,7 @@ li {
     ;
     height: 5vw;
     width: 4vw;
-    background-image: url(../images/shop/rl1.png);
+    background-image: url(../../assets/images/shop/rl1.png);
     background-size: 100%;
     background-repeat: repeat-y;
     background-size: auto 80px;
@@ -2688,7 +2693,7 @@ li {
     ;
     height: 6vw;
     width: 4vw;
-    background-image: url(../images/shop/rl1.png);
+    background-image: url(../../assets/images/shop/rl1.png);
     background-size: 130%;
     background-repeat: repeat-y;
     background-size: auto 70px;
@@ -2724,7 +2729,7 @@ li {
 .shop_wave3 {
     height: 20vw;
     width: 12vw;
-    background-image: url(../images/shop/bl1.png);
+    background-image: url(../../assets/images/shop/bl1.png);
     background-size: auto 220px;
     background-repeat: repeat-y;
     -webkit-animation: shop_waves3 10s linear infinite;
@@ -2899,7 +2904,12 @@ li {
         margin-bottom: 0%;
     }
 }
+.lernus_main.showIn{
+    opacity: 1;
+}
 .lernus_main {
+    transition: all 1.8s;
+    opacity: 0;
     position: relative;
     padding: 0;
     /* take off */
@@ -3003,7 +3013,12 @@ li {
                 transform: translateY(0);
     }
 }
+footer.showIn{
+    opacity: 1;
+}
 footer {
+    transition: all 1.8s;
+    opacity: 0;
     position: relative;
     bottom: 0;
     background-color: #3abfff;
@@ -3380,8 +3395,210 @@ footer {
         }
     }
 }
- 
-
-
-
+.progress_bar.showIn {
+  
+    opacity: 1;
+}
+.progress_bar {
+    transition: opacity 0.5s;
+    opacity: 0;
+    z-index: 1000000;
+    height: 18vw;
+    width: 10vw;
+    position: fixed;
+    right: 2vw;
+    top: 15vh;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 2fr 1fr;
+}
+.intro_bartitle {
+    height: 100%;
+    display: grid;
+    align-content: space-between
+}
+.intro_bartitle a {
+    cursor: pointer;
+    margin: 0;
+    font-size: 1vw;
+}
+.intro_bar {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.intro_circle {
+    transition: background-color 0.2s;
+    position: absolute;
+    height: 0.8vw;
+    width: 0.8vw;
+    border-radius: 50vw;
+    background-color: red;
+    
+    left: calc(83.25% - 0.4vw); 
+}
+.intro_line {
+    height: 94%;
+    width: 1px;
+    background-color: #000;
+}
+.relative {
+    position: fixed;
+    padding-top: 0px;
+}
+.intro_main {
+    position: relative;
+    display: grid;
+    height: 40vw;
+    width: 100vw;
+    background-image: url(../../assets/images/page2_intro/bgd.png);
+    background-size: 100vw auto;
+    background-repeat: no-repeat;
+    align-items: center;
+    top: 90px;
+}
+.intro_title {
+    display: grid;
+    width: 100vw;
+    height: 70%;
+    background-color: rgba(255, 255, 255, 0.8);
+    justify-items: center;
+    align-content: center;
+    grid-template-rows: 4vw auto;
+    grid-row-gap: 3vw;
+}
+.intro_title h2 {
+    margin-bottom: 0;
+    font-size: 3.5vw;
+}
+.intro_title p {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 1.5vw;
+}
+.intro_sec {
    
+    position: relative;
+    display: grid;
+    height: 55vw;
+    width: 100vw;
+    top: 90px;
+    grid-template-rows: 1f;
+    grid-template-columns: 2fr 3fr;
+}
+.intro_text {
+    display: grid;
+    padding: 0 5vw;
+    padding-top: 12vw;
+    grid-row-gap: 2.5vw;
+}
+.intro_sec_1, .intro_sec_2, .intro_sec_3, .intro_sec_4 {
+    height: 55vw;
+    width: auto;
+}
+.intro_text_title p {
+    font-size: 1vw;
+    margin: 0;
+}
+.intro_text_title :nth-child(1) {
+    font-size: 1.5vw;
+}
+.intro_text_title h3 {
+    font-size: 3vw;
+    margin: 0;
+    margin-top: 0.5vw;
+    margin-bottom: 2.5vw;
+}
+.intro_text_btn p {
+    cursor: pointer;
+    font-size: 1.5vw;
+    margin: 0;
+}
+.intro_text_btn p img {
+    opacity: 0;
+    margin-left: 0.5vw;
+    height: 1.8vw;
+}
+.intro_text_btn {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 12vw);
+    align-items: center;
+}
+.intro_text_btn :nth-child(3) {
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+.pic35, .pic68, .pic122, .pic911 {
+    height: auto;
+    width: 15vw;
+    justify-self: flex-end;
+    align-self: flex-start;
+}
+.test {
+    background-color: pink;
+}
+.allyear {
+
+    position: relative;
+    background-image: url(../../assets/images/page2_intro/all_year/fsbg.jpg);
+    background-size: cover;
+    display: grid;
+    height: 55vw;
+    width: 100vw;
+    top: 90px;
+    align-items: center;
+    padding-top: 10vw;
+}
+.allyear_text {
+    display: grid;
+    justify-items: center;
+}
+.allyear_text p, .allyear_text h2 {
+    margin: 0;
+}
+.allyear_text h2 {
+    margin-top: 0.5vw;
+    margin-bottom: 2.5vw;
+    font-size: 3vw;
+}
+.allyear_text:nth-child(1) {
+    font-size: 1.5vw;
+}
+.allyear_text:nth-child(3) {
+    font-size: 1vw;
+}
+.allyear_btn p {
+    cursor: pointer;
+    margin: 0;
+    font-size: 1.5vw;
+    text-align: center;
+}
+.allyear_btn {
+    display: grid;
+    justify-content: center;
+    align-self: flex-start;
+    grid-template-rows: repeat(2, 7vw);
+    grid-template-columns: repeat(2, 10vw);
+}
+.allyear_btn p img {
+    opacity: 0;
+    margin-left: 0.5vw;
+    margin-bottom: 1vw;
+    height: 2.5vw;
+}
+.pink{
+    background-color: pink !important; 
+}
+.lightblue{
+    background-color: #00d7ff !important; 
+}
+.orange{
+    background-color: #ffb465 !important; 
+}
+.gray{
+    background-color: #d4e4e4 !important; 
+}
+.red{
+    background-color: red ; 
+}

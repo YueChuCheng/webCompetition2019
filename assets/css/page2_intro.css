@@ -1,0 +1,249 @@
+
+.progress_bar.showIn {
+  
+    opacity: 1;
+
+}
+
+
+.progress_bar {
+   
+
+    transition: opacity 0.5s;
+    opacity: 0;
+    z-index: 1000000;
+    height: 18vw;
+    width: 10vw;
+    position: fixed;
+    right: 2vw;
+    top: 15vh;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 2fr 1fr;
+}
+
+.intro_bartitle {
+    height: 100%;
+    display: grid;
+    align-content: space-between
+}
+
+.intro_bartitle a {
+    cursor: pointer;
+    margin: 0;
+    font-size: 1vw;
+}
+
+.intro_bar {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.intro_circle {
+    transition: background-color 0.2s;
+    position: absolute;
+    height: 0.8vw;
+    width: 0.8vw;
+    border-radius: 50vw;
+    background-color: red;
+   
+    left: calc(83.25% - 0.4vw); 
+}
+
+.intro_line {
+    height: 94%;
+    width: 1px;
+    background-color: #000;
+}
+
+.relative {
+    position: fixed;
+    padding-top: 0px;
+}
+
+.intro_main {
+    position: relative;
+    display: grid;
+    height: 40vw;
+    width: 100vw;
+    background-image: url(../../assets/images/page2_intro/bgd.png);
+    background-size: 100vw auto;
+    background-repeat: no-repeat;
+    align-items: center;
+    top: 90px;
+}
+
+.intro_title {
+    display: grid;
+    width: 100vw;
+    height: 70%;
+    background-color: rgba(255, 255, 255, 0.8);
+    justify-items: center;
+    align-content: center;
+    grid-template-rows: 4vw auto;
+    grid-row-gap: 3vw;
+}
+
+.intro_title h2 {
+    margin-bottom: 0;
+    font-size: 3.5vw;
+}
+
+.intro_title p {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 1.5vw;
+}
+
+.intro_sec {
+   
+    position: relative;
+    display: grid;
+    height: 55vw;
+    width: 100vw;
+    top: 90px;
+    grid-template-rows: 1f;
+    grid-template-columns: 2fr 3fr;
+}
+
+.intro_text {
+    display: grid;
+    padding: 0 5vw;
+    padding-top: 12vw;
+    grid-row-gap: 2.5vw;
+}
+
+.intro_sec_1, .intro_sec_2, .intro_sec_3, .intro_sec_4 {
+    height: 55vw;
+    width: auto;
+}
+
+.intro_text_title p {
+    font-size: 1vw;
+    margin: 0;
+}
+
+.intro_text_title :nth-child(1) {
+    font-size: 1.5vw;
+}
+
+.intro_text_title h3 {
+    font-size: 3vw;
+    margin: 0;
+    margin-top: 0.5vw;
+    margin-bottom: 2.5vw;
+}
+
+.intro_text_btn p {
+    cursor: pointer;
+    font-size: 1.5vw;
+    margin: 0;
+}
+
+.intro_text_btn p img {
+    opacity: 0;
+    margin-left: 0.5vw;
+    height: 1.8vw;
+}
+
+.intro_text_btn {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 12vw);
+    align-items: center;
+}
+
+.intro_text_btn :nth-child(3) {
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+
+.pic35, .pic68, .pic122, .pic911 {
+    height: auto;
+    width: 15vw;
+    justify-self: flex-end;
+    align-self: flex-start;
+}
+
+.test {
+    background-color: pink;
+}
+
+.allyear {
+
+    position: relative;
+    background-image: url(../../assets/images/page2_intro/all_year/fsbg.jpg);
+    background-size: cover;
+    display: grid;
+    height: 55vw;
+    width: 100vw;
+    top: 90px;
+    align-items: center;
+    padding-top: 10vw;
+}
+
+.allyear_text {
+    display: grid;
+    justify-items: center;
+}
+
+.allyear_text p, .allyear_text h2 {
+    margin: 0;
+}
+
+.allyear_text h2 {
+    margin-top: 0.5vw;
+    margin-bottom: 2.5vw;
+    font-size: 3vw;
+}
+
+.allyear_text:nth-child(1) {
+    font-size: 1.5vw;
+}
+
+.allyear_text:nth-child(3) {
+    font-size: 1vw;
+}
+
+.allyear_btn p {
+    cursor: pointer;
+    margin: 0;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.allyear_btn {
+    display: grid;
+    justify-content: center;
+    align-self: flex-start;
+    grid-template-rows: repeat(2, 7vw);
+    grid-template-columns: repeat(2, 10vw);
+}
+
+.allyear_btn p img {
+    opacity: 0;
+    margin-left: 0.5vw;
+    margin-bottom: 1vw;
+    width: 2.5vw;
+}
+
+.pink{
+    background-color: pink !important; 
+}
+
+.lightblue{
+    background-color: #00d7ff !important; 
+}
+
+.orange{
+    background-color: #ffb465 !important; 
+}
+
+.gray{
+    background-color: #d4e4e4 !important; 
+}
+
+.red{
+    background-color: red ; 
+}

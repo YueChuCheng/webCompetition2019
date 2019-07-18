@@ -66,6 +66,10 @@
     width: 50vw;
 }
 
+.fs,.spring,.summer,.fall,.winter{
+    cursor: pointer;
+}
+
 li {
     list-style: none;
     cursor: pointer;

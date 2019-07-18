@@ -7,9 +7,10 @@ import "../../node_modules/slick-carousel/slick/slick.js";
 import "../../node_modules/slick-carousel/slick/slick.css";
 import "../../node_modules/slick-carousel/slick/slick-theme.css";
 import '../css/style.css';
+
 import ScrollMagic from "scrollmagic";
 
-import tree from "../images/tree.png";
+
 import bgi from "../images/bg.png";
 import bird from "../images/bird.png";
 import g_pa from "../images/grandpa.png";
@@ -67,11 +68,46 @@ import animate_f8_sm from "../images/cellphone_pic/f8.png";
 import animate_f9_sm from "../images/cellphone_pic/f9.png";
 import animate_f10_sm from "../images/cellphone_pic/f10.png";
 
+
+import intro_sec_1 from "../images/page2_intro/ssbg.jpg";
+import intro_sec_2 from "../images/page2_intro/summer/msbg.jpg"
+import intro_sec_3 from "../images/page2_intro/fall/asbg.jpg"
+import intro_sec_4 from "../images/page2_intro/winter/wsbg.jpg"
+import pic35 from "../images/page2_intro/35.png";
+import pic68 from "../images/page2_intro/68.png";
+import pic911 from "../images/page2_intro/911.png";
+import pic122 from "../images/page2_intro/122.png";
+
+import intro_bean from "../images/page2_intro/spring/bean.png";
+import intro_peach from "../images/page2_intro/spring/peach.png";
+import intro_red from "../images/page2_intro/spring/red.png";
+import intro_soure from "../images/page2_intro/spring/soure.png";
+
+import intro_mango from "../images/page2_intro/summer/mango.png";
+import intro_lich from "../images/page2_intro/summer/lich.png";
+import intro_ln from "../images/page2_intro/summer/ln.png";
+import intro_dragon from "../images/page2_intro/summer/dragon.png";
+import intro_rice from "../images/page2_intro/summer/rice.png";
+
+import intro_jade from "../images/page2_intro/fall/jade.png";
+import intro_tro from "../images/page2_intro/fall/tro.png";
+
+import intro_tomato from "../images/page2_intro/winter/tomato.png";
+import intro_onion from "../images/page2_intro/winter/onion.png";
+import intro_juju from "../images/page2_intro/winter/juju.png";
+import intro_wax from "../images/page2_intro/winter/wax.png";
+import intro_radish from "../images/page2_intro/winter/radish.png";
+
+import intro_pine from "../images/page2_intro/all_year/pine.png";
+import intro_papa from "../images/page2_intro/all_year/papa.png";
+import intro_gava from "../images/page2_intro/all_year/gava.png";
+import intro_bana from "../images/page2_intro/all_year/bana.png";
+
 $(".title_logo").attr("src", title_logo);
 $(".nav_logo").attr("src", nav_logo);
 
 $(".main_pic").attr("src", bgi);
-$("#tree").attr("src", tree);
+
 $(".g-pa").attr("src", g_pa);
 $(".bird").attr("src", bird);
 
@@ -126,6 +162,40 @@ $(".animate_f8_sm ").attr("src", animate_f8_sm);
 $(".animate_f9_sm ").attr("src", animate_f9_sm);
 $(".animate_f10_sm ").attr("src", animate_f10_sm);
 
+$(".intro_sec_1 ").attr("src", intro_sec_1);
+$(".intro_sec_2 ").attr("src", intro_sec_2);
+$(".intro_sec_3 ").attr("src", intro_sec_3);
+$(".intro_sec_4 ").attr("src", intro_sec_4);
+$(".pic35 ").attr("src", pic35);
+$(".pic68 ").attr("src", pic68);
+$(".pic911 ").attr("src", pic911);
+$(".pic122 ").attr("src", pic122);
+
+$(".intro_peach ").attr("src", intro_peach);
+$(".intro_bean ").attr("src", intro_bean);
+$(".intro_red ").attr("src", intro_red);
+$(".intro_soure ").attr("src", intro_soure);
+
+
+$(".intro_mango ").attr("src", intro_mango);
+$(".intro_lich ").attr("src", intro_lich);
+$(".intro_ln ").attr("src", intro_ln);
+$(".intro_dragon ").attr("src", intro_dragon);
+$(".intro_rice ").attr("src", intro_rice);
+
+$(".intro_jade ").attr("src", intro_jade);
+$(".intro_tro ").attr("src", intro_tro);
+
+$(".intro_tomato ").attr("src", intro_tomato);
+$(".intro_onion ").attr("src", intro_onion);
+$(".intro_juju ").attr("src", intro_juju);
+$(".intro_wax ").attr("src", intro_wax);
+$(".intro_radish ").attr("src", intro_radish);
+
+$(".intro_pine ").attr("src", intro_pine);
+$(".intro_papa ").attr("src", intro_papa);
+$(".intro_gava ").attr("src", intro_gava);
+$(".intro_bana ").attr("src", intro_bana);
 
 
 let controller = new ScrollMagic.Controller();
@@ -154,12 +224,70 @@ new ScrollMagic.Scene({
   .addTo(controller);
 
 
+
+
+
 new ScrollMagic.Scene({
   triggerElement: '.shop_page'
 })
   .setClassToggle(".shop_page", "showIn")
   .reverse(false)
   .addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: '.lernus_main'
+})
+  .setClassToggle(".lernus_main", "showIn")
+  .reverse(false)
+  .addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: '.lernus_main'
+})
+  .setClassToggle("footer", "showIn")
+  .reverse(false)
+  .addTo(controller);
+
+//page2_intro_start
+
+new ScrollMagic.Scene({
+  triggerElement: '#allyear'
+})
+  .setClassToggle(".progress_bar", "showIn")
+  .addTo(controller);
+new ScrollMagic.Scene({
+  triggerElement: '#allyear'
+})
+  .setClassToggle(".intro_circle", "red")
+  .addTo(controller);
+
+
+new ScrollMagic.Scene({
+  triggerElement: '#spring'
+})
+  .setClassToggle(".intro_circle", "pink")
+  .addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: '#summer'
+})
+  .setClassToggle(".intro_circle", "lightblue")
+  .addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: '#fall'
+})
+  .setClassToggle(".intro_circle", "orange")
+  .addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: '#winter'
+})
+  .setClassToggle(".intro_circle", "gray")
+  .addTo(controller);
+
+
+//page2_intro_end
 
 
 
@@ -209,8 +337,95 @@ $(document).ready(function () {
       $(".nav_btn").css("opacity", "1");
     }
     if (wdth <= 480 && hm_click % 2 === 0) {
-     $(".nav_btn").css("opacity", "0");
-     $(".nav_main").css("animation", "none");
+      $(".nav_btn").css("opacity", "0");
+      $(".nav_main").css("animation", "none");
     }
   });
+
+  //page_intro btn start
+  for (let btn_x = 1; btn_x <= 5; btn_x++) {
+    let btn_cout = $('.btn_' + btn_x).children().length;
+    for (let btn_y = 1; btn_y <= btn_cout; btn_y++) {
+      $(".btn_" + btn_x + " p:nth-child(" + btn_y + ")").hover(function () {
+        $(".btn_" + btn_x + " p:nth-child(" + btn_y + ") img").css("opacity", "1");
+
+
+      }, function () {
+        $(".btn_" + btn_x + " p:nth-child(" + btn_y + ") img").css("opacity", "0");
+
+      }
+      );
+    }
+
+
+  }
+  //page_intro btn end
+  $(".fs").click(function () {
+    window.location.assign("../intro.html");
+
+  });
+  $(".spring ").click(function () {
+    window.location.assign("../intro.html ");
+  });
+  $(".summer ").click(function () {
+    window.location.assign("../intro.html ");
+  });
+  $(".fall ").click(function () {
+    window.location.assign("../intro.html ");
+  });
+  $(".winter ").click(function () {
+    window.location.assign("../intro.html ");
+  });
+
+  $(".nav_logo ").click(function () {
+    window.location.assign("../index.html ");
+  });
+
+
+});
+
+
+
+
+
+
+//計算page2 點點跑的位置
+
+$(function () {
+  $(window).scroll(function () {
+    let scrollVal = $(this).scrollTop();
+    let window_height = $(document).height()
+   
+    $(".intro_circle").css("top", "calc(" + (scrollVal) / window_height *(4122 / 3512)+ " * 16.92vw + 0.54vw  )");
+
+  });
+});
+
+
+
+function moveTo(name) {
+  let offset = $(name).offset();
+  let $body = $('html');
+  $body.animate({
+    scrollTop: offset.top
+  }, 600);
+}
+$('.btn_intro_main').click(function (event) {
+  moveTo('#intro_main');
+});
+
+$('.btn_spring').click(function (event) {
+  moveTo('#spring');
+});
+$('.btn_summer').click(function (event) {
+  moveTo('#summer');
+});
+$('.btn_fall').click(function (event) {
+  moveTo('#fall');
+});
+$('.btn_winter').click(function (event) {
+  moveTo('#winter');
+});
+$('.btn_allyear').click(function (event) {
+  moveTo('#allyear');
 });
