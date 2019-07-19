@@ -3,12 +3,13 @@
     position: absolute;
     display: grid;
     padding-right: 2vw;
+    padding-left: 2vw;
     width: 100vw;
     height: 80px;
     text-align: center;
     grid-template-rows: 80px;
     grid-template-columns: auto 1fr;
-    padding-top: 30px;
+    
   
 }
 
@@ -20,7 +21,8 @@
 }
 
 .nav_btn {
-    
+    transition: color 0.5s;
+    color: #000;
     justify-self: end;
     align-content: center;
     display: grid;
@@ -51,7 +53,7 @@
         text-align: center;
         grid-template-rows: 60px;
         grid-template-columns: auto 1fr;
-        padding-top: 30px;
+        /* padding-top: 30px; */
     }
     .nav_sec {
         font-size: 15px;

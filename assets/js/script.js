@@ -103,6 +103,19 @@ import intro_papa from "../images/page2_intro/all_year/papa.png";
 import intro_gava from "../images/page2_intro/all_year/gava.png";
 import intro_bana from "../images/page2_intro/all_year/bana.png";
 
+import learn_us_title from "../images/team_pic/wlogo.png";
+import member_1_pic from "../images/team_pic/b1.png";
+import member_2_pic from "../images/team_pic/b2.png";
+import member_3_pic from "../images/team_pic/b3.png";
+
+
+import page2_learn_b1b from "../images/team_pic/b1b.png";
+import page2_learn_b2b from "../images/team_pic/b2b.png";
+import page2_learn_b3b from "../images/team_pic/b3b.png";
+
+
+
+
 $(".title_logo").attr("src", title_logo);
 $(".nav_logo").attr("src", nav_logo);
 
@@ -198,6 +211,18 @@ $(".intro_gava ").attr("src", intro_gava);
 $(".intro_bana ").attr("src", intro_bana);
 
 
+$(".learn_us_title ").attr("src", learn_us_title);
+$(".member_1_pic ").attr("src", member_1_pic);
+$(".member_2_pic ").attr("src", member_2_pic);
+$(".member_3_pic ").attr("src", member_3_pic);
+
+$(".page2_learn_b1b ").attr("src", page2_learn_b1b);
+$(".page2_learn_b2b ").attr("src", page2_learn_b2b);
+$(".page2_learn_b3b ").attr("src", page2_learn_b3b);
+
+
+
+
 let controller = new ScrollMagic.Controller();
 
 let i = 0;
@@ -286,6 +311,11 @@ new ScrollMagic.Scene({
   .setClassToggle(".intro_circle", "gray")
   .addTo(controller);
 
+  new ScrollMagic.Scene({
+    triggerElement: '.learn_us_main_sec2'
+  })
+    .setClassToggle(".nav_btn", "black")
+    .addTo(controller);
 
 //page2_intro_end
 
