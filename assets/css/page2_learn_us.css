@@ -1,5 +1,10 @@
 .color_white {
     color: #fff;
+   
+}
+.color_white .nav_sec:hover {
+    border: #fff solid 1px !important;
+   
 }
 
 
@@ -227,7 +232,12 @@
 
 
 
+.black .nav_sec:hover {
+    border: #000 solid 1px !important;
+   
+}
 
 .black{
     color:#000;
+    
 }

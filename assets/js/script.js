@@ -317,6 +317,9 @@ new ScrollMagic.Scene({
     .setClassToggle(".nav_btn", "black")
     .addTo(controller);
 
+   
+
+
 //page2_intro_end
 
 
