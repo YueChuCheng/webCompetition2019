@@ -778,7 +778,7 @@ body {
         width: 100vw;
         height: 100vh;
         padding-right: 0vw;
-        background-image: url(../assets/images/cellphone_pic/mbs.png);
+        background-image: url(../images/cellphone_pic/mbs.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position-x: 100vw;
@@ -1086,7 +1086,7 @@ body {
     width: 100%;
     height: 100%;
     /* 需用絕對路徑否則dist找不到 */
-    background-image: url(../../assets/images/cloud.png);
+    background-image: url(../images/cloud.png);
     -webkit-animation: cloud-ani 10s linear infinite;
             animation: cloud-ani 10s linear infinite;
     background-size: 800px auto;
@@ -1141,7 +1141,7 @@ body {
         justify-content: end;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 100vw;
-        background-image: url(../../assets/images/cellphone_pic/bgli.png);
+        background-image: url(../images/cellphone_pic/bgli.png);
         background-size: cover;
     }
     .main_page {
@@ -1863,7 +1863,7 @@ body {
     position: absolute;
     height: 23%;
     width: 5%;
-    background-image: url(../../assets/images/wave.png);
+    background-image: url(../../images/wave.png);
     background-size: auto 130px;
     animation: story_waves 5s linear infinite;
     margin-top: 32%;
@@ -1885,7 +1885,7 @@ body {
 .peach_ani {
     z-index: 1000;
     position: absolute;
-    background-image: url(../../assets/images/main_story/peach.png);
+    background-image: url(../../images/main_story/peach.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
     width: 28.6vw;
@@ -2073,7 +2073,7 @@ body {
     position: absolute;
     height: 8vw;
     width: 6%;
-    background-image: url(../../assets/images/wave.png);
+    background-image: url(../images/wave.png);
     background-size: auto 130px;
     -webkit-animation: story_waves 5s linear infinite;
             animation: story_waves 5s linear infinite;
@@ -2377,7 +2377,7 @@ body {
 }
 .intro_bw {
     position: absolute;
-    background-image: url(../../assets/images/wave.png);
+    background-image: url(../images/wave.png);
     background-size: auto 220px;
     height: 15vw;
     width: 8.5%;
@@ -2404,8 +2404,8 @@ li {
     position: relative;
     height: 3vw;
     width: 3vw;
-    background-image: url(../../images/fruit_intro/bl.png);
-    background-image: url(../../assets/images/fruit_intro/bl.png);
+    background-image: url(../images/fruit_intro/bl.png);
+    background-image: url(../images/fruit_intro/bl.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -2414,7 +2414,7 @@ li {
     position: relative;
     height: 3vw;
     width: 3vw;
-    background-image: url(../../assets/images/fruit_intro/br.png);
+    background-image: url(../images/fruit_intro/br.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -2657,7 +2657,7 @@ li {
     ;
     height: 5vw;
     width: 4vw;
-    background-image: url(../../assets/images/shop/rl1.png);
+    background-image: url(../images/shop/rl1.png);
     background-size: 100%;
     background-repeat: repeat-y;
     background-size: auto 80px;
@@ -2695,7 +2695,7 @@ li {
     ;
     height: 6vw;
     width: 4vw;
-    background-image: url(../../assets/images/shop/rl1.png);
+    background-image: url(../images/shop/rl1.png);
     background-size: 130%;
     background-repeat: repeat-y;
     background-size: auto 70px;
@@ -2731,7 +2731,7 @@ li {
 .shop_wave3 {
     height: 20vw;
     width: 12vw;
-    background-image: url(../../assets/images/shop/bl1.png);
+    background-image: url(../images/shop/bl1.png);
     background-size: auto 220px;
     background-repeat: repeat-y;
     -webkit-animation: shop_waves3 10s linear infinite;
@@ -3509,7 +3509,7 @@ footer {
     display: grid;
     height: 40vw;
     width: 100vw;
-    background-image: url(../../assets/images/page2_intro/bgd.png);
+    background-image: url(../images/page2_intro/bgd.png);
     background-size: 100vw auto;
     background-repeat: no-repeat;
     align-items: center;
@@ -3599,7 +3599,7 @@ footer {
 .allyear {
 
     position: relative;
-    background-image: url(../../assets/images/page2_intro/all_year/fsbg.jpg);
+    background-image: url(../images/page2_intro/all_year/fsbg.jpg);
     background-size: cover;
     display: grid;
     height: 55vw;

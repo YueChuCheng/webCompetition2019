@@ -411,7 +411,7 @@ $(document).ready(function () {
   });
 
   $(".nav_logo ").click(function () {
-    window.location.assign("../index.html ");
+    window.location.assign("https://contest.cpmah.org.tw/~C2019b195/");
   });
 
 
@@ -444,7 +444,7 @@ function moveTo(name) {
   }, 600);
 }
 $('.btn_intro_main').click(function (event) {
-  moveTo('#intro_main');
+  moveTo("body");
 });
 
 $('.btn_spring').click(function (event) {
