@@ -113,6 +113,17 @@ import page2_learn_b1b from "../images/team_pic/b1b.png";
 import page2_learn_b2b from "../images/team_pic/b2b.png";
 import page2_learn_b3b from "../images/team_pic/b3b.png";
 
+import story_main_peach from "../images/page2_story/part1/peach.png";
+import story_main_pa from "../images/page2_story/part2/gfi.png";
+import story_main_lbg from "../images/page2_story/part2/lbg.png";
+import story_main_rbg from "../images/page2_story/part2/rbg.png";
+import story_main_bbg from "../images/page2_story/part2/bbg.png";
+import story_main3_footer from "../images/page2_story/part3/footer.png";
+import story_main3_mountain from "../images/page2_story/part3/mbg.png";
+import story_main3_title from "../images/page2_story/part3/welcome.png";
+import story_main3_leaflb from "../images/page2_story/part3/bleaf.png";
+import story_main3_leafdb from "../images/page2_story/part3/dleaf.png";
+import story_main3_leafr from "../images/page2_story/part3/rleaf.png";
 
 
 
@@ -220,6 +231,17 @@ $(".page2_learn_b1b ").attr("src", page2_learn_b1b);
 $(".page2_learn_b2b ").attr("src", page2_learn_b2b);
 $(".page2_learn_b3b ").attr("src", page2_learn_b3b);
 
+$(".story_main_peach ").attr("src", story_main_peach);
+$(".story_main_pa img  ").attr("src", story_main_pa);
+$(".story_main_lbg").attr("src", story_main_lbg);
+$(".story_main_rbg").attr("src", story_main_rbg);
+$(".story_main_bbg").attr("src", story_main_bbg);
+$(".story_main3_footer").attr("src", story_main3_footer);
+$(".story_main3_mountain").attr("src", story_main3_mountain);
+$(".story_main3_title").attr("src", story_main3_title);
+$(".story_main3_leaflb").attr("src", story_main3_leaflb);
+$(".story_main3_leafdb").attr("src", story_main3_leafdb);
+$(".story_main3_leafr").attr("src", story_main3_leafr);
 
 
 
@@ -247,6 +269,82 @@ new ScrollMagic.Scene({
   .setClassToggle(".intro", "showIn")
   .reverse(false)
   .addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: '.page2_story_main'
+})
+  .setClassToggle(".page2_story_main", "showIn")
+  .reverse(false)
+  .addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: '.page2_story_main2'
+})
+  .setClassToggle(".page2_story_main2", "showIn")
+  .reverse(false)
+  .addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: '.page2_story_main3'
+})
+  .setClassToggle(".page2_story_main3", "showIn")
+  .reverse(false)
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '.page2_story_main3'
+  })
+    .setClassToggle(".story_main_rain", "story-rain")
+    .reverse(false)
+    .addTo(controller);
+  
+  new ScrollMagic.Scene({
+    triggerElement: '.page2_story_main3'
+  })
+    .setClassToggle(".story_main3_mountain", "story_main_bg")
+    .reverse(false)
+    .addTo(controller);
+  
+    new ScrollMagic.Scene({
+      triggerElement: '.page2_story_main3'
+    })
+      .setClassToggle(".story_main3_footer", "story_main_bg")
+      .reverse(false)
+      .addTo(controller);
+
+ new ScrollMagic.Scene({
+      triggerElement: '.page2_story_main3'
+    })
+      .setClassToggle(".story_leaf", "story_main_leaf")
+      .reverse(false)
+      .addTo(controller);
+
+
+      new ScrollMagic.Scene({
+        triggerElement: '.page2_story_main3'
+      })
+        .setClassToggle(".story_main3_title", "story_main_showIn")
+        .reverse(false)
+        .addTo(controller);
+  
+
+new ScrollMagic.Scene({
+  triggerElement: '.page2_story_main2'
+})
+  .setClassToggle(".story_main_bgani", "story_main_bg")
+  .reverse(false)
+  .addTo(controller);
+
+
+new ScrollMagic.Scene({
+  triggerElement: '.page2_story_main2'
+})
+  .setClassToggle(".story_main_pa", "story_main_showIn")
+  .reverse(false)
+  .addTo(controller);
+
+
+
 
 
 
@@ -311,13 +409,13 @@ new ScrollMagic.Scene({
   .setClassToggle(".intro_circle", "gray")
   .addTo(controller);
 
-  new ScrollMagic.Scene({
-    triggerElement: '.learn_us_main_sec2'
-  })
-    .setClassToggle(".nav_btn", "black")
-    .addTo(controller);
+new ScrollMagic.Scene({
+  triggerElement: '.learn_us_main_sec2'
+})
+  .setClassToggle(".nav_btn", "black")
+  .addTo(controller);
 
-   
+
 
 
 //page2_intro_end
@@ -392,31 +490,25 @@ $(document).ready(function () {
 
 
   }
-  //page_intro btn end
-  $(".fs").click(function () {
-    window.location.assign("../intro.html");
-
-  });
-  $(".spring ").click(function () {
-    window.location.assign("../intro.html ");
-  });
-  $(".summer ").click(function () {
-    window.location.assign("../intro.html ");
-  });
-  $(".fall ").click(function () {
-    window.location.assign("../intro.html ");
-  });
-  $(".winter ").click(function () {
-    window.location.assign("../intro.html ");
-  });
+  
 
   $(".nav_logo ").click(function () {
     window.location.assign("https://contest.cpmah.org.tw/~C2019b195/");
   });
 
 
+  $(".intro_text_btn p ").click(function () {
+    $(".fruit_message").removeClass('no_show');
 });
 
+
+  $(".fruit_message_card_off ").click(function () {
+      $(".fruit_message").addClass('no_show');
+  });
+
+
+
+});
 
 
 
@@ -428,8 +520,8 @@ $(function () {
   $(window).scroll(function () {
     let scrollVal = $(this).scrollTop();
     let window_height = $(document).height()
-   
-    $(".intro_circle").css("top", "calc(" + (scrollVal) / window_height *(4122 / 3512)+ " * 16.92vw + 0.54vw  )");
+
+    $(".intro_circle").css("top", "calc(" + (scrollVal) / window_height * (4122 / 3512) + " * 16.92vw + 0.54vw  )");
 
   });
 });
@@ -462,3 +554,47 @@ $('.btn_winter').click(function (event) {
 $('.btn_allyear').click(function (event) {
   moveTo('#allyear');
 });
+
+
+new Vue({
+  el:'#fruit_message_card_text',
+  data: {
+      textInput: ''
+  },
+  computed: {
+     textOutput:function(){
+         //data只用來定義變數，在使用變數時，直接用變數的properties名稱 
+         return `my input is ${this.textInput}`; //印出字串
+     },
+     htmlOutput:function(){
+          return`
+              <h1>
+                  the input is ${this.textInput}
+              </h1>
+          `
+     }
+  },
+  methods: {
+      onInput:function(event){
+          this.textInput=event.target.value; //將輸入值放入textInput
+      }
+  },
+  //template自動產生新頁面 
+  //• v-html可以設定有HTML標籤的輸出內容
+  template:`    
+  <div >
+  <div class="view">
+      <label for="text">Please Input:</label>
+      <input v-on:input="onInput" type="text" id="text"><!--v-on:input="onInput" vue的及時印出資料-->
+  </div>
+  <!--• 利用兩兩個⼤大括號{{..}}就可以使⽤用Vue Instance裡的變數 
+      • 在{{}}之中，可以是data變數，也可以是computed變數-->
+  <p class="data">{{textOutput}}</p>
+  <div v-html="htmlOutput"></div>
+</div>`
+})
+
+
+
+
+

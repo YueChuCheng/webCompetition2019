@@ -1,0 +1,370 @@
+.showIn {
+    opacity: 1 !important;
+}
+
+.page2_story_main {
+    opacity: 0;
+    position: relative;
+    width: 100vw;
+    height: 50vw;
+    background-image: url(../../assets/images/page2_story/part1/cbg.png);
+    background-size: 100vw 50vw;
+    background-repeat: no-repeat;
+    display: grid;
+}
+
+.story_main_cloud {
+    top: 0;
+    position: absolute;
+    width: 100vw;
+    height: 40vw;
+    background-image: url(../../assets/images/page2_story/part1/cloud.png);
+    background-size: auto 376px;
+    animation: story_main_cloud 25s linear infinite;
+}
+
+@keyframes story_main_cloud {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 854.5px 0px;
+    }
+}
+
+.story_main_peach {
+    position: absolute;
+    width: 9vw;
+    left: -9vw;
+    top: 41.5vw;
+    animation-name: story_main_peach, idle_p;
+    animation-duration: 25s, 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes story_main_peach {
+    0% {
+        left: -9vw;
+    }
+    50% {}
+    100% {
+        left: 109vw;
+    }
+}
+
+.story_main_text {
+    position: relative;
+    height: 40vw;
+    width: 36vw;
+    right: 0px;
+    justify-self: end;
+    display: grid;
+    grid-template-rows: 2vw auto;
+    grid-row-gap: 2vw;
+    padding-top: 8vw;
+    padding-right: 5vw;
+}
+
+.story_main_text_title {
+    color: #04487E;
+    font-size: 2vw;
+    font-weight: 400;
+}
+
+.story_main_text_p p {
+    margin: 0;
+    margin-bottom: 1.5vw;
+    font-size: 1.2vw;
+}
+
+.page2_story_main2 {
+    opacity: 0;
+    position: relative;
+    width: 100vw;
+    height: 50vw;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr 2fr;
+}
+
+.story_main_bg {
+    animation: story_main_bg 0.8s ease-in-out forwards;
+}
+
+.story_main_lbg, .story_main_rbg, .story_main_bbg {
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    align-self: center;
+}
+
+.story_main_lbg {
+    animation-delay: 0.3s;
+}
+
+.story_main_rbg {
+    animation-delay: 0.8s;
+}
+
+.story_main_bbg {
+    animation-delay: 1.3s;
+}
+
+@keyframes story_main_bg {
+    0% {
+        opacity: 0;
+        transform: translateY(20vw)
+    }
+    70% {
+        transform: translateY(-2vw)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0vw)
+    }
+}
+
+.story_main_showIn {
+    animation: story_main_showIn 0.5s ease 1.8s forwards;
+}
+
+.story_main_pa {
+    opacity: 0;
+    display: grid;
+    justify-items: center;
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.story_main_pa img {
+    height: 40vw;
+    align-self: flex-end;
+}
+
+.story_main_pa p {
+    color: #04487E;
+    font-size: 3vw;
+}
+
+.story_main_pa p span {
+    font-size: 2vw;
+    font-weight: 300;
+}
+
+.story_main2_text {
+    opacity: 0;
+    grid-row: 1/2;
+    grid-column: 3/4;
+    padding-top: 14vw;
+    padding-bottom: 12vw;
+    padding-right: 3vw;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    color: #fff;
+    font-size: 1.2vw;
+    animation: story_main_showIn 0.5s ease 1.8s forwards;
+}
+
+.story_main2_text p {
+    margin: 0;
+}
+
+@keyframes story_main_showIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.page2_story_main3 {
+    opacity: 0;
+    display: grid;
+    height: 50vw;
+    width: 100vw;
+    position: relative;
+}
+
+.story_main3_title {
+    opacity: 0;
+    justify-self: center;
+    align-self: center;
+    width: 25vw;
+    animation-delay: 4.2s;
+}
+
+.story_main3_footer {
+    width: 100vw;
+    position: absolute;
+    align-self: flex-end;
+   
+}
+
+.story_main3_mountain {
+    opacity: 0;
+    position: absolute;
+    bottom: 3.5vw;
+    width: 40vw;
+    height: auto;
+    animation-delay: 0.8s;
+    
+}
+
+.story_main_leaf {
+    animation-name: story_main_bgleaf, story_main_leaf;
+    animation-timing-function: linear, ease-in-out ;
+    animation-duration: 0.8s,4s;
+    
+    animation-iteration-count: 1, infinite;
+ 
+}
+
+.story_main3_leaflb, .story_main3_leafdb, .story_main3_leafr {
+    opacity: 0;
+    position: absolute;
+    width: auto;
+    right: 0;
+    transform-origin: right bottom;
+   
+}
+
+.story_main3_leaflb {
+    height: 22vw;
+    z-index: 1000;
+    top: 20.5vw;
+    animation-delay: 0.8s, 1.6s;
+   
+}
+
+.story_main3_leafdb {
+    height: 12vw;
+    z-index: 100;
+    bottom: 0vw;
+    animation-delay: 1.3s, 2.1s;
+   
+}
+
+.story_main3_leafr {
+    height: 21vw;
+    z-index: 100;
+    top: 10vw;
+    animation-delay: 1.8s, 2.6s;
+    
+}
+@keyframes story_main_bgleaf{
+    0% {
+        opacity: 0;
+        transform: translateY(20vw)
+    }
+    70% {
+        transform: translateY(-2vw)
+    }
+    100% {
+        opacity: 1 ;
+        transform: translateY(0vw)
+    }
+}
+@keyframes story_main_leaf {
+    0% {
+        opacity: 1 ;
+        transform: rotate(0deg)
+    }
+    50% {
+        opacity: 1 ;
+        transform: rotate(20deg)
+    }
+    100% {
+        opacity: 1 ;
+        transform: rotate(0deg)
+    }
+}
+
+.story-rain {
+    animation: story-rain ease forwards;
+    
+}
+
+.story_main_rain {
+    position: absolute;
+    opacity: 0;
+    transform: rotate(-55deg);
+    z-index: 10000;
+    border-radius: 50vw;
+    background-color: #0697ff;
+}
+
+.story_main_rain_sm {
+    animation-duration: 1s;
+    animation-delay: 3s;
+    height: 0.8vw;
+    width: 2.5vw;
+    top: 28vw;
+    left: 28vw;
+}
+
+.story_main_rain_md1 {
+    animation-duration: 1s;
+    animation-delay: 2.5s;
+    height: 1.2vw;
+    width: 3.5vw;
+    top: 5vw;
+    left: 33vw;
+}
+
+.story_main_rain_md2 {
+    animation-duration: 1s;
+    animation-delay: 2.8s;
+    height: 1.2vw;
+    width: 3.5vw;
+    top: 8vw;
+    left: 75vw;
+}
+
+.story_main_rain_lg1 {
+    animation-delay: 3s;
+    animation-duration: 0.8s;
+    height: 1.7vw;
+    width: 5vw;
+    top: 16vw;
+    left: 62vw;
+}
+
+.story_main_rain_lg2 {
+    animation-delay: 3s;
+    animation-duration: 1.7s;
+    height: 1.7vw;
+    width: 5vw;
+    top: 21vw;
+    left: 85vw;
+}
+
+.story_main_rain_lg3 {
+    animation-delay: 2.4s;
+    animation-duration: 0.9s;
+    height: 1.7vw;
+    width: 5vw;
+    top: 38vw;
+    left: 62vw;
+}
+
+.story_main_rain_max1 {
+    animation-delay: 3.2s;
+    animation-duration: 0.5s;
+    height: 3vw;
+    width: 8vw;
+    top: 15vw;
+    left: 5vw;
+}
+
+.story_main_rain_max2 {
+    animation-delay: 3s;
+    animation-duration: 0.9s;
+    height: 3vw;
+    width: 8vw;
+    top: 40vw;
+    left: 10vw;
+}

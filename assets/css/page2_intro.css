@@ -22,6 +22,55 @@
     grid-template-columns: 2fr 1fr;
 }
 
+
+.fruit_message{
+   
+    display: grid;
+    z-index: 10000000;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.644);
+    justify-items: center;
+    align-items: center;
+}
+
+.fruit_message_card{
+  
+    display: grid;
+    height: 40vw;
+    width: 40vw;
+    background-color: #fff;
+}
+
+
+.no_show{
+    display: none !important;
+    
+}
+
+.fruit_message_card_off{
+
+    cursor: pointer;
+    justify-self:flex-end;
+    width: 2vw;
+    height: 2vw;
+}
+.fruit_message_card_line1,.fruit_message_card_line2{
+    border: #000 solid 0.5px;
+    width: 2.8vw;
+    position: absolute;
+    transform-origin: left top;
+}
+.fruit_message_card_line1{
+  
+    transform: rotate(45deg);
+}
+.fruit_message_card_line2{
+    margin-top:2vw;
+    transform: rotate(-45deg);
+}
+
 .intro_bartitle {
     height: 100%;
     display: grid;
@@ -243,6 +292,7 @@
     margin-left: 0.5vw;
     margin-bottom: 1vw;
     width: 2.5vw;
+    height: 2.5vw;
 }
 
 .pink{
