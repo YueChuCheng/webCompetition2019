@@ -1,0 +1,214 @@
+.buy_main {
+    position: relative;
+    display: grid;
+    height: 50vw;
+    width: 100vw;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.buy_pic {
+    background-image: url(../../assets/images/page2_buy/part1/ybg.png);
+    background-size: cover;
+    width: 100%;
+}
+
+.buy_text {
+    position: relative;
+    display: grid;
+    padding-top: 13vw;
+    padding-left: 8vw;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-row-gap: 3.5vw;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.buy_text_title {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, auto);
+    /* grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr; */
+}
+
+.buy_icon {
+    align-self: center;
+    width: 7vw;
+    margin-left: 1vw;
+}
+
+.buy_text_title h2 {
+    justify-self: flex-start;
+    margin: 0;
+    font-size: 2.5vw;
+    border-bottom: solid 1vw #fdd000;
+}
+
+.buy_text p {
+    margin: 0;
+    font-size: 1.5vw;
+}
+
+.buy_deco {
+    z-index: -1;
+    position: absolute;
+    height: 8vw;
+    margin-top: 30vw;
+    margin-left: 3vw;
+}
+
+.buy_step_main {
+    position: relative;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-row-gap: 0vw;
+    height: 50vw;
+    width: 100vw;
+}
+
+.buy_step_main h2 {
+    align-self: center;
+    justify-self: center;
+    border-bottom: solid 1vw #fdd000;
+    margin: 0;
+    font-size: 2.5vw;
+    font-weight: 400;
+}
+
+.buy_step_des {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 8vw;
+    height: 32vw;
+    width: 68vw;
+}
+
+.buy_step_sec {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.buy_step_sec h4 {
+    margin: 0;
+    font-size: 2vw;
+    font-weight: 300;
+}
+
+.buy_step_sec h4 img {
+    height: 3.5vw;
+}
+
+.buy_step_sec :nth-child(3) {
+    margin-top: 2vw;
+    width: 100%;
+}
+
+.buy_step_sec_text {
+    font-size: 1.2vw;
+    font-weight: 300;
+}
+
+.buy_page_main {
+    position: relative;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-row-gap: 3vw;
+    height: 50vw;
+    width: 100vw;
+}
+
+.buy_page_main h2 {
+    align-self: center;
+    justify-self: center;
+    border-bottom: solid 1vw #fdd000;
+    margin: 0;
+    font-size: 2.5vw;
+    font-weight: 400;
+}
+
+.buy_page_des {
+    display: grid;
+    justify-content: center;
+    height: 30vw;
+    width: 80vw;
+    grid-column-gap: 5vw;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3vw repeat(2, 20vw) 3vw;
+}
+.buy_page_sec{
+    position: relative;
+    cursor: pointer;
+    align-self: center;
+    height: 90%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    justify-items: center;
+    align-content: flex-start;
+    border: solid 0.2vw #000;
+    border-radius: 1.8vw;
+}
+.buy_page_des_hover1,.buy_page_des_hover2{
+    display: grid;
+    justify-content:center;
+    align-content: center; 
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0 , 0, 0, 0.6);
+    border-radius: 1.5vw;
+    opacity: 0;
+    transition: opacity 0.5s;
+   
+}
+.buy_page_des_hover1:hover,.buy_page_des_hover2:hover{
+    opacity: 1;
+}
+.buy_page_des_hover_txt{
+    height: 3vw;
+    width: 8vw;
+    background-color: #fdd000;
+    border-radius: 50vw;
+    text-align: center;
+    line-height: 3vw;
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+.buy_page_txt{
+    display: grid;
+    align-content: flex-start;
+    
+}
+.buy_page_sec img{
+    width: 100%;
+}
+
+.buy_page_sec h4{
+    margin: 0;
+    font-size: 1.5vw;
+    font-weight: 800;
+    margin-bottom:1.5vw;
+    margin-top:2vw;
+}
+
+
+.buy_page_sec p{
+    margin: 0;
+    font-size: 1.2vw;
+    font-weight: 400;
+}
+.buy_page_deco_r,.buy_page_deco_l{
+    align-self: center;
+    height: 50%;
+}
+
+.buy_page_deco_r{
+    justify-self: flex-end;
+    transform: rotate(180deg);
+}

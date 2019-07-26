@@ -778,7 +778,7 @@ body {
         width: 100vw;
         height: 100vh;
         padding-right: 0vw;
-        background-image: url(../assets/images/cellphone_pic/mbs.png);
+        background-image: url(../images/cellphone_pic/mbs.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position-x: 100vw;
@@ -1086,7 +1086,7 @@ body {
     width: 100%;
     height: 100%;
     /* 需用絕對路徑否則dist找不到 */
-    background-image: url(../../assets/images/cloud.png);
+    background-image: url(../images/cloud.png);
     -webkit-animation: cloud-ani 10s linear infinite;
             animation: cloud-ani 10s linear infinite;
     background-size: 800px auto;
@@ -1141,7 +1141,7 @@ body {
         justify-content: end;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 100vw;
-        background-image: url(../../assets/images/cellphone_pic/bgli.png);
+        background-image: url(../images/cellphone_pic/bgli.png);
         background-size: cover;
     }
     .main_page {
@@ -1863,7 +1863,7 @@ body {
     position: absolute;
     height: 23%;
     width: 5%;
-    background-image: url(../../assets/images/wave.png);
+    background-image: url(../images/wave.png);
     background-size: auto 130px;
     animation: story_waves 5s linear infinite;
     margin-top: 32%;
@@ -1885,7 +1885,7 @@ body {
 .peach_ani {
     z-index: 1000;
     position: absolute;
-    background-image: url(../../assets/images/main_story/peach.png);
+    background-image: url(../images/main_story/peach.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
     width: 28.6vw;
@@ -2073,7 +2073,7 @@ body {
     position: absolute;
     height: 8vw;
     width: 6%;
-    background-image: url(../../assets/images/wave.png);
+    background-image: url(../images/wave.png);
     background-size: auto 130px;
     -webkit-animation: story_waves 5s linear infinite;
             animation: story_waves 5s linear infinite;
@@ -2377,7 +2377,7 @@ body {
 }
 .intro_bw {
     position: absolute;
-    background-image: url(../../assets/images/wave.png);
+    background-image: url(../images/wave.png);
     background-size: auto 220px;
     height: 15vw;
     width: 12%;
@@ -2401,8 +2401,8 @@ li {
     position: relative;
     height: 3vw;
     width: 3vw;
-    background-image: url(../../images/fruit_intro/bl.png);
-    background-image: url(../../assets/images/fruit_intro/bl.png);
+    background-image: url(../images/fruit_intro/bl.png);
+    background-image: url(../images/fruit_intro/bl.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -2411,7 +2411,7 @@ li {
     position: relative;
     height: 3vw;
     width: 3vw;
-    background-image: url(../../assets/images/fruit_intro/br.png);
+    background-image: url(../images/fruit_intro/br.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -2654,7 +2654,7 @@ li {
     ;
     height: 5vw;
     width: 4vw;
-    background-image: url(../../assets/images/shop/rl1.png);
+    background-image: url(../images/shop/rl1.png);
     background-size: 100%;
     background-repeat: repeat-y;
     background-size: auto 80px;
@@ -2692,7 +2692,7 @@ li {
     ;
     height: 6vw;
     width: 4vw;
-    background-image: url(../../assets/images/shop/rl1.png);
+    background-image: url(../images/shop/rl1.png);
     background-size: 130%;
     background-repeat: repeat-y;
     background-size: auto 70px;
@@ -2728,7 +2728,7 @@ li {
 .shop_wave3 {
     height: 20vw;
     width: 12vw;
-    background-image: url(../../assets/images/shop/bl1.png);
+    background-image: url(../images/shop/bl1.png);
     background-size: auto 220px;
     background-repeat: repeat-y;
     -webkit-animation: shop_waves3 10s linear infinite;
@@ -3553,7 +3553,7 @@ footer {
     display: grid;
     height: 40vw;
     width: 100vw;
-    background-image: url(../../assets/images/page2_intro/bgd.png);
+    background-image: url(../images/page2_intro/bgd.png);
     background-size: 100vw auto;
     background-repeat: no-repeat;
     align-items: center;
@@ -3656,7 +3656,7 @@ footer {
 .allyear {
 
     position: relative;
-    background-image: url(../../assets/images/page2_intro/all_year/fsbg.jpg);
+    background-image: url(../images/page2_intro/all_year/fsbg.jpg);
     background-size: cover;
     display: grid;
     height: 55vw;
@@ -3951,7 +3951,7 @@ footer {
     position: relative;
     width: 100vw;
     height: 50vw;
-    background-image: url(../../assets/images/page2_story/part1/cbg.png);
+    background-image: url(../images/page2_story/part1/cbg.png);
     background-size: 100vw 50vw;
     background-repeat: no-repeat;
     display: grid;
@@ -3961,7 +3961,7 @@ footer {
     position: absolute;
     width: 100vw;
     height: 40vw;
-    background-image: url(../../assets/images/page2_story/part1/cloud.png);
+    background-image: url(../images/page2_story/part1/cloud.png);
     background-size: auto 376px;
     -webkit-animation: story_main_cloud 25s linear infinite;
             animation: story_main_cloud 25s linear infinite;
@@ -4394,4 +4394,197 @@ footer {
     width: 8vw;
     top: 40vw;
     left: 10vw;
+}
+.buy_main {
+    position: relative;
+    display: grid;
+    height: 50vw;
+    width: 100vw;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+.buy_pic {
+    background-image: url(../images/page2_buy/part1/ybg.png);
+    background-size: cover;
+    width: 100%;
+}
+.buy_text {
+    position: relative;
+    display: grid;
+    padding-top: 13vw;
+    padding-left: 8vw;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-row-gap: 3.5vw;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+.buy_text_title {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, auto);
+    /* grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr; */
+}
+.buy_icon {
+    align-self: center;
+    width: 7vw;
+    margin-left: 1vw;
+}
+.buy_text_title h2 {
+    justify-self: flex-start;
+    margin: 0;
+    font-size: 2.5vw;
+    border-bottom: solid 1vw #fdd000;
+}
+.buy_text p {
+    margin: 0;
+    font-size: 1.5vw;
+}
+.buy_deco {
+    z-index: -1;
+    position: absolute;
+    height: 8vw;
+    margin-top: 30vw;
+    margin-left: 3vw;
+}
+.buy_step_main {
+    position: relative;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-row-gap: 0vw;
+    height: 50vw;
+    width: 100vw;
+}
+.buy_step_main h2 {
+    align-self: center;
+    justify-self: center;
+    border-bottom: solid 1vw #fdd000;
+    margin: 0;
+    font-size: 2.5vw;
+    font-weight: 400;
+}
+.buy_step_des {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 8vw;
+    height: 32vw;
+    width: 68vw;
+}
+.buy_step_sec {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.buy_step_sec h4 {
+    margin: 0;
+    font-size: 2vw;
+    font-weight: 300;
+}
+.buy_step_sec h4 img {
+    height: 3.5vw;
+}
+.buy_step_sec :nth-child(3) {
+    margin-top: 2vw;
+    width: 100%;
+}
+.buy_step_sec_text {
+    font-size: 1.2vw;
+    font-weight: 300;
+}
+.buy_page_main {
+    position: relative;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-row-gap: 3vw;
+    height: 50vw;
+    width: 100vw;
+}
+.buy_page_main h2 {
+    align-self: center;
+    justify-self: center;
+    border-bottom: solid 1vw #fdd000;
+    margin: 0;
+    font-size: 2.5vw;
+    font-weight: 400;
+}
+.buy_page_des {
+    display: grid;
+    justify-content: center;
+    height: 30vw;
+    width: 80vw;
+    grid-column-gap: 5vw;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3vw repeat(2, 20vw) 3vw;
+}
+.buy_page_sec{
+    position: relative;
+    cursor: pointer;
+    align-self: center;
+    height: 90%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    justify-items: center;
+    align-content: flex-start;
+    border: solid 0.2vw #000;
+    border-radius: 1.8vw;
+}
+.buy_page_des_hover1,.buy_page_des_hover2{
+    display: grid;
+    justify-content:center;
+    align-content: center; 
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0 , 0, 0, 0.6);
+    border-radius: 1.5vw;
+    opacity: 0;
+    transition: opacity 0.5s;
+   
+}
+.buy_page_des_hover1:hover,.buy_page_des_hover2:hover{
+    opacity: 1;
+}
+.buy_page_des_hover_txt{
+    height: 3vw;
+    width: 8vw;
+    background-color: #fdd000;
+    border-radius: 50vw;
+    text-align: center;
+    line-height: 3vw;
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+.buy_page_txt{
+    display: grid;
+    align-content: flex-start;
+    
+}
+.buy_page_sec img{
+    width: 100%;
+}
+.buy_page_sec h4{
+    margin: 0;
+    font-size: 1.5vw;
+    font-weight: 800;
+    margin-bottom:1.5vw;
+    margin-top:2vw;
+}
+.buy_page_sec p{
+    margin: 0;
+    font-size: 1.2vw;
+    font-weight: 400;
+}
+.buy_page_deco_r,.buy_page_deco_l{
+    align-self: center;
+    height: 50%;
+}
+.buy_page_deco_r{
+    justify-self: flex-end;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
 }

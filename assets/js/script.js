@@ -1,5 +1,4 @@
 import $ from 'jquery';
-
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import "../../node_modules/normalize.css/normalize.css";
@@ -125,7 +124,18 @@ import story_main3_leaflb from "../images/page2_story/part3/bleaf.png";
 import story_main3_leafdb from "../images/page2_story/part3/dleaf.png";
 import story_main3_leafr from "../images/page2_story/part3/rleaf.png";
 
-
+import buy_pic from "../images/page2_buy/part1/ybg.png";
+import buy_icon from "../images/page2_buy/part1/ylc.png";
+import buy_deco from "../images/page2_buy/part1/yc.png";
+import buy_step_title_icon1 from "../images/page2_buy/part2/t1.png";
+import buy_step_title_icon2 from "../images/page2_buy/part2/t2.png";
+import buy_step_title_icon3 from "../images/page2_buy/part2/t3.png";
+import buy_step_img1 from "../images/page2_buy/part2/price.png";
+import buy_step_img2 from "../images/page2_buy/part2/fruits.png";
+import buy_step_img3 from "../images/page2_buy/part2/gift.png";
+import buy_page_img1 from "../images/page2_buy/part3/bbt.png";
+import buy_page_img2 from "../images/page2_buy/part3/rbt.png";
+import buy_page_deco_l from "../images/page2_buy/part3/dc_l.png";
 
 $(".title_logo").attr("src", title_logo);
 $(".nav_logo").attr("src", nav_logo);
@@ -243,8 +253,19 @@ $(".story_main3_leaflb").attr("src", story_main3_leaflb);
 $(".story_main3_leafdb").attr("src", story_main3_leafdb);
 $(".story_main3_leafr").attr("src", story_main3_leafr);
 
-
-
+$(".buy_pic").attr("src", buy_pic);
+$(".buy_icon").attr("src", buy_icon);
+$(".buy_deco").attr("src", buy_deco);
+$(".buy_step_title_icon1").attr("src", buy_step_title_icon1);
+$(".buy_step_title_icon2").attr("src", buy_step_title_icon2);
+$(".buy_step_title_icon3").attr("src", buy_step_title_icon3);
+$(".buy_step_img1").attr("src", buy_step_img1);
+$(".buy_step_img2").attr("src", buy_step_img2);
+$(".buy_step_img3").attr("src", buy_step_img3);
+$(".buy_page_img1").attr("src", buy_page_img1);
+$(".buy_page_img2").attr("src", buy_page_img2);
+$(".buy_page_deco_l").attr("src", buy_page_deco_l);
+$(".buy_page_deco_r").attr("src", buy_page_deco_l);
 let controller = new ScrollMagic.Controller();
 
 let i = 0;
@@ -291,42 +312,42 @@ new ScrollMagic.Scene({
   .reverse(false)
   .addTo(controller);
 
-  new ScrollMagic.Scene({
-    triggerElement: '.page2_story_main3'
-  })
-    .setClassToggle(".story_main_rain", "story-rain")
-    .reverse(false)
-    .addTo(controller);
-  
-  new ScrollMagic.Scene({
-    triggerElement: '.page2_story_main3'
-  })
-    .setClassToggle(".story_main3_mountain", "story_main_bg")
-    .reverse(false)
-    .addTo(controller);
-  
-    new ScrollMagic.Scene({
-      triggerElement: '.page2_story_main3'
-    })
-      .setClassToggle(".story_main3_footer", "story_main_bg")
-      .reverse(false)
-      .addTo(controller);
+new ScrollMagic.Scene({
+  triggerElement: '.page2_story_main3'
+})
+  .setClassToggle(".story_main_rain", "story-rain")
+  .reverse(false)
+  .addTo(controller);
 
- new ScrollMagic.Scene({
-      triggerElement: '.page2_story_main3'
-    })
-      .setClassToggle(".story_leaf", "story_main_leaf")
-      .reverse(false)
-      .addTo(controller);
+new ScrollMagic.Scene({
+  triggerElement: '.page2_story_main3'
+})
+  .setClassToggle(".story_main3_mountain", "story_main_bg")
+  .reverse(false)
+  .addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: '.page2_story_main3'
+})
+  .setClassToggle(".story_main3_footer", "story_main_bg")
+  .reverse(false)
+  .addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: '.page2_story_main3'
+})
+  .setClassToggle(".story_leaf", "story_main_leaf")
+  .reverse(false)
+  .addTo(controller);
 
 
-      new ScrollMagic.Scene({
-        triggerElement: '.page2_story_main3'
-      })
-        .setClassToggle(".story_main3_title", "story_main_showIn")
-        .reverse(false)
-        .addTo(controller);
-  
+new ScrollMagic.Scene({
+  triggerElement: '.page2_story_main3'
+})
+  .setClassToggle(".story_main3_title", "story_main_showIn")
+  .reverse(false)
+  .addTo(controller);
+
 
 new ScrollMagic.Scene({
   triggerElement: '.page2_story_main2'
@@ -490,27 +511,129 @@ $(document).ready(function () {
 
 
   }
-  
+
 
   $(".nav_logo ").click(function () {
     window.location.assign("https://contest.cpmah.org.tw/~C2019b195/");
   });
 
+  $(".intro_text_btn p").click(function () {
+    let id = $(this).attr("id");//顯示的id
+    let p_id = $(this).parent().parent().parent(".intro_sec").attr("id");//顯示所在的的class
 
-  $(".intro_text_btn p ").click(function () {
+    //選擇顯示語句
+    switch (id) {
+
+      //春天
+      case "peach":
+        $(".fruit_message_card_text").html("<p>peach</p>");
+        break;
+      case "bean":
+        $(".fruit_message_card_text").html("<p>bean</p>");
+        break;
+      case "red":
+        $(".fruit_message_card_text").html("<p>red</p>");
+        break;
+      case "soure":
+        $(".fruit_message_card_text").html("<p>soure</p>");
+        break;
+
+      //夏天
+      case "mango":
+        $(".fruit_message_card_text").html("<p>mango</p>");
+        break;
+      case "lich":
+        $(".fruit_message_card_text").html("<p>lich</p>");
+        break;
+      case "ln":
+        $(".fruit_message_card_text").html("<p>ln</p>");
+        break;
+      case "dragon":
+        $(".fruit_message_card_text").html("<p>dragon</p>");
+        break;
+      case "rice":
+        $(".fruit_message_card_text").html("<p>rice</p>");
+        break;
+      //秋天
+      case "jade":
+        $(".fruit_message_card_text").html("<p>jade</p>");
+        break;
+      case "tro":
+        $(".fruit_message_card_text").html("<p>tro</p>");
+        break;
+      //冬天
+      case "tomato":
+        $(".fruit_message_card_text").html("<p>tomato</p>");
+        break;
+      case "onion":
+        $(".fruit_message_card_text").html("<p>onion/p>");
+        break;
+      case "juju":
+        $(".fruit_message_card_text").html("<p>juju/p>");
+        break;
+      case "wax":
+        $(".fruit_message_card_text").html("<p>wax/p>");
+        break;
+      case "radish":
+        $(".fruit_message_card_text").html("<p>radish</p>");
+        break;
+
+      default:
+        $(".fruit_message_card_text").html("<p>no</p>");
+        break;
+
+
+    }
+
+    $(".fruit_message_card img ").attr("src", `../../assets/images/page2_intro/${p_id}/${id}.png`);
     $(".fruit_message").removeClass('no_show');
-});
+  });
+
+
+  $(".allyear_btn p").click(function () {
+    let id = $(this).attr("id");
+    let p_id = $(this).parent().parent(".allyear").attr("id");
+    
+    //選擇顯示語句
+    switch (id) {
+
+      //春天
+      case "pine":
+        $(".fruit_message_card_text").html("<p>pine</p>");
+        break;
+      case "gava":
+        $(".fruit_message_card_text").html("<p>gava</p>");
+        break;
+      case "papa":
+        $(".fruit_message_card_text").html("<p>papa</p>");
+        break;
+      case "bana":
+        $(".fruit_message_card_text").html("<p>bana</p>");
+        break;
+
+      
+      default:
+        $(".fruit_message_card_text").html("<p>no</p>");
+        break;
+
+
+    }
+
+    
+    $(".fruit_message_card img ").attr("src", `../../assets/images/page2_intro/${p_id}/${id}.png`);
+    $(".fruit_message").removeClass('no_show');
+  });
+
 
 
   $(".fruit_message_card_off ").click(function () {
-      $(".fruit_message").addClass('no_show');
+
+    $(".fruit_message").addClass('no_show');
   });
 
 
 
 });
-
-
 
 
 
@@ -552,49 +675,7 @@ $('.btn_winter').click(function (event) {
   moveTo('#winter');
 });
 $('.btn_allyear').click(function (event) {
-  moveTo('#allyear');
+  moveTo('#all_year');
 });
-
-
-new Vue({
-  el:'#fruit_message_card_text',
-  data: {
-      textInput: ''
-  },
-  computed: {
-     textOutput:function(){
-         //data只用來定義變數，在使用變數時，直接用變數的properties名稱 
-         return `my input is ${this.textInput}`; //印出字串
-     },
-     htmlOutput:function(){
-          return`
-              <h1>
-                  the input is ${this.textInput}
-              </h1>
-          `
-     }
-  },
-  methods: {
-      onInput:function(event){
-          this.textInput=event.target.value; //將輸入值放入textInput
-      }
-  },
-  //template自動產生新頁面 
-  //• v-html可以設定有HTML標籤的輸出內容
-  template:`    
-  <div >
-  <div class="view">
-      <label for="text">Please Input:</label>
-      <input v-on:input="onInput" type="text" id="text"><!--v-on:input="onInput" vue的及時印出資料-->
-  </div>
-  <!--• 利用兩兩個⼤大括號{{..}}就可以使⽤用Vue Instance裡的變數 
-      • 在{{}}之中，可以是data變數，也可以是computed變數-->
-  <p class="data">{{textOutput}}</p>
-  <div v-html="htmlOutput"></div>
-</div>`
-})
-
-
-
 
 

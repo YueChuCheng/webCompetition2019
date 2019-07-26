@@ -1,7 +1,7 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-let htmlPages = ['index', 'intro','learn_us', 'story'];
+let htmlPages = ['index', 'intro','learn_us', 'story','buy'];
 
 let htmlPlugins = htmlPages.map(page =>
     new HtmlWebpackPlugin({
