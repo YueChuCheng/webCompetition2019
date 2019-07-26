@@ -778,7 +778,7 @@ body {
         width: 100vw;
         height: 100vh;
         padding-right: 0vw;
-        background-image: url(../images/cellphone_pic/mbs.png);
+        background-image: url(../assets/images/cellphone_pic/mbs.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position-x: 100vw;
@@ -2401,7 +2401,7 @@ li {
     position: relative;
     height: 3vw;
     width: 3vw;
-    background-image: url(../images/fruit_intro/bl.png);
+    background-image: url(../../images/fruit_intro/bl.png);
     background-image: url(../images/fruit_intro/bl.png);
     background-size: contain;
     background-repeat: no-repeat;
