@@ -137,6 +137,28 @@ import buy_page_img1 from "../images/page2_buy/part3/bbt.png";
 import buy_page_img2 from "../images/page2_buy/part3/rbt.png";
 import buy_page_deco_l from "../images/page2_buy/part3/dc_l.png";
 
+import buy_fresh_pic from "../images/pages2_buy_fresh/abbg.png";
+
+import pick_f_main_pick_pic1 from "../images/pages2_buy_fresh/f_1.png";
+import pick_f_main_pick_pic2 from "../images/pages2_buy_fresh/f_2.png";
+import pick_f_main_pick_pic3 from "../images/pages2_buy_fresh/f_3.png";
+import pick_f_main_pick_pic4 from "../images/pages2_buy_fresh/f_4.png";
+import pick_f_main_pick_pic5 from "../images/pages2_buy_fresh/f_5.png";
+import pick_f_main_pick_pic6 from "../images/pages2_buy_fresh/f_6.png";
+import pick_f_main_pick_pic7 from "../images/pages2_buy_fresh/f_7.png";
+import pick_f_main_pick_pic8 from "../images/pages2_buy_fresh/f_8.png";
+import pick_f_main_pick_pic9 from "../images/pages2_buy_fresh/f_9.png";
+import pick_f_main_pick_pic10 from "../images/pages2_buy_fresh/f_10.png";
+import pick_f_main_pick_pic11 from "../images/pages2_buy_fresh/f_11.png";
+import pick_f_main_pick_pic12 from "../images/pages2_buy_fresh/f_12.png";
+import pick_f_main_pick_pic13 from "../images/pages2_buy_fresh/f_13.png";
+import pick_f_main_pick_pic14 from "../images/pages2_buy_fresh/f_14.png";
+import pick_p_pic1 from "../images/pages2_buy_fresh/cgc.png";
+import pick_p_pic2 from "../images/pages2_buy_fresh/rgc.png";
+import pick_p_pic3 from "../images/pages2_buy_fresh/bgc.png";
+
+
+
 $(".title_logo").attr("src", title_logo);
 $(".nav_logo").attr("src", nav_logo);
 
@@ -266,6 +288,30 @@ $(".buy_page_img1").attr("src", buy_page_img1);
 $(".buy_page_img2").attr("src", buy_page_img2);
 $(".buy_page_deco_l").attr("src", buy_page_deco_l);
 $(".buy_page_deco_r").attr("src", buy_page_deco_l);
+
+$(".buy_fresh_pic").attr("src", buy_fresh_pic);
+$(".pick_f_main_pick_pic1").attr("src", pick_f_main_pick_pic1);
+$(".pick_f_main_pick_pic2").attr("src", pick_f_main_pick_pic2);
+$(".pick_f_main_pick_pic3").attr("src", pick_f_main_pick_pic3);
+$(".pick_f_main_pick_pic4").attr("src", pick_f_main_pick_pic4);
+$(".pick_f_main_pick_pic5").attr("src", pick_f_main_pick_pic5);
+$(".pick_f_main_pick_pic6").attr("src", pick_f_main_pick_pic6);
+$(".pick_f_main_pick_pic7").attr("src", pick_f_main_pick_pic7);
+$(".pick_f_main_pick_pic8").attr("src", pick_f_main_pick_pic8);
+$(".pick_f_main_pick_pic9").attr("src", pick_f_main_pick_pic9);
+$(".pick_f_main_pick_pic10").attr("src", pick_f_main_pick_pic10);
+$(".pick_f_main_pick_pic11").attr("src", pick_f_main_pick_pic11);
+$(".pick_f_main_pick_pic12").attr("src", pick_f_main_pick_pic12);
+$(".pick_f_main_pick_pic13").attr("src", pick_f_main_pick_pic13);
+$(".pick_f_main_pick_pic14").attr("src", pick_f_main_pick_pic14);
+$(".pick_p_pic1").attr("src", pick_p_pic1);
+$(".pick_p_pic2").attr("src", pick_p_pic2);
+$(".pick_p_pic3").attr("src", pick_p_pic3);
+
+
+
+
+
 let controller = new ScrollMagic.Controller();
 
 let i = 0;
@@ -395,10 +441,14 @@ new ScrollMagic.Scene({
 //page2_intro_start
 
 new ScrollMagic.Scene({
-  triggerElement: '#allyear'
+  triggerElement: '.allyear'
 })
   .setClassToggle(".progress_bar", "showIn")
   .addTo(controller);
+
+
+
+
 new ScrollMagic.Scene({
   triggerElement: '#allyear'
 })
@@ -435,8 +485,10 @@ new ScrollMagic.Scene({
 })
   .setClassToggle(".nav_btn", "black")
   .addTo(controller);
+ 
 
 
+  
 
 
 //page2_intro_end
@@ -514,7 +566,7 @@ $(document).ready(function () {
 
 
   $(".nav_logo ").click(function () {
-    window.location.assign("https://contest.cpmah.org.tw/~C2019b195/");
+    window.location.assign("/");
   });
 
   $(".intro_text_btn p").click(function () {
@@ -587,6 +639,13 @@ $(document).ready(function () {
 
     $(".fruit_message_card img ").attr("src", `../../assets/images/page2_intro/${p_id}/${id}.png`);
     $(".fruit_message").removeClass('no_show');
+
+
+
+    
+
+
+
   });
 
 
@@ -630,6 +689,11 @@ $(document).ready(function () {
 
     $(".fruit_message").addClass('no_show');
   });
+
+
+
+
+
 
 
 
@@ -677,5 +741,62 @@ $('.btn_winter').click(function (event) {
 $('.btn_allyear').click(function (event) {
   moveTo('#all_year');
 });
+
+$("#buy_fresh ").click(function () {
+  window.location.assign("../buy_fresh.html");
+});
+
+
+$("#buy_onSeason ").click(function () {
+  window.location.assign("../buy_onSeason.html");
+});
+
+
+//click price style
+let click_count=1;
+let last_click_price=0;
+
+for (let price = 1000 ;price <= 3500; price+=500) {
+ 
+  $(`#price${price}`).click(function () { 
+   
+    click_count++;
+    if(click_count>=2){
+      $(`#price${last_click_price}`).removeClass("freash_checkPriceOutline");
+      $(`#price${price}`).addClass("freash_checkPriceOutline");
+    }
+    else{
+      $(`#price${price}`).addClass("freash_checkPriceOutline");
+    }
+    last_click_price=price;
+  
+  });
+  
+}
+
+
+//click fruit style
+let click_fruit_cout=0;
+
+for (let fruit_count = 1; fruit_count < 15; fruit_count++) {
+  let click_fruit_time=1;
+  $(`.pick_f_main_pick_pic${fruit_count}`).click(function () {
+    
+    
+    if(click_fruit_cout<3 && click_fruit_time%2){
+      $(`.pick_f_main_pick_pic${fruit_count}`).addClass("freash_checkFruiteOutline");
+      click_fruit_cout++;
+      click_fruit_time++;
+    }
+    else if(!(click_fruit_time%2)) {
+      $(`.pick_f_main_pick_pic${fruit_count}`).removeClass("freash_checkFruiteOutline");
+      click_fruit_cout--;
+      click_fruit_time++;
+    }
+    
+  });
+}
+
+
 
 

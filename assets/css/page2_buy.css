@@ -64,7 +64,7 @@
     display: grid;
     align-content: center;
     justify-content: center;
-    grid-row-gap: 0vw;
+    grid-row-gap: 5vw;
     height: 50vw;
     width: 100vw;
 }
@@ -85,12 +85,13 @@
     grid-column-gap: 8vw;
     height: 32vw;
     width: 68vw;
+
 }
 
 .buy_step_sec {
     display: grid;
     justify-content: center;
-    align-content: center;
+    align-content: flex-start;
 }
 
 .buy_step_sec h4 {
