@@ -159,6 +159,13 @@ import pick_p_pic1 from "../images/pages2_buy_fresh/cgc.png";
 import pick_p_pic2 from "../images/pages2_buy_fresh/rgc.png";
 import pick_p_pic3 from "../images/pages2_buy_fresh/bgc.png";
 
+import buy_onSeason_mainPic from "../images/page2_buy_onSeason/srbg.png";
+import onSeason_pick_fruit1 from "../images/page2_buy_onSeason/cmi.png";
+import onSeason_pick_fruit2 from "../images/page2_buy_onSeason/emi.png";
+import onSeason_pick_fruit3 from "../images/page2_buy_onSeason/eri.png";
+import onSeason_pick_fruit4 from "../images/page2_buy_onSeason/cri.png";
+import onSeason_pick_fruit5 from "../images/page2_buy_onSeason/ebi.png";
+import onSeason_pick_fruit6 from "../images/page2_buy_onSeason/cbi.png";
 
 
 $(".title_logo").attr("src", title_logo);
@@ -311,7 +318,13 @@ $(".pick_p_pic2").attr("src", pick_p_pic2);
 $(".pick_p_pic3").attr("src", pick_p_pic3);
 
 
-
+$(".buy_onSeason_mainPic").attr("src", buy_onSeason_mainPic);
+$(".onSeason_pick_fruit1").attr("src", onSeason_pick_fruit1);
+$(".onSeason_pick_fruit2").attr("src", onSeason_pick_fruit2);
+$(".onSeason_pick_fruit3").attr("src", onSeason_pick_fruit3);
+$(".onSeason_pick_fruit4").attr("src", onSeason_pick_fruit4);
+$(".onSeason_pick_fruit5").attr("src", onSeason_pick_fruit5);
+$(".onSeason_pick_fruit6").attr("src", onSeason_pick_fruit6);
 
 
 let controller = new ScrollMagic.Controller();
@@ -692,11 +705,9 @@ $(document).ready(function () {
     $(".fruit_message").addClass('no_show');
   });
 
+  readOrder();//read order's data
 
 
-
-
-  readOrder();
 
 
 });
@@ -760,15 +771,15 @@ let last_click_price = 0;
 
 for (let price = 1000; price <= 3500; price += 500) {
 
-  $(`#price${price}`).click(function () {
+  $(`#${price}`).click(function () {
 
     click_count++;
     if (click_count >= 2) {
-      $(`#price${last_click_price}`).removeClass("freash_checkPriceOutline");
-      $(`#price${price}`).addClass("freash_checkPriceOutline");
+      $(`#${last_click_price}`).removeClass("freash_checkPriceOutline");
+      $(`#${price}`).addClass("freash_checkPriceOutline");
     }
     else {
-      $(`#price${price}`).addClass("freash_checkPriceOutline");
+      $(`#${price}`).addClass("freash_checkPriceOutline");
     }
     last_click_price = price;
 
@@ -800,44 +811,49 @@ for (let fruit_count = 1; fruit_count < 15; fruit_count++) {
 }
 
 
+//click package style
 
-// add data
+let clickPackage_count = 1;
+let lastPackage_click_price = 0;
+
+for (let price = 1; price <= 3; price++) {
+
+  $(`.pick_p_pic${price}`).click(function () {
+
+    clickPackage_count++;
+    if (clickPackage_count >= 2) {
+      $(`.pick_p_pic${lastPackage_click_price}`).removeClass("freash_checkPackageOutline");
+      $(`.pick_p_pic${price}`).addClass("freash_checkPackageOutline");
+    }
+    else {
+      $(`.pick_p_pic${price}`).addClass("freash_checkPackageOutline");
+    }
+    lastPackage_click_price = price;
+
+  });
+
+}
+
+
+
+// buy_fresh add data
 $(".buy_fresh_submit").click(function () {
   set();
-  //console.log();
-  //firebase
-  //.firestore().collection("user").add({
-  //  first: "Ada",
-  //  last: "Lovelace",
-  //  born: 1812
-  //})
-  //  .then(function (docRef) {
-  //    console.log("Document written with ID: ", docRef.id);
-  //  })
-  //  .catch(function (error) {
-  //    console.error("Error adding document: ", error);
-  //  });
-
-
 });
 
+// buy_fresh add data start
+function set() {
 
-
-
-
-
-
-
-
-// add data
- function set() {
-  
   firebase
     .firestore()
     .collection("order")
     .add({
-      fruits:$('.freash_checkFruiteOutline').attr('id'),
-      price:$('.freash_checkPriceOutline').attr('id'),
+
+      fruit1: $('.freash_checkFruiteOutline')[0].id,
+      fruit2: $('.freash_checkFruiteOutline')[1].id,
+      fruit3: $('.freash_checkFruiteOutline')[2].id,
+      price: $('.freash_checkPriceOutline').attr('id'),
+      package: $('.freash_checkPackageOutline').attr('id'),
       name: $("input[name='name']").val(),
       TEL: $("input[name='tel']").val(),
       Email: $("input[name='email']").val(),
@@ -847,6 +863,60 @@ $(".buy_fresh_submit").click(function () {
 
     });
 }
+// buy_fresh add data end
+
+
+// buy_onSeason add data
+$(".buy_onSeason_submit").click(function () {
+  buy_onSeason_setData();
+});
+
+
+
+// buy_onSeason add data start
+function buy_onSeason_setData() {
+  count_buy_onSeason_pick();
+  firebase
+    .firestore()
+    .collection("order")
+    .add({
+      buy_list_count:has_buy_count,//quntity to buy
+      buy_list_name:has_buy_name,// to be bought item's name
+      package: $('.freash_checkPackageOutline').attr('id'),
+      name: $("input[name='onSeason_name']").val(),
+      TEL: $("input[name='onSeason_tel']").val(),
+      Email: $("input[name='onSeason_email']").val(),
+      Address: $("input[name='onSeason_address']").val(),
+      Remarks: $("input[name='onSeason_remarks']").val(),
+
+
+    });
+}
+// buy_onSeason add data end
+
+
+//count buy_onSeason_pick_main start
+let has_buy_count=[];//amount fruits which is bought
+let has_buy_name=[];//name which fruits is none zero 
+function count_buy_onSeason_pick() {
+  has_buy_count.length = 0//empty array avoid repeat value
+  has_buy_name.length = 0//empty array avoid repeat value
+  for (let index = 0; index < 6; index++) {
+    
+    if (onSeason_quantity_count[index]>0) {
+      has_buy_count.push($(`#quantity_count_${index+1} p`).text());
+      has_buy_name.push($(`.onSeason_pick_fruit${index+1}`).attr('id'));
+    }
+    
+  }
+  console.log(has_buy_count);
+}
+
+
+
+
+
+//count buy_onSeason_pick_main end
 
 //read data
 let docs = []; //data array
@@ -859,13 +929,48 @@ function readOrder() {
       querySnapshot.forEach((doc) => {
         docs[count] = doc;//read firestore's data in array
         count++; //data quantity
-        console.log(`${doc.id} => ${doc.data().name}`);
-  
+        //console.log(`${doc.id} => ${doc.data().name}`);
+
       });
       for (let index = 0; index < count; index++) {
         $(".test_firestore").append(`<p>${docs[index].id}</p>`);
       }
-  
+
     });
 }
+
+
+
+
+//onSeason pick couter start
+let onSeason_quantity_count = [];
+
+//init onSeason_quantity_count 
+for (let index = 0; index < 6; index++) {
+  onSeason_quantity_count[index]=0;
+$(`#quantity_count_${index+1}`).html(`<p>${onSeason_quantity_count[index]}</p>`);
+}
+
+//onSeason_quantity_count add
+for (let index = 0; index < 6; index++) {
+  $(`#quantity_add_${index+1}`).click(function () {
+    onSeason_quantity_count[index]++;
+    $(`#quantity_count_${index+1}`).html(`<p>${onSeason_quantity_count[index]}</p>`);
+  });
+}
+
+//onSeason_quantity_count minus
+
+for (let index = 0; index < 6; index++) {
+  $(`#quantity_minus_${index+1}`).click(function () {
+
+    if(onSeason_quantity_count[index]>0){ //can't less then -1
+    onSeason_quantity_count[index]--;
+    }
+
+    $(`#quantity_count_${index+1}`).html(`<p>${onSeason_quantity_count[index]}</p>`);
+  });
+}
+
+//onSeason pick couter end
 

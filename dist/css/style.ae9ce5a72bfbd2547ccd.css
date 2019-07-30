@@ -348,6 +348,117 @@ template {
 [hidden] {
   display: none;
 }
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
 @charset 'UTF-8';
 /* Slider */
 .slick-loading .slick-list
@@ -545,117 +656,6 @@ template {
     opacity: .75;
     color: black;
 }
-/* Slider */
-.slick-slider
-{
-    position: relative;
-
-    display: block;
-    box-sizing: border-box;
-
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-
-    -webkit-touch-callout: none;
-    -khtml-user-select: none;
-    touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
-}
-.slick-list
-{
-    position: relative;
-
-    display: block;
-    overflow: hidden;
-
-    margin: 0;
-    padding: 0;
-}
-.slick-list:focus
-{
-    outline: none;
-}
-.slick-list.dragging
-{
-    cursor: pointer;
-    cursor: hand;
-}
-.slick-slider .slick-track,
-.slick-slider .slick-list
-{
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-}
-.slick-track
-{
-    position: relative;
-    top: 0;
-    left: 0;
-
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.slick-track:before,
-.slick-track:after
-{
-    display: table;
-
-    content: '';
-}
-.slick-track:after
-{
-    clear: both;
-}
-.slick-loading .slick-track
-{
-    visibility: hidden;
-}
-.slick-slide
-{
-    display: none;
-    float: left;
-
-    height: 100%;
-    min-height: 1px;
-}
-[dir='rtl'] .slick-slide
-{
-    float: right;
-}
-.slick-slide img
-{
-    display: block;
-}
-.slick-slide.slick-loading img
-{
-    display: none;
-}
-.slick-slide.dragging img
-{
-    pointer-events: none;
-}
-.slick-initialized .slick-slide
-{
-    display: block;
-}
-.slick-loading .slick-slide
-{
-    visibility: hidden;
-}
-.slick-vertical .slick-slide
-{
-    display: block;
-
-    height: auto;
-
-    border: 1px solid transparent;
-}
-.slick-arrow.slick-hidden {
-    display: none;
-}
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -778,7 +778,7 @@ body {
         width: 100vw;
         height: 100vh;
         padding-right: 0vw;
-        background-image: url(../assets/images/cellphone_pic/mbs.png);
+        background-image: url(../images/cellphone_pic/mbs.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position-x: 100vw;
@@ -1086,7 +1086,7 @@ body {
     width: 100%;
     height: 100%;
     /* 需用絕對路徑否則dist找不到 */
-    background-image: url(../../assets/images/cloud.png);
+    background-image: url(../images/cloud.png);
     -webkit-animation: cloud-ani 10s linear infinite;
             animation: cloud-ani 10s linear infinite;
     background-size: 800px auto;
@@ -1141,7 +1141,7 @@ body {
         justify-content: end;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 100vw;
-        background-image: url(../../assets/images/cellphone_pic/bgli.png);
+        background-image: url(../images/cellphone_pic/bgli.png);
         background-size: cover;
     }
     .main_page {
@@ -2073,7 +2073,7 @@ body {
     position: absolute;
     height: 8vw;
     width: 6%;
-    background-image: url(../../assets/images/wave.png);
+    background-image: url(../images/wave.png);
     background-size: auto 130px;
     -webkit-animation: story_waves 5s linear infinite;
             animation: story_waves 5s linear infinite;
@@ -2377,7 +2377,7 @@ body {
 }
 .intro_bw {
     position: absolute;
-    background-image: url(../../assets/images/wave.png);
+    background-image: url(../images/wave.png);
     background-size: auto 220px;
     height: 15vw;
     width: 12%;
@@ -2401,8 +2401,8 @@ li {
     position: relative;
     height: 3vw;
     width: 3vw;
-    background-image: url(../../images/fruit_intro/bl.png);
-    background-image: url(../../assets/images/fruit_intro/bl.png);
+    background-image: url(../images/fruit_intro/bl.png);
+    background-image: url(../images/fruit_intro/bl.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -2411,7 +2411,7 @@ li {
     position: relative;
     height: 3vw;
     width: 3vw;
-    background-image: url(../../assets/images/fruit_intro/br.png);
+    background-image: url(../images/fruit_intro/br.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -2654,7 +2654,7 @@ li {
     ;
     height: 5vw;
     width: 4vw;
-    background-image: url(../../assets/images/shop/rl1.png);
+    background-image: url(../images/shop/rl1.png);
     background-size: 100%;
     background-repeat: repeat-y;
     background-size: auto 80px;
@@ -2692,7 +2692,7 @@ li {
     ;
     height: 6vw;
     width: 4vw;
-    background-image: url(../../assets/images/shop/rl1.png);
+    background-image: url(../images/shop/rl1.png);
     background-size: 130%;
     background-repeat: repeat-y;
     background-size: auto 70px;
@@ -2728,7 +2728,7 @@ li {
 .shop_wave3 {
     height: 20vw;
     width: 12vw;
-    background-image: url(../../assets/images/shop/bl1.png);
+    background-image: url(../images/shop/bl1.png);
     background-size: auto 220px;
     background-repeat: repeat-y;
     -webkit-animation: shop_waves3 10s linear infinite;
@@ -3553,7 +3553,7 @@ footer {
     display: grid;
     height: 40vw;
     width: 100vw;
-    background-image: url(../../assets/images/page2_intro/bgd.png);
+    background-image: url(../images/page2_intro/bgd.png);
     background-size: 100vw auto;
     background-repeat: no-repeat;
     align-items: center;
@@ -3656,7 +3656,7 @@ footer {
 .allyear {
 
     position: relative;
-    background-image: url(../../assets/images/page2_intro/all_year/fsbg.jpg);
+    background-image: url(../images/page2_intro/all_year/fsbg.jpg);
     background-size: cover;
     display: grid;
     height: 55vw;
@@ -3951,7 +3951,7 @@ footer {
     position: relative;
     width: 100vw;
     height: 50vw;
-    background-image: url(../../assets/images/page2_story/part1/cbg.png);
+    background-image: url(../images/page2_story/part1/cbg.png);
     background-size: 100vw 50vw;
     background-repeat: no-repeat;
     display: grid;
@@ -3961,7 +3961,7 @@ footer {
     position: absolute;
     width: 100vw;
     height: 40vw;
-    background-image: url(../../assets/images/page2_story/part1/cloud.png);
+    background-image: url(../images/page2_story/part1/cloud.png);
     background-size: auto 376px;
     -webkit-animation: story_main_cloud 25s linear infinite;
             animation: story_main_cloud 25s linear infinite;
@@ -4404,7 +4404,7 @@ footer {
     grid-template-columns: 1fr 1fr;
 }
 .buy_pic {
-    background-image: url(../../assets/images/page2_buy/part1/ybg.png);
+    background-image: url(../images/page2_buy/part1/ybg.png);
     background-size: cover;
     width: 100%;
 }
@@ -4742,14 +4742,24 @@ footer {
     font-size: 1.5vw;
     font-weight: 500;
 }
+.pick_p_pic1,.pick_p_pic2,.pick_p_pic3{
+    cursor: pointer;
+}
 .freash_checkPriceOutline{
     outline:red solid 3px;
 }
 .freash_checkFruiteOutline{
     outline:lightblue solid 3px;
 }
+.freash_checkPackageOutline{
+    outline:lightpink solid 3px;
+}
 .buy_fresh_submit{
     border-radius: 50vw;
     cursor: pointer;
     background-color: lightblue;
+}
+.test_firestore{
+    height: 50vw;
+    width: 100vw;
 }

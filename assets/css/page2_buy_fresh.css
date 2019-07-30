@@ -176,6 +176,11 @@
     font-weight: 500;
 }
 
+.pick_p_pic1,.pick_p_pic2,.pick_p_pic3{
+    cursor: pointer;
+}
+
+
 .freash_checkPriceOutline{
     outline:red solid 3px;
 }
@@ -184,6 +189,10 @@
     outline:lightblue solid 3px;
 }
 
+
+.freash_checkPackageOutline{
+    outline:lightpink solid 3px;
+}
 
 .buy_fresh_submit{
     border-radius: 50vw;
