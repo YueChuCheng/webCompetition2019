@@ -6,6 +6,8 @@ import "../../node_modules/slick-carousel/slick/slick.js";
 import "../../node_modules/slick-carousel/slick/slick.css";
 import "../../node_modules/slick-carousel/slick/slick-theme.css";
 import '../css/style.css';
+import '../js/firestore.js';
+import firebase from '../js/firestore.js';
 
 import ScrollMagic from "scrollmagic";
 
@@ -485,10 +487,10 @@ new ScrollMagic.Scene({
 })
   .setClassToggle(".nav_btn", "black")
   .addTo(controller);
- 
 
 
-  
+
+
 
 
 //page2_intro_end
@@ -642,7 +644,7 @@ $(document).ready(function () {
 
 
 
-    
+
 
 
 
@@ -652,7 +654,7 @@ $(document).ready(function () {
   $(".allyear_btn p").click(function () {
     let id = $(this).attr("id");
     let p_id = $(this).parent().parent(".allyear").attr("id");
-    
+
     //選擇顯示語句
     switch (id) {
 
@@ -670,7 +672,7 @@ $(document).ready(function () {
         $(".fruit_message_card_text").html("<p>bana</p>");
         break;
 
-      
+
       default:
         $(".fruit_message_card_text").html("<p>no</p>");
         break;
@@ -678,7 +680,7 @@ $(document).ready(function () {
 
     }
 
-    
+
     $(".fruit_message_card img ").attr("src", `../../assets/images/page2_intro/${p_id}/${id}.png`);
     $(".fruit_message").removeClass('no_show');
   });
@@ -694,7 +696,7 @@ $(document).ready(function () {
 
 
 
-
+  readOrder();
 
 
 });
@@ -753,50 +755,117 @@ $("#buy_onSeason ").click(function () {
 
 
 //click price style
-let click_count=1;
-let last_click_price=0;
+let click_count = 1;
+let last_click_price = 0;
 
-for (let price = 1000 ;price <= 3500; price+=500) {
- 
-  $(`#price${price}`).click(function () { 
-   
+for (let price = 1000; price <= 3500; price += 500) {
+
+  $(`#price${price}`).click(function () {
+
     click_count++;
-    if(click_count>=2){
+    if (click_count >= 2) {
       $(`#price${last_click_price}`).removeClass("freash_checkPriceOutline");
       $(`#price${price}`).addClass("freash_checkPriceOutline");
     }
-    else{
+    else {
       $(`#price${price}`).addClass("freash_checkPriceOutline");
     }
-    last_click_price=price;
-  
+    last_click_price = price;
+
   });
-  
+
 }
 
 
 //click fruit style
-let click_fruit_cout=0;
+let click_fruit_cout = 0;
 
 for (let fruit_count = 1; fruit_count < 15; fruit_count++) {
-  let click_fruit_time=1;
+  let click_fruit_time = 1;
   $(`.pick_f_main_pick_pic${fruit_count}`).click(function () {
-    
-    
-    if(click_fruit_cout<3 && click_fruit_time%2){
+
+
+    if (click_fruit_cout < 3 && click_fruit_time % 2) {
       $(`.pick_f_main_pick_pic${fruit_count}`).addClass("freash_checkFruiteOutline");
       click_fruit_cout++;
       click_fruit_time++;
     }
-    else if(!(click_fruit_time%2)) {
+    else if (!(click_fruit_time % 2)) {
       $(`.pick_f_main_pick_pic${fruit_count}`).removeClass("freash_checkFruiteOutline");
       click_fruit_cout--;
       click_fruit_time++;
     }
-    
+
   });
 }
 
 
 
+// add data
+$(".buy_fresh_submit").click(function () {
+  set();
+  //console.log();
+  //firebase
+  //.firestore().collection("user").add({
+  //  first: "Ada",
+  //  last: "Lovelace",
+  //  born: 1812
+  //})
+  //  .then(function (docRef) {
+  //    console.log("Document written with ID: ", docRef.id);
+  //  })
+  //  .catch(function (error) {
+  //    console.error("Error adding document: ", error);
+  //  });
+
+
+});
+
+
+
+
+
+
+
+
+
+// add data
+ function set() {
+  
+  firebase
+    .firestore()
+    .collection("order")
+    .add({
+      fruits:$('.freash_checkFruiteOutline').attr('id'),
+      price:$('.freash_checkPriceOutline').attr('id'),
+      name: $("input[name='name']").val(),
+      TEL: $("input[name='tel']").val(),
+      Email: $("input[name='email']").val(),
+      Address: $("input[name='address']").val(),
+      Remarks: $("input[name='remarks']").val(),
+
+
+    });
+}
+
+//read data
+let docs = []; //data array
+let count = 0; //data quantity
+
+function readOrder() {
+  $("#test_firestore p").empty();
+  firebase
+    .firestore().collection("order").get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        docs[count] = doc;//read firestore's data in array
+        count++; //data quantity
+        console.log(`${doc.id} => ${doc.data().name}`);
+  
+      });
+      for (let index = 0; index < count; index++) {
+        $(".test_firestore").append(`<p>${docs[index].id}</p>`);
+      }
+  
+    });
+}
 

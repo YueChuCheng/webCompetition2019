@@ -190,3 +190,10 @@
     cursor: pointer;
     background-color: lightblue;
 }
+
+
+
+.test_firestore{
+    height: 50vw;
+    width: 100vw;
+}
