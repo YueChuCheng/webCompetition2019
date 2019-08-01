@@ -160,8 +160,8 @@ import pick_p_pic2 from "../images/pages2_buy_fresh/rgc.png";
 import pick_p_pic3 from "../images/pages2_buy_fresh/bgc.png";
 
 import buy_onSeason_mainPic from "../images/page2_buy_onSeason/srbg.png";
-import onSeason_pick_fruit1 from "../images/page2_buy_onSeason/cmi.png";
-import onSeason_pick_fruit2 from "../images/page2_buy_onSeason/emi.png";
+import onSeason_pick_fruit1 from "../images/page2_buy_onSeason/emi.png";
+import onSeason_pick_fruit2 from "../images/page2_buy_onSeason/cmi.png";
 import onSeason_pick_fruit3 from "../images/page2_buy_onSeason/eri.png";
 import onSeason_pick_fruit4 from "../images/page2_buy_onSeason/cri.png";
 import onSeason_pick_fruit5 from "../images/page2_buy_onSeason/ebi.png";
@@ -843,25 +843,38 @@ $(".buy_fresh_submit").click(function () {
 
 // buy_fresh add data start
 function set() {
-
+  document.getElementById("buyfresh_remarks").defaultValue = "none";//set buyfresh_remarks default value
+  
+if(click_count!=1&&click_fruit_cout===3&&clickPackage_count!=1&& $("input[name='name']").val()&&$("input[name='tel']").val()&&$("input[name='email']").val()&&$("input[name='address']").val()){
   firebase
     .firestore()
-    .collection("order")
+    .collection("order_fresh")
     .add({
 
-      fruit1: $('.freash_checkFruiteOutline')[0].id,
-      fruit2: $('.freash_checkFruiteOutline')[1].id,
-      fruit3: $('.freash_checkFruiteOutline')[2].id,
-      price: $('.freash_checkPriceOutline').attr('id'),
-      package: $('.freash_checkPackageOutline').attr('id'),
-      name: $("input[name='name']").val(),
+      Fruit1: $('.freash_checkFruiteOutline')[0].id,
+      Fruit2: $('.freash_checkFruiteOutline')[1].id,
+      Fruit3: $('.freash_checkFruiteOutline')[2].id,
+      Price: $('.freash_checkPriceOutline').attr('id'),
+      Package: $('.freash_checkPackageOutline').attr('id'),
+      Name: $("input[name='name']").val(),
       TEL: $("input[name='tel']").val(),
       Email: $("input[name='email']").val(),
       Address: $("input[name='address']").val(),
       Remarks: $("input[name='remarks']").val(),
-
-
     });
+
+    alert(`感謝您的購買，您的購買項目為：
+水果種類：${$('.freash_checkFruiteOutline')[0].id}、${$('.freash_checkFruiteOutline')[1].id}、${$('.freash_checkFruiteOutline')[2].id}
+價錢：${$('.freash_checkPriceOutline').attr('id')}
+包裝：${$('.freash_checkPackageOutline').attr('id')}`);
+
+
+
+
+  }
+  else{
+    alert("有東西漏填喔");
+  }
 }
 // buy_fresh add data end
 
@@ -875,12 +888,15 @@ $(".buy_onSeason_submit").click(function () {
 
 // buy_onSeason add data start
 function buy_onSeason_setData() {
+  document.getElementById("buyOnSeason_remarks").defaultValue = "none";//set buyfresh_remarks default value
   count_buy_onSeason_pick();
+  if(has_buy_count[0]&&$('.freash_checkPackageOutline').attr('id')&&$("input[name='onSeason_name']").val()&&$("input[name='onSeason_tel']").val()&& $("input[name='onSeason_email']").val()&&$("input[name='onSeason_address']").val()){
   firebase
     .firestore()
-    .collection("order")
+    .collection("order_onSeason")
     .add({
       buy_list_count:has_buy_count,//quntity to buy
+      buy_list_totalPrice:totalprice,//price
       buy_list_name:has_buy_name,// to be bought item's name
       package: $('.freash_checkPackageOutline').attr('id'),
       name: $("input[name='onSeason_name']").val(),
@@ -891,21 +907,40 @@ function buy_onSeason_setData() {
 
 
     });
+
+    alert("感謝您的購買，您的購買項目為：\n"+
+    has_buy_name+
+    "\n總金額為："+totalprice+
+    "\n包裝："+$('.freash_checkPackageOutline').attr('id'));
+
+
+
+
+  }
+  else{
+    alert("您有東西漏填");
+  }
 }
 // buy_onSeason add data end
 
 
 //count buy_onSeason_pick_main start
+let totalprice=0;
+let onSeason_price=[699,559,829,579,959,629];
 let has_buy_count=[];//amount fruits which is bought
 let has_buy_name=[];//name which fruits is none zero 
+let has_buy_price=[];//fruit's price 
 function count_buy_onSeason_pick() {
   has_buy_count.length = 0//empty array avoid repeat value
   has_buy_name.length = 0//empty array avoid repeat value
+  has_buy_price.length=0//empty array avoid repeat value
   for (let index = 0; index < 6; index++) {
     
     if (onSeason_quantity_count[index]>0) {
-      has_buy_count.push($(`#quantity_count_${index+1} p`).text());
+      has_buy_count.push(Number($(`#quantity_count_${index+1} p`).text()));
       has_buy_name.push($(`.onSeason_pick_fruit${index+1}`).attr('id'));
+      has_buy_price.push(onSeason_price[index]);
+      totalprice+=onSeason_price[index]*Number($(`#quantity_count_${index+1} p`).text()) ;
     }
     
   }
@@ -925,7 +960,7 @@ let count = 0; //data quantity
 function readOrder() {
   $("#test_firestore p").empty();
   firebase
-    .firestore().collection("order").get().then((querySnapshot) => {
+    .firestore().collection("order_fresh").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         docs[count] = doc;//read firestore's data in array
         count++; //data quantity
