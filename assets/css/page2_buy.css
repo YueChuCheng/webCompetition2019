@@ -1,23 +1,26 @@
+
 .buy_main {
+    
     position: relative;
     display: grid;
-    height: 50vw;
+    height: 50vw !important;
     width: 100vw;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 50vw;
 }
 
 .buy_pic {
     background-image: url(../../assets/images/page2_buy/part1/ybg.png);
     background-size: cover;
-    width: 100%;
+    height: 100%;
 }
 
 .buy_text {
+   
     position: relative;
     display: grid;
-    padding-top: 13vw;
-    padding-left: 8vw;
+    padding-top: 15vw;
+    padding-left: 10vw;
     grid-template-rows: auto;
     grid-template-columns: auto;
     grid-row-gap: 3.5vw;
@@ -42,29 +45,34 @@
 .buy_text_title h2 {
     justify-self: flex-start;
     margin: 0;
-    font-size: 2.5vw;
+    font-size: 2.8vw;
     border-bottom: solid 1vw #fdd000;
+    letter-spacing: 0.5vw;
 }
 
 .buy_text p {
     margin: 0;
-    font-size: 1.5vw;
+    font-size: 1.8vw;
+    letter-spacing: 0.3vw;
+    font-weight: 100;
+    line-height: 3.2vw;
 }
 
 .buy_deco {
     z-index: -1;
     position: absolute;
     height: 8vw;
-    margin-top: 30vw;
-    margin-left: 3vw;
+    margin-top: 35vw;
+    margin-left: 5vw;
 }
 
 .buy_step_main {
+    padding-top:12vw;
     position: relative;
     display: grid;
     align-content: center;
     justify-content: center;
-    grid-row-gap: 5vw;
+    grid-row-gap: 4vw;
     height: 50vw;
     width: 100vw;
 }
@@ -115,12 +123,13 @@
 }
 
 .buy_page_main {
+   
     position: relative;
     display: grid;
     align-content: center;
     justify-content: center;
     grid-row-gap: 3vw;
-    height: 50vw;
+    height: 50vw !important;
     width: 100vw;
 }
 

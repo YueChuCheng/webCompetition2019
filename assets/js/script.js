@@ -158,6 +158,11 @@ import pick_f_main_pick_pic14 from "../images/pages2_buy_fresh/f_14.png";
 import pick_p_pic1 from "../images/pages2_buy_fresh/cgc.png";
 import pick_p_pic2 from "../images/pages2_buy_fresh/rgc.png";
 import pick_p_pic3 from "../images/pages2_buy_fresh/bgc.png";
+import fresh_check from "../images/pages2_buy_fresh/wn.png";
+import pick_f_main_pick_check from "../images/pages2_buy_fresh/yn.png";
+
+
+
 
 import buy_onSeason_mainPic from "../images/page2_buy_onSeason/srbg.png";
 import onSeason_pick_fruit1 from "../images/page2_buy_onSeason/emi.png";
@@ -316,7 +321,8 @@ $(".pick_f_main_pick_pic14").attr("src", pick_f_main_pick_pic14);
 $(".pick_p_pic1").attr("src", pick_p_pic1);
 $(".pick_p_pic2").attr("src", pick_p_pic2);
 $(".pick_p_pic3").attr("src", pick_p_pic3);
-
+$(".fresh_check").attr("src", fresh_check);
+$(".pick_f_main_pick_check").attr("src", pick_f_main_pick_check);
 
 $(".buy_onSeason_mainPic").attr("src", buy_onSeason_mainPic);
 $(".onSeason_pick_fruit1").attr("src", onSeason_pick_fruit1);
@@ -439,19 +445,6 @@ new ScrollMagic.Scene({
   .reverse(false)
   .addTo(controller);
 
-new ScrollMagic.Scene({
-  triggerElement: '.lernus_main'
-})
-  .setClassToggle(".lernus_main", "showIn")
-  .reverse(false)
-  .addTo(controller);
-
-new ScrollMagic.Scene({
-  triggerElement: '.lernus_main'
-})
-  .setClassToggle("footer", "showIn")
-  .reverse(false)
-  .addTo(controller);
 
 //page2_intro_start
 
@@ -593,56 +586,116 @@ $(document).ready(function () {
 
       //春天
       case "peach":
-        $(".fruit_message_card_text").html("<p>peach</p>");
+        $(".fruit_message_address").html("<p>主要產地 那瑪夏區、桃源區<br>產期 4月至5月</p>");
+        $(".fruit_message_subtitle").html("<p>春意盎然</p>");
+        $(".fruit_message_title").html("<p>水蜜桃</p>");
+        $(".fruit_message_card_text").html("<p>那瑪夏區的水蜜桃是國內唯一種植在熱帶山區的水蜜桃，品種大多為白鳳桃，果肉纖維少，香甜又多汁。雖然台灣氣候濕熱，無法培育如日本般碩大甜美的水蜜桃品種，但寶島的台農一號（春蜜）和台農二號（夏蜜），果實雖小，依舊甜美。夏日桃樹已經和果園成為一體，數抹胭紅，一半藏在葉片陰影處，另一半在陽光照耀下，肆意散發著紅熟氣息。</p>");
         break;
       case "bean":
-        $(".fruit_message_card_text").html("<p>bean</p>");
+        $(".fruit_message_address").html("<p>主要產地 那瑪夏區、桃源區<br>產期 4月至5月</p>");
+        $(".fruit_message_subtitle").html("<p>春意盎然</p>");
+        $(".fruit_message_title").html("<p>毛豆</p>");
+        $(".fruit_message_card_text").html("<p>來到旗山和美濃區的外銷毛豆生產專區，農夫和加工業者的戰備狀態，為的是搶收豆莢離開植株後的「黃金四小時」，避免隨時間拉長而快速流失甜度、葉綠素消逝導致豆莢黃化，進而影響口感，高品質的鮮嫩口感，連一向嚴謹的日本商，都直誇「比本國生產的還新鮮」！</p>");
         break;
       case "red":
-        $(".fruit_message_card_text").html("<p>red</p>");
+        $(".fruit_message_address").html("<p>主要產地 桃源區、那瑪夏區<br>產期 5月</p>");
+        $(".fruit_message_subtitle").html("<p>春意盎然</p>");
+        $(".fruit_message_title").html("<p>紅肉李</p>");
+        $(".fruit_message_card_text").html("<p>高雄市紅肉李主要集中於桃源區，桃源區所栽種的紅肉李，果實碩大，果肉質脆、酸甜度適宜，醃漬後另有一番風味，是老少咸宜的水果。桃源、那瑪夏為八八風災重創區，社區重建的工作夥伴會親自上山確認紅肉李的熟度跟採摘情況，不厭其煩地跟果農溝通需求，依照果乾、蜜餞、醋、酒等不同的加工用途，在出貨時便依照熟度與等級進行分類，以確保最後成品的品質。</p>");
         break;
       case "soure":
-        $(".fruit_message_card_text").html("<p>soure</p>");
+        $(".fruit_message_address").html("<p>主要產地 桃源區、六龜區、那瑪夏區、甲仙區<br>產期 3月下旬至4月下旬</p>");
+        $(".fruit_message_subtitle").html("<p>春意盎然</p>");
+        $(".fruit_message_title").html("<p>梅子</p>");
+        $(".fruit_message_card_text").html("<p>如果要醃漬脆梅，必須在清明之前，此時梅子翠綠，果實爽脆。清明過後，梅果漸漸軟黃，只能醃漬Q梅或紫蘇梅，直到五月梅果盡落，在連綿不斷的梅雨中收場。高屏溪流域的那瑪夏區、桃源區及六龜區，就是南台灣最著名的梅子產區。</p>");
         break;
 
       //夏天
       case "mango":
-        $(".fruit_message_card_text").html("<p>mango</p>");
+        $(".fruit_message_address").html("<p>主要產地 六龜區、杉林區、阿蓮區、田寮區、桃源區<br>產期 5月至8月</p>");
+        $(".fruit_message_subtitle").html("<p>盛夏時光</p>");
+        $(".fruit_message_title").html("<p>金煌芒果</p>");
+
+        $(".fruit_message_card_text").html("<p>每一樣水果都記錄著土地的生命，不同地區土壤的特質、氣候條件，總是醞釀出不同風味口感的特殊水果。高雄六龜區最負盛名的，不外是金煌芒果。金煌芒果是高雄市六龜區果農黃金煌先生育成，果實大、核薄、纖維細，甜美多汁的滋味令消費者驚艷。果肉率高、果色金黃、色澤漂亮，是金煌芒果的優點。</p>");
         break;
       case "lich":
-        $(".fruit_message_card_text").html("<p>lich</p>");
+        $(".fruit_message_address").html("<p>主要產地 大樹區、旗山區、杉林區、內門區、燕巢區<br>產期 5月至6月</p>");
+        $(".fruit_message_subtitle").html("<p>盛夏時光</p>");
+        $(".fruit_message_title").html("<p>荔枝</p>");
+
+        $(".fruit_message_card_text").html("<p>大樹區境內荔枝種植以黑葉及玉荷包分布最廣，特有的紅土、黃土夾帶砂質土質，本身即含有豐富礦物質，也形成良好的排水條件；到了冬季，坡度略高的氣溫和濕度，正好提供開花的必備條件，夏季又保有豔陽遍照的優勢，果實自然成熟快、甜度高。核小果肉細緻，果實約八分熟，果皮呈紅、黃綠相間即可採收，甜中帶酸的口感最好。</p>");
         break;
       case "ln":
-        $(".fruit_message_card_text").html("<p>ln</p>");
+        $(".fruit_message_address").html("<p>主要產地 內門區、杉林區、田寮區、甲仙區、旗山區<br>產期 7月至8月</p>");
+        $(".fruit_message_subtitle").html("<p>盛夏時光</p>");
+        $(".fruit_message_title").html("<p>龍眼</p>");
+
+        $(".fruit_message_card_text").html("<p>龍眼為台灣夏季最具代表性的水果之一，除了鮮食外，花粉可成蜜源，還可烘焙製成龍眼乾。暖春，南國空氣仿如加了糖，黃白小花已開滿枝頭，招引來揮翅陣陣的蜜蜂們。盛夏，果實由青轉褐色，粗厚果皮轉為薄而平，輕捏果肉富有彈性。初秋，戶戶燻木香氣揚起，溫徐炭火烘焙著粒粒果實，細火慢焙足足六天，燻蒸成醇厚甘甜的龍眼乾果。</p>");
         break;
       case "dragon":
-        $(".fruit_message_card_text").html("<p>dragon</p>");
+        $(".fruit_message_address").html("<p>主要產地  橋頭區、梓官區、六龜區、旗山區<br>產期 6月至11月</p>");
+        $(".fruit_message_subtitle").html("<p>盛夏時光</p>");
+        $(".fruit_message_title").html("<p>紅龍果</p>");
+
+        $(".fruit_message_card_text").html("<p>帶刺的綠色三角莖，沿著水泥柱或棚架攀爬，如仙人掌的向陽姿態，在內門和旗山區的廣裘農地，結出一望無際的紅龍果園，剖開果實，漾著水分的紅肉，密布黑籽，清香高甜度的果味，最適合冰鎮後大口享用。因花只在夜間盛開，隔天即謝的特性，香氣濃厚，又有夜仙子之稱。</p>");
         break;
       case "rice":
-        $(".fruit_message_card_text").html("<p>rice</p>");
+        $(".fruit_message_address").html("<p>主要產地 美濃區、大寮區<br>產期 一期作－5月至6月；二期作－10月至11月</p>");
+        $(".fruit_message_subtitle").html("<p>盛夏時光</p>");
+        $(".fruit_message_title").html("<p>稻米</p>");
+
+        $(".fruit_message_card_text").html("<p>談及高屏溪流域的稻米，中下游各有好米自居，一是中游美濃，另一為下游大寮。美濃有高雄米倉的美譽，此區主要稻米品種為台稉2號、高雄145號，外觀晶瑩剔透，米粒飽滿有光澤。大寮區域種植的好米品種以高雄145號和高雄147號為主，穀粒較大短圓、完整米型高、粒型整齊、米粒外觀晶瑩剔透、口感佳。</p>");
         break;
       //秋天
       case "jade":
-        $(".fruit_message_card_text").html("<p>jade</p>");
+        $(".fruit_message_address").html("<p>主要產地 桃源區、那瑪夏區<br>產期 9月至10月</p>");
+        $(".fruit_message_subtitle").html("<p>秋蘭飄香</p>");
+        $(".fruit_message_title").html("<p>愛玉</p>");
+
+        $(".fruit_message_card_text").html("<p>用清澈溪水搓出來的愛玉才美味，每條河流搓出的愛玉風味都不相同，那是河水的滋味。種植愛玉的園區必須很「天然」，間接地讓愛玉成為另類的環境指標。 桃源區、那瑪夏區是荖濃溪的上游，溪水清澈乾淨，洗出來的愛玉子清香味美。</p>");
         break;
       case "tro":
-        $(".fruit_message_card_text").html("<p>tro</p>");
+        $(".fruit_message_address").html("<p>主要產地 甲仙區<br>產期 10月至翌年1月</p>");
+        $(".fruit_message_subtitle").html("<p>秋蘭飄香</p>");
+        $(".fruit_message_title").html("<p>芋頭</p>");
+
+        $(".fruit_message_card_text").html("<p>日據時期，製造樟腦的客家人來到甲仙，帶來現在常見的檳榔心芋。當時他們將芋頭種在冷卻樟腦的水池旁，甲仙區近海拔250公尺的丘陵地形，還有楠梓仙溪帶來的溫差調節，讓芋頭生長得格外良好。</p>");
         break;
       //冬天
       case "tomato":
-        $(".fruit_message_card_text").html("<p>tomato</p>");
+        $(".fruit_message_address").html("<p>主要產地  美濃區、杉林區<br>產期 11月中旬至翌年4月</p>");
+        $(".fruit_message_subtitle").html("<p>臘梅怒放</p>");
+        $(".fruit_message_title").html("<p>橙蜜香番茄</p>");
+
+        $(".fruit_message_card_text").html("<p>入秋之後，氣候漸漸轉涼，就是種植橙蜜香小果番茄的好時機。美濃、杉林一帶秋冬時節少雨，日夜溫差大，白日有充足的日照，晚上又有涼爽的溫度，讓番茄得以累積甜分。在南台灣以有機方式種植橙蜜香小果番茄，首先要有耐心，得等氣溫來到適合種植的攝氏20度以下，這個溫度較不利銀葉粉蝨的生長，較能降低毒素病的發生率。</p>");
         break;
       case "onion":
-        $(".fruit_message_card_text").html("<p>onion/p>");
+        $(".fruit_message_address").html("<p>主要產地  林園區<br>產期 1月至2月</p>");
+        $(".fruit_message_subtitle").html("<p>臘梅怒放</p>");
+        $(".fruit_message_title").html("<p>洋蔥</p>");
+
+        $(".fruit_message_card_text").html("<p>一至二月，植株下部葉片開始出現枯黃和倒伏現象，農人知道該挑個晴空無雲的好日子，來採收蔥球了！一顆顆連葉帶起的蔥球，經過葉片萎凋的等待，將球莖以葉片覆蓋、放在田土上曬日光浴，烤成迷人紅棕色的外表皮膜，可讓蔥球含水量低，耐貯運，最後才將葉和根部剪除方便包裝，連續三至四天的採收期，全程仰賴乾燥晴朗的陽光，碰不得一點雨。</p>");
         break;
       case "juju":
-        $(".fruit_message_card_text").html("<p>juju/p>");
+        $(".fruit_message_address").html("<p>主要產地 燕巢區、阿蓮區、六龜區、大社區、田寮區<br>產期 12月至翌年2月</p>");
+        $(".fruit_message_subtitle").html("<p>臘梅怒放</p>");
+        $(".fruit_message_title").html("<p>蜜棗</p>");
+
+        $(".fruit_message_card_text").html("<p>高雄市為台灣蜜棗最大產區，栽植集中於大社、燕巢、阿蓮、田寮及岡山一帶。由於鄰近有名的惡地「月世界」，因此土壤高鹽、高鹼，富含鉀、鎂等礦物質和微量元素，使得種植在此地的水果，風味特別濃烈。蜜棗果粒適中，但肉質脆、甜、細緻，有台灣蘋果的美名。</p>");
         break;
       case "wax":
-        $(".fruit_message_card_text").html("<p>wax/p>");
+        $(".fruit_message_address").html("<p>主要產地 六龜區<br>產期  10月至翌年6月</p>");
+        $(".fruit_message_subtitle").html("<p>臘梅怒放</p>");
+        $(".fruit_message_title").html("<p>蓮霧</p>");
+
+        $(".fruit_message_card_text").html("<p>高品質蓮霧最早出現於屏東臨海地區，因抑制生長、催促發芽開花技術之引用及有機肥料的運用，使得生長出結實、顏色暗紅、質地脆、甜度特別高的蓮霧，而且經濟價值又高，稱為「黑珍珠」。數年後，果農將蓮霧從夏果改成冬果，更生產出果實特大、果色深紅、水分多、清甜爽口的蓮霧，稱為「黑鑽石」，而這個名字也蘊涵著六龜農民的驕傲，極品蓮霧在六龜。</p>");
         break;
       case "radish":
-        $(".fruit_message_card_text").html("<p>radish</p>");
+        $(".fruit_message_address").html("<p>主要產地 美濃區 <br>產期  11月至12月</p>");
+        $(".fruit_message_subtitle").html("<p>臘梅怒放</p>");
+        $(".fruit_message_title").html("<p>白玉蘿蔔</p>");
+
+        $(".fruit_message_card_text").html("<p>白玉蘿蔔是美濃的特有種，據說是早期由日本引進來的，以前只簡單稱作小蘿蔔，在兩期稻作之間，農家隨手種在田埂邊畸零地。由於季節跟土壤，讓美濃的蘿蔔長的個頭份外嬌小，皮薄細肉嫩脆，反倒與他地碩大粗壯的蘿蔔有了區隔。除了煮湯，燉，更可做各樣乾製醃漬品，諸如曬蘿蔔角，蘿蔔絲，加糖鹽醋醃製成的醃蘿蔔，或曬乾後塞進高粱酒瓶裡，甘中透點酸的蘿蔔乾。</p>");
         break;
 
       default:
@@ -671,18 +724,34 @@ $(document).ready(function () {
     //選擇顯示語句
     switch (id) {
 
-      //春天
+      //全年
       case "pine":
-        $(".fruit_message_card_text").html("<p>pine</p>");
+        $(".fruit_message_address").html("<p>主要產地 大樹區、鳥松區、內門區<br>產期 全年</p>");
+        $(".fruit_message_subtitle").html("<p>四季繁華</p>");
+        $(".fruit_message_title").html("<p>鳳梨</p>");
+
+        $(".fruit_message_card_text").html("<p>全年可供果的鳳梨稱得上台灣的驕傲，高雄市的鳳梨研發出多元的低酸度、高品質、特殊風味及不同產期的鳳梨，目前以「金鑽鳳梨」為主力，果肉細緻、風味口感均屬上乘，每年4月至6月品質最佳。</p>");
         break;
       case "gava":
-        $(".fruit_message_card_text").html("<p>gava</p>");
+        $(".fruit_message_address").html("<p>主要產地 燕巢區、大社區、阿蓮區、內門區、岡山區<br>產期 全年</p>");
+        $(".fruit_message_subtitle").html("<p>四季繁華</p>");
+        $(".fruit_message_title").html("<p>芭樂</p>");
+
+        $(".fruit_message_card_text").html("<p>產地以高雄市大社區、燕巢區等地最具代表性，全年均產。目前以燕巢的珍珠芭樂為主力品種，珍珠芭樂具有香味、果肉細緻、甜度上乘、脆度夠。有機會的話，不妨品嚐對比，會發現成長較快的夏季產物，比起冬春季所產，口感較為鬆軟且甜度較低，水分較多，冬春季因水分少、糖份易累積，滋味各有千秋。</p>");
         break;
       case "papa":
-        $(".fruit_message_card_text").html("<p>papa</p>");
+        $(".fruit_message_address").html("<p>主要產地  美濃區、旗山區、杉林區、六龜區<br>產期 全年</p>");
+        $(".fruit_message_subtitle").html("<p>四季繁華</p>");
+        $(".fruit_message_title").html("<p>木瓜</p>");
+
+        $(".fruit_message_card_text").html("<p>木瓜為台灣相當大眾化的經濟水果，配合網室栽培可全年供果。果肉橙紅，甜度及營養價值高，健脾胃、助消化，向來是消費市場的寵兒。木瓜是高屏溪流域的特產，許多農會都有著自有品牌，比如旗山區農會的「紅晶果」、杉林區農會的「紅孩兒」、美濃區農會的「月光山」等。</p>");
         break;
       case "bana":
-        $(".fruit_message_card_text").html("<p>bana</p>");
+        $(".fruit_message_address").html("<p>主要產地 旗山區、美濃區、杉林區、內門區、大寮區<br>產期 全年</p>");
+        $(".fruit_message_subtitle").html("<p>四季繁華</p>");
+        $(".fruit_message_title").html("<p>香蕉</p>");
+
+        $(".fruit_message_card_text").html("<p>台灣素有「香蕉王國」之稱，果皮成熟時呈黃色，果肉淡黃、細緻，最吸引消費者的是其獨特的濃郁香氣，且其營養豐富，具有飽腹感卻又只有半碗飯的熱量，「香甜的台灣香蕉」是日本市場的寵兒。旗山特別適合種植蕉類，自山上帶來的沖積土壤特別肥沃，讓香蕉產量特多，型體壯碩，其中又以溪洲河谷平原產的香蕉品質最佳。</p>");
         break;
 
 
@@ -775,11 +844,20 @@ for (let price = 1000; price <= 3500; price += 500) {
 
     click_count++;
     if (click_count >= 2) {
+      $(`#${last_click_price} .pick_f_main_circle`).css("background-color","#f2f2f2");
+      $(`#${last_click_price} .pick_f_main_circle`).css("border","solid #000 1px");
+      $(`#${last_click_price} .fresh_check`).css("opacity","0");
       $(`#${last_click_price}`).removeClass("freash_checkPriceOutline");
       $(`#${price}`).addClass("freash_checkPriceOutline");
+      $(`#${price} .fresh_check`).css("opacity","1");
+      $(`#${price} .pick_f_main_circle`).css("border","none");
+      $(`#${price} .pick_f_main_circle`).css("background-color","#fdd000");
     }
     else {
+      $(`#${price} .pick_f_main_circle`).css("background-color","#fdd000");
+      $(`#${price} .pick_f_main_circle`).css("border","none");
       $(`#${price}`).addClass("freash_checkPriceOutline");
+      $(`#${price} .fresh_check`).css("opacity","1");
     }
     last_click_price = price;
 
@@ -798,11 +876,15 @@ for (let fruit_count = 1; fruit_count < 15; fruit_count++) {
 
     if (click_fruit_cout < 3 && click_fruit_time % 2) {
       $(`.pick_f_main_pick_pic${fruit_count}`).addClass("freash_checkFruiteOutline");
+      
+      //$(`.pic_card`).html('<img src="" class="pick_f_main_pick_check  "> ');
       click_fruit_cout++;
       click_fruit_time++;
     }
     else if (!(click_fruit_time % 2)) {
       $(`.pick_f_main_pick_pic${fruit_count}`).removeClass("freash_checkFruiteOutline");
+      //$(`.pick_f_main_pick_pic:nth-child${fruit_count}`).remove("<img src='' class='pick_f_main_pick_check '>");
+      //$(`.pic_card`).html('<img src="" class="pick_f_main_pick_check "> ');
       click_fruit_cout--;
       click_fruit_time++;
     }
@@ -844,24 +926,24 @@ $(".buy_fresh_submit").click(function () {
 // buy_fresh add data start
 function set() {
   document.getElementById("buyfresh_remarks").defaultValue = "none";//set buyfresh_remarks default value
-  
-if(click_count!=1&&click_fruit_cout===3&&clickPackage_count!=1&& $("input[name='name']").val()&&$("input[name='tel']").val()&&$("input[name='email']").val()&&$("input[name='address']").val()){
-  firebase
-    .firestore()
-    .collection("order_fresh")
-    .add({
 
-      Fruit1: $('.freash_checkFruiteOutline')[0].id,
-      Fruit2: $('.freash_checkFruiteOutline')[1].id,
-      Fruit3: $('.freash_checkFruiteOutline')[2].id,
-      Price: $('.freash_checkPriceOutline').attr('id'),
-      Package: $('.freash_checkPackageOutline').attr('id'),
-      Name: $("input[name='name']").val(),
-      TEL: $("input[name='tel']").val(),
-      Email: $("input[name='email']").val(),
-      Address: $("input[name='address']").val(),
-      Remarks: $("input[name='remarks']").val(),
-    });
+  if (click_count != 1 && click_fruit_cout === 3 && clickPackage_count != 1 && $("input[name='name']").val() && $("input[name='tel']").val() && $("input[name='email']").val() && $("input[name='address']").val()) {
+    firebase
+      .firestore()
+      .collection("order_fresh")
+      .add({
+
+        Fruit1: $('.freash_checkFruiteOutline')[0].id,
+        Fruit2: $('.freash_checkFruiteOutline')[1].id,
+        Fruit3: $('.freash_checkFruiteOutline')[2].id,
+        Price: $('.freash_checkPriceOutline').attr('id'),
+        Package: $('.freash_checkPackageOutline').attr('id'),
+        Name: $("input[name='name']").val(),
+        TEL: $("input[name='tel']").val(),
+        Email: $("input[name='email']").val(),
+        Address: $("input[name='address']").val(),
+        Remarks: $("input[name='remarks']").val(),
+      });
 
     alert(`感謝您的購買，您的購買項目為：
 水果種類：${$('.freash_checkFruiteOutline')[0].id}、${$('.freash_checkFruiteOutline')[1].id}、${$('.freash_checkFruiteOutline')[2].id}
@@ -872,7 +954,7 @@ if(click_count!=1&&click_fruit_cout===3&&clickPackage_count!=1&& $("input[name='
 
 
   }
-  else{
+  else {
     alert("有東西漏填喔");
   }
 }
@@ -890,34 +972,34 @@ $(".buy_onSeason_submit").click(function () {
 function buy_onSeason_setData() {
   document.getElementById("buyOnSeason_remarks").defaultValue = "none";//set buyfresh_remarks default value
   count_buy_onSeason_pick();
-  if(has_buy_count[0]&&$('.freash_checkPackageOutline').attr('id')&&$("input[name='onSeason_name']").val()&&$("input[name='onSeason_tel']").val()&& $("input[name='onSeason_email']").val()&&$("input[name='onSeason_address']").val()){
-  firebase
-    .firestore()
-    .collection("order_onSeason")
-    .add({
-      buy_list_count:has_buy_count,//quntity to buy
-      buy_list_totalPrice:totalprice,//price
-      buy_list_name:has_buy_name,// to be bought item's name
-      package: $('.freash_checkPackageOutline').attr('id'),
-      name: $("input[name='onSeason_name']").val(),
-      TEL: $("input[name='onSeason_tel']").val(),
-      Email: $("input[name='onSeason_email']").val(),
-      Address: $("input[name='onSeason_address']").val(),
-      Remarks: $("input[name='onSeason_remarks']").val(),
+  if (has_buy_count[0] && $('.freash_checkPackageOutline').attr('id') && $("input[name='onSeason_name']").val() && $("input[name='onSeason_tel']").val() && $("input[name='onSeason_email']").val() && $("input[name='onSeason_address']").val()) {
+    firebase
+      .firestore()
+      .collection("order_onSeason")
+      .add({
+        buy_list_count: has_buy_count,//quntity to buy
+        buy_list_totalPrice: totalprice,//price
+        buy_list_name: has_buy_name,// to be bought item's name
+        package: $('.freash_checkPackageOutline').attr('id'),
+        name: $("input[name='onSeason_name']").val(),
+        TEL: $("input[name='onSeason_tel']").val(),
+        Email: $("input[name='onSeason_email']").val(),
+        Address: $("input[name='onSeason_address']").val(),
+        Remarks: $("input[name='onSeason_remarks']").val(),
 
 
-    });
+      });
 
-    alert("感謝您的購買，您的購買項目為：\n"+
-    has_buy_name+
-    "\n總金額為："+totalprice+
-    "\n包裝："+$('.freash_checkPackageOutline').attr('id'));
+    alert("感謝您的購買，您的購買項目為：\n" +
+      has_buy_name +
+      "\n總金額為：" + totalprice +
+      "\n包裝：" + $('.freash_checkPackageOutline').attr('id'));
 
 
 
 
   }
-  else{
+  else {
     alert("您有東西漏填");
   }
 }
@@ -925,24 +1007,24 @@ function buy_onSeason_setData() {
 
 
 //count buy_onSeason_pick_main start
-let totalprice=0;
-let onSeason_price=[699,559,829,579,959,629];
-let has_buy_count=[];//amount fruits which is bought
-let has_buy_name=[];//name which fruits is none zero 
-let has_buy_price=[];//fruit's price 
+let totalprice = 0;
+let onSeason_price = [699, 559, 829, 579, 959, 629];
+let has_buy_count = [];//amount fruits which is bought
+let has_buy_name = [];//name which fruits is none zero 
+let has_buy_price = [];//fruit's price 
 function count_buy_onSeason_pick() {
   has_buy_count.length = 0//empty array avoid repeat value
   has_buy_name.length = 0//empty array avoid repeat value
-  has_buy_price.length=0//empty array avoid repeat value
+  has_buy_price.length = 0//empty array avoid repeat value
   for (let index = 0; index < 6; index++) {
-    
-    if (onSeason_quantity_count[index]>0) {
-      has_buy_count.push(Number($(`#quantity_count_${index+1} p`).text()));
-      has_buy_name.push($(`.onSeason_pick_fruit${index+1}`).attr('id'));
+
+    if (onSeason_quantity_count[index] > 0) {
+      has_buy_count.push(Number($(`#quantity_count_${index + 1} p`).text()));
+      has_buy_name.push($(`.onSeason_pick_fruit${index + 1}`).attr('id'));
       has_buy_price.push(onSeason_price[index]);
-      totalprice+=onSeason_price[index]*Number($(`#quantity_count_${index+1} p`).text()) ;
+      totalprice += onSeason_price[index] * Number($(`#quantity_count_${index + 1} p`).text());
     }
-    
+
   }
   console.log(has_buy_count);
 }
@@ -982,28 +1064,28 @@ let onSeason_quantity_count = [];
 
 //init onSeason_quantity_count 
 for (let index = 0; index < 6; index++) {
-  onSeason_quantity_count[index]=0;
-$(`#quantity_count_${index+1}`).html(`<p>${onSeason_quantity_count[index]}</p>`);
+  onSeason_quantity_count[index] = 0;
+  $(`#quantity_count_${index + 1}`).html(`<p>${onSeason_quantity_count[index]}</p>`);
 }
 
 //onSeason_quantity_count add
 for (let index = 0; index < 6; index++) {
-  $(`#quantity_add_${index+1}`).click(function () {
+  $(`#quantity_add_${index + 1}`).click(function () {
     onSeason_quantity_count[index]++;
-    $(`#quantity_count_${index+1}`).html(`<p>${onSeason_quantity_count[index]}</p>`);
+    $(`#quantity_count_${index + 1}`).html(`<p>${onSeason_quantity_count[index]}</p>`);
   });
 }
 
 //onSeason_quantity_count minus
 
 for (let index = 0; index < 6; index++) {
-  $(`#quantity_minus_${index+1}`).click(function () {
+  $(`#quantity_minus_${index + 1}`).click(function () {
 
-    if(onSeason_quantity_count[index]>0){ //can't less then -1
-    onSeason_quantity_count[index]--;
+    if (onSeason_quantity_count[index] > 0) { //can't less then -1
+      onSeason_quantity_count[index]--;
     }
 
-    $(`#quantity_count_${index+1}`).html(`<p>${onSeason_quantity_count[index]}</p>`);
+    $(`#quantity_count_${index + 1}`).html(`<p>${onSeason_quantity_count[index]}</p>`);
   });
 }
 

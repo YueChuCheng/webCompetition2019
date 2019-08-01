@@ -1,7 +1,7 @@
 .title_logo {
     position: absolute;
     opacity: 0;
-    width: 20%;
+    width: 23%;
     margin-top: 13%;
     margin-left: 6%;
     animation: fadeIn-font 0.5s linear 4.5s forwards;
@@ -47,7 +47,7 @@
     /* left: calc(100vw - 55vw); */
     margin-top: 1.5%;
     height: 100%;
-    width: 100vw !important;
+    /* width: 100vw !important; */
     animation: g-pa_jumpin 0.5s linear 2s forwards;
     display: grid;
     justify-items: end;
@@ -72,10 +72,13 @@
 .home_subtitle {
     position: absolute;
     animation: fadeIn-font 0.5s linear 4.5s forwards;
-    margin-top: 30%;
-    margin-left: 11.5%;
+    margin-top: 31%;
+    margin-left: 12%;
     opacity: 0;
-    font-size: 1.2vw;
+    font-size: 1.3vw;
+    font-weight: 100;
+    letter-spacing: 0.18vw;
+    line-height: 2.8vw;
 }
 
 .home_fruit_sm {

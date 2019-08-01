@@ -1,16 +1,10 @@
-
 .progress_bar.showIn {
-  
     opacity: 1;
-
 }
 
-
 .progress_bar {
-   
-
     transition: opacity 0.5s;
-    opacity: 0 ;
+    opacity: 0;
     z-index: 1000000;
     height: 18vw;
     width: 10vw;
@@ -22,9 +16,7 @@
     grid-template-columns: 2fr 1fr;
 }
 
-
-.fruit_message{
-   
+.fruit_message {
     display: grid;
     z-index: 10000000;
     position: fixed;
@@ -35,40 +27,100 @@
     align-items: center;
 }
 
-.fruit_message_card{
-  
+.fruit_message_card {
+    border: solid rgb(61, 61, 61) 0.2vw;
+    position: relative;
+    border-radius: 3vw;
     display: grid;
-    height: 40vw;
-    width: 40vw;
+    grid-template-rows: 3fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 38vw;
+    width: 65vw;
     background-color: #fff;
 }
 
-
-.no_show{
+.no_show {
     display: none !important;
-    
 }
 
-.fruit_message_card_off{
-
+.fruit_message_card_off {
+    transform: scale(0.5);
+    position: absolute;
     cursor: pointer;
-    justify-self:flex-end;
+    justify-self: flex-end;
     width: 2vw;
     height: 2vw;
+    right: 1.5vw;
+    top: 1vw;
 }
-.fruit_message_card_line1,.fruit_message_card_line2{
-    border: #000 solid 0.5px;
-    width: 2.8vw;
+
+.fruit_message_card_line1, .fruit_message_card_line2 {
+    border: rgb(61, 61, 61) solid 4px;
+    border-radius: 50vw;
+    width: 2.85vw;
     position: absolute;
     transform-origin: left top;
+    background-color: rgb(61, 61, 61);
 }
-.fruit_message_card_line1{
-  
-    transform: rotate(45deg);
+
+.fruit_message_card_line1 {
+    transform: rotate(43deg);
 }
-.fruit_message_card_line2{
-    margin-top:2vw;
-    transform: rotate(-45deg);
+
+.fruit_message_card_line2 {
+    margin-top: 2vw;
+    transform: rotate(-47deg);
+}
+
+.fruit_message_address p {
+    font-size: 1vw;
+    margin-top:3vw;
+    margin-left:3vw;
+    font-weight: 100;
+    line-height: 2.2vw;
+
+}
+
+.fruit_message_sec1 {
+    padding-top:5vw;
+    display: grid;
+    justify-items: center;
+    align-content: flex-start;
+    grid-row-gap: 1vw;
+}
+.fruit_message_subtitle p{
+    letter-spacing: 0.18vw;
+    font-weight: 100;
+    color: #fff;
+    width: 6vw;
+    background-color: #27aede;
+    margin:0;
+    text-align: center;
+    font-size:0.8vw ;
+}
+.fruit_message_title p{
+    margin:0;
+    text-align: center;
+    font-size:1.5vw ;
+}
+.fruit_message_sec1 img {
+    height: 10vw;
+}
+
+.fruit_message_card_text {
+    display: grid;
+    justify-items: center;
+    padding: 2vw 12vw;
+    color: #fff;
+    font-weight: 100;
+    font-size: 1vw;
+    line-height: 2vw;
+    letter-spacing: 0.18vw;
+    height: 100%;
+    border-radius: 0 0 2.8vw 2.8vw;
+    background-color: #27aede;
+    grid-row: 2/3;
+    grid-column: 1/4;
 }
 
 .intro_bartitle {
@@ -81,6 +133,8 @@
     cursor: pointer;
     margin: 0;
     font-size: 1vw;
+    font-weight: 100;
+    letter-spacing: 2px;
 }
 
 .intro_bar {
@@ -96,8 +150,7 @@
     width: 0.8vw;
     border-radius: 50vw;
     background-color: red;
-   
-    left: calc(83.25% - 0.4vw); 
+    left: calc(83.25% - 0.4vw);
 }
 
 .intro_line {
@@ -120,7 +173,7 @@
     background-size: 100vw auto;
     background-repeat: no-repeat;
     align-items: center;
-    top: 90px;
+    top: 6vw;
 }
 
 .intro_title {
@@ -135,18 +188,21 @@
 }
 
 .intro_title h2 {
+    letter-spacing: 0.5vw;
+    font-weight: 500;
     margin-bottom: 0;
-    font-size: 3.5vw;
+    font-size: 3.7vw;
 }
 
 .intro_title p {
+    letter-spacing: 0.18vw;
+    font-weight: 100;
     text-align: center;
     margin-bottom: 0;
     font-size: 1.5vw;
 }
 
 .intro_sec {
-   
     position: relative;
     display: grid;
     height: 55vw;
@@ -169,12 +225,14 @@
 }
 
 .intro_text_title p {
-    font-size: 1vw;
+    letter-spacing: 0.3vw;
+    line-height: 2vw;
+    font-weight: 100;
+    font-size: 1.2vw;
     margin: 0;
 }
 
 .intro_text_title :nth-child(1) {
-   
     font-size: 1.5vw;
 }
 
@@ -195,6 +253,7 @@
 }
 
 .intro_text_title h3 {
+    letter-spacing: 0.3vw;
     font-size: 3vw;
     margin: 0;
     margin-top: 0.5vw;
@@ -205,6 +264,7 @@
     cursor: pointer;
     font-size: 1.5vw;
     margin: 0;
+    letter-spacing: 0.4vw;
 }
 
 .intro_text_btn p img {
@@ -216,7 +276,8 @@
 .intro_text_btn {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(2, 12vw);
+    grid-template-columns: repeat(2, 13vw);
+    grid-row-gap: 1.5vw;
     align-items: center;
 }
 
@@ -237,7 +298,6 @@
 }
 
 .allyear {
-
     position: relative;
     background-image: url(../../assets/images/page2_intro/all_year/fsbg.jpg);
     background-size: cover;
@@ -254,14 +314,21 @@
     justify-items: center;
 }
 
-.allyear_text p, .allyear_text h2 {
+.allyear_text p {
+    text-align: center;
     margin: 0;
+    font-weight: 100;
+    letter-spacing: 0.18vw;
+    line-height: 2.8vw;
 }
 
 .allyear_text h2 {
+    margin: 0;
     margin-top: 0.5vw;
-    margin-bottom: 2.5vw;
+    margin-bottom: 2.8vw;
     font-size: 3vw;
+    font-weight: 500;
+    letter-spacing: 0.4vw;
 }
 
 .allyear_text:nth-child(1) {
@@ -275,8 +342,10 @@
 .allyear_btn p {
     cursor: pointer;
     margin: 0;
-    font-size: 1.5vw;
+    font-size: 1.8vw;
     text-align: center;
+    letter-spacing: 0.18vw;
+    font-weight: normal;
 }
 
 .allyear_btn {
@@ -295,22 +364,22 @@
     height: 2.5vw;
 }
 
-.pink{
-    background-color: pink !important; 
+.pink {
+    background-color: pink !important;
 }
 
-.lightblue{
-    background-color: #00d7ff !important; 
+.lightblue {
+    background-color: #00d7ff !important;
 }
 
-.orange{
-    background-color: #ffb465 !important; 
+.orange {
+    background-color: #ffb465 !important;
 }
 
-.gray{
-    background-color: #d4e4e4 !important; 
+.gray {
+    background-color: #d4e4e4 !important;
 }
 
-.red{
-    background-color: red ; 
+.red {
+    background-color: red;
 }

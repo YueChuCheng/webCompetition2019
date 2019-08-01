@@ -11,8 +11,10 @@
 }
 
 .intro h3 {
+    letter-spacing: 0.5vw;
+    font-weight: 500;
     position: relative;
-    font-size: 3vw;
+    font-size: 3.8vw;
 }
 
 .text_line1 {
@@ -21,7 +23,10 @@
 }
 
 .text {
-    font-size: 1vw;
+    letter-spacing: 0.18vw;
+    line-height: 2vw;
+    font-weight: 100;
+    font-size: 1.2vw;
 }
 
 .intro_o {

@@ -210,8 +210,13 @@
 #story_Effect.showIn {
     opacity: 1;
 }
+.page_main{
+    padding:0;
+    width: 100vw;
+}
 
 .story_main {
+   
     position: relative;
     width: 100vw;
     height: 50vw;
@@ -223,19 +228,20 @@
     display: grid;
     grid-template-rows: 70%;
     grid-template-columns: 35% 35%;
-    grid-column-gap: 7%;
+    grid-column-gap: 15%;
 }
 
 .story_text {
+    margin-left:20%;
     display: grid;
     grid-template-rows: 19% 56% 20%;
 }
 
 .RB {
     position: absolute;
-    width: 6%;
+    width: 8%;
     height: auto;
-    top: 7vw;
+    top: 5vw;
     left: 11vw;
 }
 
@@ -248,27 +254,40 @@
     align-self: flex-end;
     padding-left: 9%;
     margin: 0;
-    font-size: 3vw;
+    font-size: 3.5vw;
+    font-weight: 500;
+    letter-spacing: 0.8vw;
 }
 
 .story_text_subtitle {
     align-self: center;
     font-size: 1.5vw;
-    padding-left: 10%;
+    letter-spacing: 0.18vw;
+    line-height: 2.8vw;
+    font-weight: 100;
+    padding-left: 13%;
 }
-
+.story_text_subtitle .sm_none{
+    margin-bottom: 5%;
+}
 .story_text_btn {
     font-size: 1.5vw;
     margin-left: 10%;
-    height: 40%;
-    width: 25%;
-    border: solid #262626 1px;
+    height: 4.5vw;
+    width: 48%;
+    border: solid #262626 0.1vw;
     border-radius: 50vw;
     display: grid;
     justify-content: center;
     align-content: center;
     cursor: pointer;
 }
+.story_text_btn a{
+    color: #262626;
+    font-size: 2vw;
+    letter-spacing: 0.18vw;
+}
+
 
 .story_pic {}
 
@@ -280,7 +299,7 @@
     z-index: -1;
     transform: rotate(45deg);
     position: absolute;
-    height: 8vw;
+    height: 10vw;
     width: 6%;
     background-image: url(../../assets/images/wave.png);
     background-size: auto 130px;

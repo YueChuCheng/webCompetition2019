@@ -1,16 +1,14 @@
-.lernus_main.showIn{
-    opacity: 1;
-}
+
 
 .lernus_main {
     height: 31vw;
     transition: all 1.8s;
-    opacity: 0;
+    opacity: 1;
     position: relative;
     padding: 0;
     /* take off */
     display: grid;
-    grid-template-rows: 5vw 10vw 3vw;
+    grid-template-rows: 5vw 10vw 4.5vw;
     grid-template-columns: 100%;
     grid-row-gap: 10%;
     justify-content: center;
@@ -25,16 +23,21 @@
 .learnus_title {
     height: 100%;
 }
-
+.lernus_main a{
+    
+    color: #262626;
+}
 .learnus_btn {
     display: grid;
     align-items: center;
     justify-items: center;
     height: 100%;
-    width: 8vw;
-    border: solid #000 1px;
+    width: 13vw;
+    border: solid #000 0.1vw;
     border-radius: 50vw;
-    font-size: 1.3vw;
+    font-size: 1.8vw;
+    letter-spacing: 0.18vw;
+    color: #262626;
 }
 
 .learnus_Rwave {
