@@ -1,6 +1,7 @@
 
 
 .lernus_main {
+    width: 100vw;
     height: 31vw;
     transition: all 1.8s;
     opacity: 1;
@@ -86,17 +87,7 @@
 /* footer.showIn{
     opacity: 1;
 } */
-footer {
-    transition: all 1.8s;
-    opacity: 1;
-    position: relative;
-    bottom: 0;
-    background-color: #3abfff;
-    width: 100vw;
-    height: 6vw;
-    margin-top: 26vw;
-    z-index: 100000;
-}
+
 
 .boat {
     transform: translateX(100vw);
@@ -270,12 +261,7 @@ footer {
      
     }
     
-    footer {
-        margin: 0;
-        height: 8vh;
-        align-self: flex-end;
-        
-    }
+    
     .lernus_sm{
         display: grid;
         grid-template-rows:1fr auto ;

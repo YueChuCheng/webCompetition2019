@@ -1,10 +1,11 @@
 .buy_onSeason_main{
-    height: 150vw;
+    height: 145vw;
     width: 100vw;
     position: relative;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: 1fr 34vw;
+    grid-template-columns: 1fr 36vw;
+    
 }
 
 
@@ -16,33 +17,41 @@
 }
 
 .buy_onSeason_sec1{
+    padding-top:13vw;
+    padding-left: 10vw;
    
-    background-color: lightblue;
-}
-.buy_onSeason_sec2{
-  
-    background-color: lightcoral;
 }
 
+.buy_onSeason_info_main input {
+    border-radius: 2vw;
+    border: none;
+}
 
 .buy_onSeason_info{
-    padding-top: 3vw;
-    padding-left: 4vw;
-    background-color: lightseagreen;
+    height: 45vw;
+    padding-left: 10vw;
 }
+
+.buy_onSeason_info h2{
+    font-size: 1.8vw;
+    letter-spacing: 0.3vw;
+    margin-bottom:1vw;
+}
+
 
 .buy_onSeason_sec1_pick_main{
     position: relative;
     display: grid;
-    justify-content: center;
+    justify-content: flex-start;
     grid-template-rows: repeat(2,1fr);
-    grid-template-columns: repeat(3 ,10vw);
-    grid-column-gap: 3vw;
+    grid-template-columns: repeat(3 ,11vw);
+    grid-column-gap:3.5vw;
     grid-row-gap: 5vw;
 }
 
 .buy_onSeason_sec1_pick_main img{
-    width: 10vw;
+    width: 11vw;
+    height: auto;
     
 }
 .onSeason_pick_card{
@@ -56,13 +65,16 @@
     grid-template-rows: 2vw;
     grid-template-columns: 1.5vw 1.5vw 1.5vw;
     justify-content: space-between;
+    align-content: center;
     border-radius: 0.5vw;
-    width: 80%;
-    height: 2vw;
+    width: 78%;
+    height: 2.3vw;
     background-color: #f2f2f2;
+    padding:0 0.5vw;
 }
 
 .onSeason_quantity_add,.onSeason_quantity_minus{
+    transform: scale(0.9);
     cursor: pointer;
     position: relative;
     display: grid;
@@ -71,11 +83,13 @@
 }
 
 .add_line1,.add_line2{
+    
     position: absolute;
     border-radius: 50vw;
     width: 1.5vw;
     border: solid #000 0.2vw;
     transform-origin: center center;
+    background-color: #000;
 
 }
 
@@ -88,6 +102,7 @@
     border-radius: 50vw;
     width: 1.5vw;
     border: solid #000 0.2vw;
+    background-color: #000;
 }
 
 .onSeason_quantity_count{
@@ -108,14 +123,15 @@
     display: grid;
     justify-content: flex-start;
     align-content: flex-start;
-    padding-top: 3vw;
-    padding-left: 4vw;
+    padding-top: 4.5vw;
+    padding-left:10vw;
 }
 
 
 .buy_onSeason_sec2 h3 {
     margin: 0;
-    font-size: 1.5vw;
+    font-size: 1.8vw;
+    letter-spacing: 0.3vw;
 }
 
 .buy_onSeason_sec2 img {
@@ -123,34 +139,49 @@
 }
 
 .buy_onSeason_sec1 h3{
-    font-size: 2.5vw;
+    font-size: 2.9vw;
+    letter-spacing: 10px;
 }
 
 .buy_onSeason_sec1:nth-child(2) {
-    font-size: 1.5vw;
+    font-size: 1.7vw;
+    letter-spacing: 0.2vw;
 }
 
 
 .buy_onSeason_submit{
-    border-radius: 50vw;
+    position: absolute;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 3vw;
+    width: 8vw;
+    border: #262626 solid 0.08vw;
+    border-radius: 5vw;
     cursor: pointer;
-    background-color: lightblue;
+    margin-top: 4vw;
+    margin-bottom: 2vw;
+    justify-self: center;
+    align-self: flex-end;
+    font-size: 1.5vw;
+    font-weight: 100;
 }
 
 
 .buy_onSeason_info_main{
-    padding-top: 3vw;
-    padding-left: 5vw;
+    padding-top: 4vw;
+    padding-left: 3vw;
     position: relative;
     display: grid;
     justify-content: start;
     align-content: flex-start;
-    grid-template-rows: repeat(5,2vw);
-    grid-template-columns: 20% 40% ;
-    grid-row-gap: 1vw;
+    grid-template-rows: repeat(5, 3vw);
+    grid-template-columns: 20% 40%;
+    grid-row-gap: 0.8vw;
+    grid-column-gap: 0.5vw;
     background-color: #f2f2f2;
     border-radius: 2vw;
-    height: 50%;
+    height: 80%;
     width: 80%;
 }
 .buy_onSeason_info_main input{
@@ -159,6 +190,17 @@
 }
 
 .buy_onSeason_info_main .input_main{
+    align-self: center;
     font-size: 1.5vw;
     font-weight: 500;
+}
+.buy_onSeason_info_main input::placeholder {
+    font-size: 1vw;
+    line-height: 1vw;
+    padding-left: 1vw;
+}
+
+#buyOnSeason_remarks {
+    border-radius: 1vw;
+    height: 7vw;
 }

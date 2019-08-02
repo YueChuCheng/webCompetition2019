@@ -175,6 +175,7 @@ import onSeason_pick_fruit6 from "../images/page2_buy_onSeason/cbi.png";
 
 $(".title_logo").attr("src", title_logo);
 $(".nav_logo").attr("src", nav_logo);
+$(".nav_logo_footer").attr("src", nav_logo);
 
 $(".main_pic").attr("src", bgi);
 
@@ -844,20 +845,20 @@ for (let price = 1000; price <= 3500; price += 500) {
 
     click_count++;
     if (click_count >= 2) {
-      $(`#${last_click_price} .pick_f_main_circle`).css("background-color","#f2f2f2");
-      $(`#${last_click_price} .pick_f_main_circle`).css("border","solid #000 1px");
-      $(`#${last_click_price} .fresh_check`).css("opacity","0");
+      $(`#${last_click_price} .pick_f_main_circle`).css("background-color", "#f2f2f2");
+      $(`#${last_click_price} .pick_f_main_circle`).css("border", "solid #000 1px");
+      $(`#${last_click_price} .fresh_check`).css("opacity", "0");
       $(`#${last_click_price}`).removeClass("freash_checkPriceOutline");
       $(`#${price}`).addClass("freash_checkPriceOutline");
-      $(`#${price} .fresh_check`).css("opacity","1");
-      $(`#${price} .pick_f_main_circle`).css("border","none");
-      $(`#${price} .pick_f_main_circle`).css("background-color","#fdd000");
+      $(`#${price} .fresh_check`).css("opacity", "1");
+      $(`#${price} .pick_f_main_circle`).css("border", "none");
+      $(`#${price} .pick_f_main_circle`).css("background-color", "#fdd000");
     }
     else {
-      $(`#${price} .pick_f_main_circle`).css("background-color","#fdd000");
-      $(`#${price} .pick_f_main_circle`).css("border","none");
+      $(`#${price} .pick_f_main_circle`).css("background-color", "#fdd000");
+      $(`#${price} .pick_f_main_circle`).css("border", "none");
       $(`#${price}`).addClass("freash_checkPriceOutline");
-      $(`#${price} .fresh_check`).css("opacity","1");
+      $(`#${price} .fresh_check`).css("opacity", "1");
     }
     last_click_price = price;
 
@@ -870,23 +871,25 @@ for (let price = 1000; price <= 3500; price += 500) {
 let click_fruit_cout = 0;
 
 for (let fruit_count = 1; fruit_count < 15; fruit_count++) {
-  let click_fruit_time = 1;
-  $(`.pick_f_main_pick_pic${fruit_count}`).click(function () {
+  let click_fruit_bool = new Boolean(true);
+  $(`.pic_card${fruit_count}`).click(function () {
 
 
-    if (click_fruit_cout < 3 && click_fruit_time % 2) {
+    if (click_fruit_cout < 3 && click_fruit_bool) {
       $(`.pick_f_main_pick_pic${fruit_count}`).addClass("freash_checkFruiteOutline");
-      
-      //$(`.pic_card`).html('<img src="" class="pick_f_main_pick_check  "> ');
+      $(`.pick_f_main_pick_pic_card .pick_check${fruit_count}`).css("display","block");
+    
       click_fruit_cout++;
-      click_fruit_time++;
+      click_fruit_bool=false;
+     
     }
-    else if (!(click_fruit_time % 2)) {
+    else if (!(click_fruit_bool)) {
       $(`.pick_f_main_pick_pic${fruit_count}`).removeClass("freash_checkFruiteOutline");
-      //$(`.pick_f_main_pick_pic:nth-child${fruit_count}`).remove("<img src='' class='pick_f_main_pick_check '>");
-      //$(`.pic_card`).html('<img src="" class="pick_f_main_pick_check "> ');
+      $(`.pick_f_main_pick_pic_card .pick_check${fruit_count}`).css("display","none");
       click_fruit_cout--;
-      click_fruit_time++;
+      
+      click_fruit_bool=true;
+     
     }
 
   });

@@ -224,7 +224,7 @@
 }
 
 .pick_f_main_pick_pic_card .pick_f_main_pick_check {
-  
+    display: none;
     top: 15%;
     position: absolute;
     height: 30%;

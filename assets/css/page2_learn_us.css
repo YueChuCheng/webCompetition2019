@@ -29,16 +29,20 @@
 }
 
 .learn_us_title {
-    height: 100%;
+    height: 120%;
     justify-self: center;
 }
 
 .learn_us_main_sec1 p {
+    text-align: center;
     margin: 0;
-    margin-top: 6vw;
+    margin-top: 9vw;
     justify-self: center;
     color: #fff;
-    font-size: 1.2vw;
+    font-size: 1.6vw;
+    font-weight: 300;
+    letter-spacing: 0.5vw;
+
 }
 
 .learn_us_deco {
@@ -171,7 +175,7 @@
     display: grid;
     justify-items: center;
     grid-template-rows: 15vw 2vw 2vw;
-    grid-row-gap: 2vw ;
+    grid-row-gap: 2.5vw ;
 }
 
 
@@ -186,12 +190,13 @@
 }
 
 .member_1 :nth-child(2),.member_2 :nth-child(2),.member_3 :nth-child(2){
-    font-size: 1.8vw;
+    font-size: 2.2vw;
     font-weight: 500;
+    letter-spacing: 0.4vw;
 }
 .member_1 :nth-child(3),.member_2 :nth-child(3),.member_3 :nth-child(3){
-    font-size: 1.3vw;
-    
+    font-size: 1.8vw;
+    letter-spacing: 0.4vw;
 }
 
 
