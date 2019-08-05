@@ -27,8 +27,8 @@ footer {
 .footer_main_text{
     display: grid;
     position: relative;
-    font-weight: 200;
-    font-size: 1.5vw;
+    font-weight: 100;
+    font-size: 1.1vw;
     align-items: center;
     justify-content: flex-end;
     color:#fff;
@@ -39,7 +39,7 @@ footer {
 .nav_logo_footer{
     position: relative;
     align-self: center;
-    height: 80%;
+    height: 35%;
 }
 
 #story_footer{

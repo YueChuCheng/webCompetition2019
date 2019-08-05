@@ -260,6 +260,7 @@
 }
 
 .story_text_subtitle {
+    color: #4d4d4d;
     align-self: center;
     font-size: 1.5vw;
     letter-spacing: 0.18vw;
@@ -283,6 +284,7 @@
     cursor: pointer;
 }
 .story_text_btn a{
+    text-decoration: none; 
     color: #262626;
     font-size: 2vw;
     letter-spacing: 0.18vw;

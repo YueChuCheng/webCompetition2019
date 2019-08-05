@@ -202,7 +202,7 @@
 .buy_fresh_info_main input::placeholder {
     font-size: 1vw;
     line-height: 1vw;
-    padding-left: 1vw;
+   
 }
 
 .pick_p_pic1, .pick_p_pic2, .pick_p_pic3 {
@@ -252,4 +252,10 @@
 #buyfresh_remarks {
     border-radius: 1vw;
     height: 7vw;
+}
+
+
+.input{
+    padding:0 1vw;
+    font-size: 1.2vw; 
 }

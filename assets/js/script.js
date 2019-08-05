@@ -171,11 +171,11 @@ import onSeason_pick_fruit3 from "../images/page2_buy_onSeason/eri.png";
 import onSeason_pick_fruit4 from "../images/page2_buy_onSeason/cri.png";
 import onSeason_pick_fruit5 from "../images/page2_buy_onSeason/ebi.png";
 import onSeason_pick_fruit6 from "../images/page2_buy_onSeason/cbi.png";
-
+import wflogo from "../images/wflogo.png";
 
 $(".title_logo").attr("src", title_logo);
 $(".nav_logo").attr("src", nav_logo);
-$(".nav_logo_footer").attr("src", nav_logo);
+$(".nav_logo_footer").attr("src", wflogo);
 
 $(".main_pic").attr("src", bgi);
 
@@ -495,8 +495,7 @@ new ScrollMagic.Scene({
   .setClassToggle(".nav_btn", "black")
   .addTo(controller);
 
-
-
+  
 
 
 
@@ -535,6 +534,24 @@ $(".hm_circle").click(function () {
 });
 
 $(document).ready(function () {
+
+
+for (let index = 1; index <= 3; index++) {
+
+  $(`.member_${index} .learn_us_ex_btn`).click(function () {
+    $(`.member_${index} .learn_us_ex_card`).removeClass("learn_us_display_none");
+
+  });
+$(`.member_${index} .learn_us_ex_card .learn_us_ex_card_cross`).click(function () {
+    $(`.member_${index} .learn_us_ex_card`).addClass("learn_us_display_none");
+    
+  });
+
+  
+}
+ 
+
+
   $(window).resize(function () {
     var wdth = $(window).width();
 
@@ -877,19 +894,19 @@ for (let fruit_count = 1; fruit_count < 15; fruit_count++) {
 
     if (click_fruit_cout < 3 && click_fruit_bool) {
       $(`.pick_f_main_pick_pic${fruit_count}`).addClass("freash_checkFruiteOutline");
-      $(`.pick_f_main_pick_pic_card .pick_check${fruit_count}`).css("display","block");
-    
+      $(`.pick_f_main_pick_pic_card .pick_check${fruit_count}`).css("display", "block");
+
       click_fruit_cout++;
-      click_fruit_bool=false;
-     
+      click_fruit_bool = false;
+
     }
     else if (!(click_fruit_bool)) {
       $(`.pick_f_main_pick_pic${fruit_count}`).removeClass("freash_checkFruiteOutline");
-      $(`.pick_f_main_pick_pic_card .pick_check${fruit_count}`).css("display","none");
+      $(`.pick_f_main_pick_pic_card .pick_check${fruit_count}`).css("display", "none");
       click_fruit_cout--;
-      
-      click_fruit_bool=true;
-     
+
+      click_fruit_bool = true;
+
     }
 
   });
