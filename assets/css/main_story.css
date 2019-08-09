@@ -354,6 +354,7 @@
         justify-items: center;
     }
     .story_text {
+        margin-left:0%;
         display: grid;
         align-content: flex-end;
         grid-template-rows: 1fr 1fr;
@@ -362,10 +363,16 @@
         grid-column-gap: 1%;
     }
     .story_text_subtitle {
+        line-height: 5vh;
         grid-row: 2/3;
         grid-column: 1/2;
     }
     .story_text_btn {
+       
+        border: solid #262626 1px;
+
+
+
         grid-row: 2/3;
         grid-column: 2/3;
     }
@@ -390,7 +397,7 @@
     }
     .story_text_btn {
         margin: 0;
-        width: 100%;
+        width: 80%;
         height: 7vw;
         font-size: 5vw;
         align-self: flex-end;

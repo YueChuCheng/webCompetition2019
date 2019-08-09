@@ -267,6 +267,8 @@ letter-spacing: 0.8vw; */
         align-self: flex-end;
     }
     .shop_subtitle {
+
+       
         display: grid;
         grid-template-rows: 100%;
         grid-template-columns: 3fr 2fr;
@@ -275,15 +277,18 @@ letter-spacing: 0.8vw; */
         margin: 0;
     }
     .shop_subtitle h3 {
+        line-height: 3.5vh;
         margin: 0;
-        font-size: 14px;
+        font-size: 13px;
     }
     .shop_btn {
+        border: solid #262626 1px;
         margin: 0;
         width: 80px;
         height: 30px;
     }
     .shop_btn a {
+       
         font-size: 14px;
     }
     .shop_circle1 {

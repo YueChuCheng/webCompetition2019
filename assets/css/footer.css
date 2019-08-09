@@ -1,11 +1,8 @@
-
 footer {
     margin: 0;
     height: 8vh;
     align-self: flex-end;
-    
 }
-
 
 footer {
     padding: 0 9vw;
@@ -21,37 +18,71 @@ footer {
     z-index: 100000;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 30vw;
-    
 }
 
-.footer_main_text{
+.footer_main_text {
     display: grid;
     position: relative;
     font-weight: 100;
-    font-size: 1.1vw;
+    font-size: 1.13vw;
     align-items: center;
     justify-content: flex-end;
-    color:#fff;
+    color: #fff;
     grid-column-gap: 2vw;
     grid-template-rows: 1fr;
-    grid-template-columns:auto auto auto;
+    grid-template-columns: auto auto auto;
 }
-.nav_logo_footer{
+
+.nav_logo_footer {
     position: relative;
     align-self: center;
     height: 35%;
 }
 
-#story_footer{
-     background-color: #0697ff;
+#story_footer {
+    background-color: #0697ff;
     margin-top: -0.5vw;
 }
 
-
-#buy_footer{
+#buy_footer {
     margin-top: 0vw;
 }
-#buy_freash_footer{
-  
+
+#buy_freash_footer {
     margin-top: 0vw;
+}
+
+@media screen and (max-width: 480px) {
+    footer {
+        padding: 0 1vw;
+        display: grid;
+        transition: all 1.8s;
+        opacity: 1;
+        position: relative;
+        bottom: 0;
+        background-color: #3abfff;
+        width: 100vw;
+        height: 8vw;
+        margin-top: 0vw;
+        z-index: 100000;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 2fr;
+    }
+    .nav_logo_footer {
+        position: relative;
+        align-self: center;
+        height: 4vw;
+    }
+    .footer_main_text {
+        display: grid;
+        position: relative;
+        font-weight: 100;
+        font-size: 3vw;
+        align-items: center;
+        justify-content: flex-end;
+        color: #fff;
+        grid-column-gap: 2vw;
+        grid-template-rows: 1fr;
+        grid-template-columns: auto auto auto;
+    }
 }

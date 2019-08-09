@@ -1,25 +1,22 @@
-.buy_onSeason_main{
+.buy_onSeason_main {
     height: 145vw;
     width: 100vw;
     position: relative;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: 1fr 36vw;
-    
 }
 
-
-.buy_onSeason_mainPic{
+.buy_onSeason_mainPic {
     grid-row: 1/4;
     grid-column: 2/3;
     height: 100%;
     background-color: pink;
 }
 
-.buy_onSeason_sec1{
-    padding-top:13vw;
+.buy_onSeason_sec1 {
+    padding-top: 13vw;
     padding-left: 10vw;
-   
 }
 
 .buy_onSeason_info_main input {
@@ -27,40 +24,39 @@
     border: none;
 }
 
-.buy_onSeason_info{
+.buy_onSeason_info {
     height: 45vw;
     padding-left: 10vw;
 }
 
-.buy_onSeason_info h2{
+.buy_onSeason_info h2 {
     font-size: 1.8vw;
     letter-spacing: 0.3vw;
-    margin-bottom:1vw;
+    margin-bottom: 1vw;
 }
 
-
-.buy_onSeason_sec1_pick_main{
+.buy_onSeason_sec1_pick_main {
     position: relative;
     display: grid;
     justify-content: flex-start;
-    grid-template-rows: repeat(2,1fr);
-    grid-template-columns: repeat(3 ,11vw);
-    grid-column-gap:3.5vw;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 11vw);
+    grid-column-gap: 3.5vw;
     grid-row-gap: 5vw;
 }
 
-.buy_onSeason_sec1_pick_main img{
+.buy_onSeason_sec1_pick_main img {
     width: 11vw;
     height: auto;
-    
 }
-.onSeason_pick_card{
+
+.onSeason_pick_card {
     display: grid;
     grid-row-gap: 1vw;
     justify-items: center;
 }
 
-.onSeason_quantity{
+.onSeason_quantity {
     display: grid;
     grid-template-rows: 2vw;
     grid-template-columns: 1.5vw 1.5vw 1.5vw;
@@ -70,10 +66,10 @@
     width: 78%;
     height: 2.3vw;
     background-color: #f2f2f2;
-    padding:0 0.5vw;
+    padding: 0 0.5vw;
 }
 
-.onSeason_quantity_add,.onSeason_quantity_minus{
+.onSeason_quantity_add, .onSeason_quantity_minus {
     transform: scale(0.9);
     cursor: pointer;
     position: relative;
@@ -82,22 +78,20 @@
     height: 100%;
 }
 
-.add_line1,.add_line2{
-    
+.add_line1, .add_line2 {
     position: absolute;
     border-radius: 50vw;
     width: 1.5vw;
     border: solid #000 0.2vw;
     transform-origin: center center;
     background-color: #000;
-
 }
 
-.add_line1{
- transform: rotate(90deg);
+.add_line1 {
+    transform: rotate(90deg);
 }
 
-.minus_line{
+.minus_line {
     position: absolute;
     border-radius: 50vw;
     width: 1.5vw;
@@ -105,28 +99,27 @@
     background-color: #000;
 }
 
-.onSeason_quantity_count{
+.onSeason_quantity_count {
     display: grid;
     justify-items: center;
     align-items: center;
 }
-.onSeason_quantity_count p{
+
+.onSeason_quantity_count p {
     font-size: 1vw;
 }
 
-.onSeason_quantity_count p{
-    margin:0;
+.onSeason_quantity_count p {
+    margin: 0;
 }
-
 
 .buy_onSeason_sec2 {
     display: grid;
     justify-content: flex-start;
     align-content: flex-start;
     padding-top: 4.5vw;
-    padding-left:10vw;
+    padding-left: 10vw;
 }
-
 
 .buy_onSeason_sec2 h3 {
     margin: 0;
@@ -138,7 +131,7 @@
     height: 15vw;
 }
 
-.buy_onSeason_sec1 h3{
+.buy_onSeason_sec1 h3 {
     font-size: 2.9vw;
     letter-spacing: 10px;
 }
@@ -148,8 +141,7 @@
     letter-spacing: 0.2vw;
 }
 
-
-.buy_onSeason_submit{
+.buy_onSeason_submit {
     position: absolute;
     display: grid;
     justify-items: center;
@@ -167,8 +159,7 @@
     font-weight: 100;
 }
 
-
-.buy_onSeason_info_main{
+.buy_onSeason_info_main {
     padding-top: 4vw;
     padding-left: 3vw;
     position: relative;
@@ -184,16 +175,18 @@
     height: 80%;
     width: 80%;
 }
-.buy_onSeason_info_main input{
+
+.buy_onSeason_info_main input {
     border-radius: 2vw;
     box-shadow: solid #000 1px;
 }
 
-.buy_onSeason_info_main .input_main{
+.buy_onSeason_info_main .input_main {
     align-self: center;
     font-size: 1.5vw;
     font-weight: 500;
 }
+
 .buy_onSeason_info_main input::placeholder {
     font-size: 1vw;
     line-height: 1vw;
@@ -203,4 +196,210 @@
 #buyOnSeason_remarks {
     border-radius: 1vw;
     height: 7vw;
+}
+
+@media screen and (max-width: 480px) {
+    .buy_onSeason_main {
+        padding-top:10vw;
+        height: 170vh;
+        width: 100vw;
+        position: relative;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr) ;
+        grid-template-columns: 1fr ;
+    }
+    .buy_onSeason_mainPic {
+        display: none;
+        grid-row: 1/4;
+        grid-column: 2/3;
+        height: 100%;
+        background-color: pink;
+    }
+    .buy_onSeason_sec1 {
+        padding-top: 13vw;
+        padding-left: 0vw;
+    }
+    .buy_onSeason_info_main input {
+        border-radius: 2vw;
+        border: none;
+    }
+    .buy_onSeason_info {
+        height: 100vw;
+        padding-top: 10vw;
+        padding-left: 10vw;
+    }
+    .buy_onSeason_info h2 {
+        letter-spacing: 0.4vw;
+        font-size: 6vw;
+        margin-bottom: 5vh;
+    }
+    .buy_onSeason_sec1_pick_main {
+        position: relative;
+        display: grid;
+        justify-content: center;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 30vw);
+        grid-column-gap: 3.5vw;
+        grid-row-gap: 5vw;
+    }
+    .buy_onSeason_sec1_pick_main img {
+        width: 30vw;
+        height: auto;
+    }
+    .onSeason_pick_card {
+        display: grid;
+        grid-row-gap: 2vw;
+        justify-items: center;
+    }
+    .onSeason_quantity {
+        display: grid;
+        grid-template-rows: 2vw;
+        grid-template-columns: 4vw 1.5vw 4vw;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 1vw;
+        width: 78%;
+        height: 5.8vw;
+        background-color: #f2f2f2;
+        padding: 0 1vw;
+    }
+    .onSeason_quantity_add, .onSeason_quantity_minus {
+        transform: scale(0.9);
+        cursor: pointer;
+        position: relative;
+        display: grid;
+        align-items: center;
+        height: 100%;
+        
+    }
+    .add_line1, .add_line2 {
+        position: absolute;
+        border-radius: 100vw;
+        width: 4vw;
+        border: solid #000 0.5vw;
+        transform-origin: center center;
+        background-color: #000;
+    }
+    .add_line1 {
+        transform: rotate(90deg);
+    }
+    
+    .minus_line {
+        position: absolute;
+        border-radius: 50vw;
+        width: 4vw;
+        border: solid #000 0.5vw;
+        background-color: #000;
+        
+       
+    }
+    .onSeason_quantity_count {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    }
+    .onSeason_quantity_count p {
+        font-size: 4vw;
+    }
+    .onSeason_quantity_count p {
+        margin: 0;
+    }
+    .buy_onSeason_sec2 {
+        display: grid;
+        justify-content: flex-start;
+        align-content: flex-start;
+        padding-top: 15vw;
+        padding-left: 10vw;
+        grid-row-gap: 1vh;
+    }
+    .buy_onSeason_sec2 h3 {
+        margin: 0;
+        font-size: 5vw;
+        letter-spacing: 0.3vw;
+    }
+    .buy_onSeason_sec2 img {
+        height: 25vw;
+    }
+    .buy_onSeason_sec1 h3 {
+        font-size: 6vw;
+        letter-spacing: 1.5vw;
+        padding-left: 10vw;
+    }
+    .buy_onSeason_sec1_subtitle{
+        padding-left: 10vw;
+    }
+    .buy_onSeason_sec1:nth-child(2) {
+        font-size: 4vw;
+        letter-spacing: 0.5vw;
+       
+    }
+    .buy_onSeason_submit {
+        position: absolute;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        height: 3vw;
+        width: 8vw;
+        border: #262626 solid 0.08vw;
+        border-radius: 5vw;
+        cursor: pointer;
+        margin-top: 4vw;
+        margin-bottom: 2vw;
+        justify-self: center;
+        align-self: flex-end;
+        font-size: 1.5vw;
+        font-weight: 100;
+    }
+    .buy_onSeason_info_main {
+        padding-top: 4vh;
+        padding-left: 8vw;
+        position: relative;
+        display: grid;
+        justify-content: start;
+        align-content: flex-start;
+        grid-template-rows: repeat(5, 6vw);
+        grid-template-columns: 30% 50%;
+        grid-row-gap: 1vh;
+        grid-column-gap: 0.5vw;
+        background-color: #f2f2f2;
+        border-radius: 4vw;
+        height: 60vw;
+        width: 88%;
+    }
+    .buy_onSeason_info_main input {
+        border-radius: 2vw;
+        border: none;
+    }
+    .buy_onSeason_info_main .input_main {
+        align-self: center;
+        font-size: 4vw;
+        font-weight: 500;
+    }
+    .buy_onSeason_info_main input::placeholder {
+        font-size: 4vw;
+        line-height: 4vw;
+    }
+
+
+    .buy_onSeason_submit {
+        position: absolute;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        height: 7vw;
+        width: 15vw;
+        border: #262626 solid 1px;
+        border-radius: 5vw;
+        cursor: pointer;
+        margin-top: 0vw;
+        margin-bottom: 2vw;
+        justify-self: center;
+        align-self: flex-end;
+        font-size: 4vw;
+        font-weight: 100;
+    }
+    #buyOnSeason_remarks {
+        border-radius: 1vw;
+        height: 7vw;
+    }
 }

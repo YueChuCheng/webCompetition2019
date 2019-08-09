@@ -1,5 +1,5 @@
 .nav_main {
-    z-index: 100000;
+    z-index: 1000000000;
     position: absolute;
     display: grid;
     margin-top:2vw;
@@ -12,7 +12,25 @@
     
   
 }
-
+.nav_logo_learn_none{
+    display: none !important;
+}
+.nav_logo_none{
+    display: none ;
+}
+.nav_logo_block{
+    display: block !important ;
+}
+.nav_logo_learn{
+    display: block;
+    align-self: center;
+    cursor: pointer;
+    position: relative;
+    width: auto;
+    height: 2.25vw;
+    margin-left:1vw;
+    margin-top:0.5vw;
+}
 .nav_logo {
   
     align-self: center;
@@ -80,6 +98,16 @@
 }
 
 @media screen and (max-width: 480px) {
+
+    
+    .nav_logo_learn{
+        display: block;
+        align-self: center;
+        cursor: pointer;
+        position: relative;
+        width: auto;
+        height: 7.5vw;
+    }
     .nav_btn {
         opacity: 0;
         justify-self: flex-end;
@@ -94,14 +122,18 @@
         margin-right: 20px;
     }
     .nav_sec {
+       
+        display: none;
         font-size: 18px;
         color: #fff !important;
     }
+    
     .nav_main {
+        transition-delay: 0s;
         margin-top:0vw;
-        padding-top: 30px;
+        padding-top: 0px;
         width: 100vw;
-        height: 100vh;
+        height: 70px;
         padding-right: 0vw;
         background-image: url(../assets/images/cellphone_pic/mbs.png);
         background-size: cover;
@@ -144,6 +176,9 @@
         grid-template-columns: repeat(3, 1fr);
         margin-right:5vw;
     }
+    .hm_circle_white{
+        border: solid #fff 1px !important;
+    }
     .hm_dot {
         transition: all 0.5s;
         align-self: center;
@@ -152,5 +187,15 @@
         width: 5px;
         background-color: #4d4d4d;
         border-radius: 50vw;
+    }
+    .hm_dot_white{
+        background-color: #fff !important;
+    }
+
+    .hm_circle_black{
+        border: solid #4d4d4d 1px !important;
+    }
+    .hm_dot_black{
+        background-color: #4d4d4d !important;
     }
 }

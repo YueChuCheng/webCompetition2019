@@ -162,6 +162,8 @@ import fresh_check from "../images/pages2_buy_fresh/wn.png";
 import pick_f_main_pick_check from "../images/pages2_buy_fresh/yn.png";
 
 
+import xx from "../images/learnus/xx.png";
+
 
 
 import buy_onSeason_mainPic from "../images/page2_buy_onSeason/srbg.png";
@@ -173,10 +175,15 @@ import onSeason_pick_fruit5 from "../images/page2_buy_onSeason/ebi.png";
 import onSeason_pick_fruit6 from "../images/page2_buy_onSeason/cbi.png";
 import wflogo from "../images/wflogo.png";
 
+
+
+$(".fruit_message_card_off").attr("src", xx);
+
 $(".title_logo").attr("src", title_logo);
+$(".main_pic").attr("src", bgi);
 $(".nav_logo").attr("src", nav_logo);
 $(".nav_logo_footer").attr("src", wflogo);
-
+$(".nav_logo_learn").attr("src", wflogo);
 $(".main_pic").attr("src", bgi);
 
 $(".g-pa").attr("src", g_pa);
@@ -332,6 +339,9 @@ $(".onSeason_pick_fruit3").attr("src", onSeason_pick_fruit3);
 $(".onSeason_pick_fruit4").attr("src", onSeason_pick_fruit4);
 $(".onSeason_pick_fruit5").attr("src", onSeason_pick_fruit5);
 $(".onSeason_pick_fruit6").attr("src", onSeason_pick_fruit6);
+
+$(".learn_us_ex_card_cross").attr("src", xx);
+
 
 
 let controller = new ScrollMagic.Controller();
@@ -495,7 +505,31 @@ new ScrollMagic.Scene({
   .setClassToggle(".nav_btn", "black")
   .addTo(controller);
 
-  
+new ScrollMagic.Scene({
+  triggerElement: '.learn_us_main_sec2'
+})
+  .setClassToggle(".nav_logo_learn", "nav_logo_learn_none")
+  .addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: '.learn_us_main_sec2'
+
+})
+  .setClassToggle(".nav_logo", "nav_logo_block")
+  .addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: '.learn_us_main_sec2'
+
+})
+  .setClassToggle("#learn_us_circle", "hm_circle_black")
+  .addTo(controller);
+new ScrollMagic.Scene({
+  triggerElement: '.learn_us_main_sec2'
+
+})
+  .setClassToggle("#learn_us_dot", "hm_dot_black")
+  .addTo(controller);
 
 
 
@@ -517,56 +551,80 @@ let hm_click = 0;
 $(".hm_circle").click(function () {
   hm_click++;
   if (hm_click % 2 === 1) {
+    $(".nav_main").css("transition-delay", "0s");
+    $(".nav_sec ").css("display", "block");
     $(".hm_circle").css("transform", " rotate(90deg)");
     $(".hm_circle").css("border", " solid #fff 1px");
     $(".hm_dot").css("background-color", " #fff ");
+    $(".nav_main").css("height", "100vh");
     $(".nav_main").css("animation", "nav_hm 0.5s linear forwards");
     $(".nav_btn").css("opacity", "1");
   }
   else {
+    $(".nav_sec ").css("display", "none");
     $(".hm_circle").css("transform", " rotate(0deg)");
-    $(".hm_circle").css("border", " solid #000 1px");
-    $(".hm_dot").css("background-color", " #000 ");
+    $(".hm_circle").css("border", " solid #000 1px ");
+    $(".hm_dot").css("background-color", " #000  ");
+    $(".nav_main").css("transition-delay", "0.5s");
+    $(".nav_main").css("height", "70px");
+
     $(".nav_main").css("animation", "nav_hm_back 0.5s linear forwards");
     $(".nav_btn").css("opacity", "0");
   }
 
 });
 
+
+
+
+
+
+
+
 $(document).ready(function () {
 
 
-for (let index = 1; index <= 3; index++) {
+  for (let index = 1; index <= 3; index++) {
 
-  $(`.member_${index} .learn_us_ex_btn`).click(function () {
-    $(`.member_${index} .learn_us_ex_card`).removeClass("learn_us_display_none");
+    $(`.member_${index} .learn_us_ex_btn`).click(function () {
+      $(`.member_${index} .learn_us_ex_card`).removeClass("learn_us_display_none");
+      $(` .learn_us_ex_card_${index}`).removeClass("learn_us_display_none");
 
-  });
-$(`.member_${index} .learn_us_ex_card .learn_us_ex_card_cross`).click(function () {
-    $(`.member_${index} .learn_us_ex_card`).addClass("learn_us_display_none");
-    
-  });
+    });
+    $(`.member_${index} .learn_us_ex_card .learn_us_ex_card_cross`).click(function () {
+      $(`.member_${index} .learn_us_ex_card`).addClass("learn_us_display_none");
+      
+    });
+    $(`.learn_us_ex_card_${index} .learn_us_ex_card_cross`).click(function () {
+      $(`.learn_us_ex_card_${index}`).addClass("learn_us_display_none");
+      
+    });
 
-  
-}
- 
+  }
+
 
 
   $(window).resize(function () {
+
     var wdth = $(window).width();
 
     if (wdth > 480) {
       $(".nav_btn ").css("opacity", "1");
     }
+
     if (wdth <= 480 && hm_click % 2 === 1) {
       $(".nav_btn ").css("opacity", "1");
+      $(".nav_sec ").css("display", "block");
       $(".hm_circle").css("transform", " rotate(90deg)");
       $(".hm_circle").css("border", " solid #fff 1px");
       $(".hm_dot").css("background-color", " #fff ");
+      $(".nav_main").css("height", "100vh");
       $(".nav_main").css("animation", "nav_hm 0.5s linear forwards");
       $(".nav_btn").css("opacity", "1");
     }
     if (wdth <= 480 && hm_click % 2 === 0) {
+      $(".nav_main").css("height", "70px");
+      $(".nav_sec ").css("display", "none");
       $(".nav_btn").css("opacity", "0");
       $(".nav_main").css("animation", "none");
     }
@@ -591,6 +649,9 @@ $(`.member_${index} .learn_us_ex_card .learn_us_ex_card_cross`).click(function (
   }
 
 
+  $(".nav_logo_learn ").click(function () {
+    window.location.assign("/");
+  });
   $(".nav_logo ").click(function () {
     window.location.assign("/");
   });
@@ -723,7 +784,7 @@ $(`.member_${index} .learn_us_ex_card .learn_us_ex_card_cross`).click(function (
 
     }
 
-    $(".fruit_message_card img ").attr("src", `../../assets/images/page2_intro/${p_id}/${id}.png`);
+    $(".fruit_message_sec1 img ").attr("src", `../../assets/images/page2_intro/${p_id}/${id}.png`);
     $(".fruit_message").removeClass('no_show');
 
 
@@ -781,7 +842,7 @@ $(`.member_${index} .learn_us_ex_card .learn_us_ex_card_cross`).click(function (
     }
 
 
-    $(".fruit_message_card img ").attr("src", `../../assets/images/page2_intro/${p_id}/${id}.png`);
+    $(".fruit_message_sec1 img ").attr("src", `../../assets/images/page2_intro/${p_id}/${id}.png`);
     $(".fruit_message").removeClass('no_show');
   });
 

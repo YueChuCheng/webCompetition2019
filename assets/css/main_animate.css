@@ -1,3 +1,5 @@
+
+
 .title_logo {
     position: absolute;
     opacity: 0;
@@ -73,13 +75,13 @@
     color: #4d4d4d;
     position: absolute;
     animation: fadeIn-font 0.5s linear 4.5s forwards;
-    margin-top: 31%;
+    margin-top: 32%;
     margin-left: 12%;
     opacity: 0;
     font-size: 1.3vw;
     font-weight: 100;
     letter-spacing: 0.18vw;
-    line-height: 2.8vw;
+    line-height: 2.5vw;
 }
 
 .home_fruit_sm {
@@ -122,8 +124,8 @@
         align-items: flex-end;
         transform: scale(1);
         animation: none;
-        width: auto;
-        height: 100%;
+        width: 100%;
+        height: auto;
         left: 0;
     }
     .title_logo, .home_subtitle {
@@ -132,6 +134,7 @@
         margin-left: 0%;
         animation: none;
         opacity: 1;
+        line-height: 3vh;
     }
     .home_subtitle {
         font-size: 3.5vw;

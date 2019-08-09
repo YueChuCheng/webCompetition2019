@@ -259,3 +259,284 @@
     padding:0 1vw;
     font-size: 1.2vw; 
 }
+
+
+@media screen and (max-width: 480px) {
+    .buy_fresh_main {
+        height: 460vw;
+        width: 100vw;
+        grid-row-gap: 10vh;
+    }
+    
+    .buy_fresh_main {
+        position: relative;
+        display: grid;
+        grid-template-rows: 60% repeat(2, 1fr);
+        grid-template-columns: 1fr ;
+    }
+    
+    .buy_fresh_pic {
+        display: none;
+        grid-row: 1/4;
+        grid-column: 2/3;
+        height: 100%;
+        background-color: pink;
+    }
+    
+    .buy_fresh_pick_f {
+        position: relative;
+        display: grid;
+        justify-content: flex-start;
+        align-content: flex-start;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr;
+        grid-row-gap: 2vw;
+        padding-top: 0vw;
+        padding-left: 0vw;
+        padding-right: 0vw;
+        padding:0vw 12vw;
+    }
+    
+    .buy_fresh_pick_f h2 {
+        margin: 0;
+        font-size: 7vw;
+        letter-spacing: 0.7vw;
+    }
+    
+    .buy_fresh_pick_f p {
+        margin: 0;
+        margin-bottom: 1vw;
+        font-size: 4.2vw;
+        letter-spacing: 0.5vw;
+    }
+    
+    .pick_f_main {
+        position: relative;
+        display: grid;
+        grid-template-rows: 40% 1fr;
+        grid-template-columns: 1fr;
+        grid-row-gap: 7vh;
+        padding-top:6vh;
+    }
+    
+    .pick_f_main_sec1 {
+        position: relative;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr;
+        align-content: flex-start;
+       
+    }
+    
+    .pick_f_main_sec1 h3, .pick_f_main_sec2 h3 {
+        font-size: 6vw;
+        letter-spacing: 0.5vw;
+        font-weight: 500;
+    }
+    
+    .pick_f_main_sec2 h3 span {
+        font-size: 3vw;
+    }
+    
+    .pick_f_main_price_main {
+        padding-top:2vh;
+        justify-self: center;
+        position: relative;
+        display: grid;
+        grid-row-gap: 2vw;
+        justify-content: flex-start;
+        align-content: flex-start;
+        grid-template-columns: 62vw;
+        grid-template-rows: repeat(6,1fr);
+        height: 100%;
+        letter-spacing: 0.2vw;
+    }
+    
+    .pick_f_main_price {
+        cursor: pointer;
+        font-size:5vw;
+        border-radius: 1.5vw;
+        position: relative;
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0vw 5vw;
+        grid-template-columns: auto auto;
+        grid-template-rows: 1fr;
+        font-weight: bold;
+        background-color: #f2f2f2;
+    }
+    
+    .pick_f_main_circle {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        height: 4.8vw;
+        width: 4.8vw;
+        border: solid #000 1px;
+        border-radius: 50vw;
+    }
+    
+    .fresh_check {
+        opacity: 0;
+        height: 50%;
+    }
+    
+    .pick_f_main_pick_pic {
+        position: relative;
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-row-gap: 4vh;
+        grid-column-gap: 0vw;
+        padding-top:3vh;
+    }
+    
+    .pick_f_main_pick_pic img {
+        height: 16vw;
+        width: 16vw;
+    }
+    
+    .pick_f_main_pick_pic_card {
+        position: relative;
+        display: grid;
+        justify-items: center;
+        font-size: 4vw;
+    }
+    
+    .pick_f_main_pick_pic_card img {
+        cursor: pointer;
+        margin-bottom: 1.5vw;
+    }
+    
+    .buy_fresh_pick_p {
+        display: grid;
+        justify-content: flex-start;
+        align-content: flex-start;
+        grid-row-gap: 2vh;
+        padding-top: 9vw;
+        padding-left: 10vw;
+    }
+    
+    .pick_p_pic {
+        margin-top: 2vw;
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(2, auto);
+        grid-column-gap: 3vw;
+        grid-row-gap: 3vw;
+    }
+    
+    .buy_fresh_pick_p h3 {
+        margin: 0;
+        font-size: 6vw;
+        letter-spacing: 0.3vw;
+        font-weight: 500;
+    }
+    
+    .buy_fresh_pick_p img {
+        height: 27vw;
+    }
+    
+    .buy_fresh_info {
+        height: 45vw;
+        padding-top: 0vw;
+        padding-left: 10vw;
+    }
+    
+    .buy_fresh_info h2 {
+        letter-spacing: 0.4vw;
+        font-size: 6vw;
+        margin-bottom: 5vh;
+    }
+    
+    .buy_fresh_info_main {
+        padding-top: 4vh;
+        padding-left: 8vw;
+        position: relative;
+        display: grid;
+        justify-content: start;
+        align-content: flex-start;
+        grid-template-rows: repeat(5, 6vw);
+        grid-template-columns: 30% 50%;
+        grid-row-gap: 1vh;
+        grid-column-gap: 0.5vw;
+        background-color: #f2f2f2;
+        border-radius: 4vw;
+        height: 60vw;
+        width: 88%;
+    }
+    
+    .buy_fresh_info_main input {
+        border-radius: 2vw;
+        border: none;
+    }
+    
+    .buy_fresh_info_main .input_main {
+        align-self: center;
+        font-size: 4vw;
+        font-weight: 500;
+    }
+    
+    .buy_fresh_info_main input::placeholder {
+        font-size: 4vw;
+        line-height: 4vw;
+       
+    }
+    
+    .pick_p_pic1, .pick_p_pic2, .pick_p_pic3 {
+        cursor: pointer;
+    }
+    
+    .freash_checkPriceOutline {
+        border: solid #fdd000 0.7vw;
+    }
+    
+    .freash_checkFruiteOutline {
+        border: solid #fdd000 0.7vw;
+        border-radius: 0.8vw;
+    }
+    
+    .freash_checkPackageOutline {
+        border: solid #fdd000 0.7vw;
+        border-radius: 0.8vw;
+    }
+    
+    .pick_f_main_pick_pic_card .pick_f_main_pick_check {
+        display: none;
+        top: 15%;
+        position: absolute;
+        height: 30%;
+        width: auto;
+    }
+    
+    .buy_fresh_submit {
+        position: absolute;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        height: 7vw;
+        width: 15vw;
+        border: #262626 solid 1px;
+        border-radius: 5vw;
+        cursor: pointer;
+        margin-top: 0vw;
+        margin-bottom: 2vw;
+        justify-self: center;
+        align-self: flex-end;
+        font-size: 4vw;
+        font-weight: 100;
+    }
+    
+    #buyfresh_remarks {
+        border-radius: 1vw;
+        height: 7vw;
+    }
+    
+    
+    .input{
+        padding:0 3vw;
+        font-size: 1.2vw; 
+    }
+}
+

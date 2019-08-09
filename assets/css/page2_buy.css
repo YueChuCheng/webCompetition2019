@@ -1,6 +1,4 @@
-
 .buy_main {
-    
     position: relative;
     display: grid;
     height: 50vw !important;
@@ -16,7 +14,6 @@
 }
 
 .buy_text {
-   
     position: relative;
     display: grid;
     padding-top: 15vw;
@@ -32,8 +29,6 @@
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(2, auto);
-    /* grid-template-rows: 1fr;
-    grid-template-columns: 2fr 1fr; */
 }
 
 .buy_icon {
@@ -67,7 +62,7 @@
 }
 
 .buy_step_main {
-    padding-top:12vw;
+    padding-top: 12vw;
     position: relative;
     display: grid;
     align-content: center;
@@ -93,7 +88,6 @@
     grid-column-gap: 8vw;
     height: 32vw;
     width: 68vw;
-
 }
 
 .buy_step_sec {
@@ -123,7 +117,6 @@
 }
 
 .buy_page_main {
-   
     position: relative;
     display: grid;
     align-content: center;
@@ -151,7 +144,8 @@
     grid-template-rows: 1fr;
     grid-template-columns: 3vw repeat(2, 20vw) 3vw;
 }
-.buy_page_sec{
+
+.buy_page_sec {
     position: relative;
     cursor: pointer;
     align-self: center;
@@ -163,24 +157,26 @@
     border: solid 0.2vw #000;
     border-radius: 1.8vw;
 }
-.buy_page_des_hover1,.buy_page_des_hover2{
+
+.buy_page_des_hover1, .buy_page_des_hover2 {
     display: grid;
-    justify-content:center;
-    align-content: center; 
+    justify-content: center;
+    align-content: center;
     position: absolute;
     height: 100%;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(0 , 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 1.5vw;
     opacity: 0;
     transition: opacity 0.5s;
-   
 }
-.buy_page_des_hover1:hover,.buy_page_des_hover2:hover{
+
+.buy_page_des_hover1:hover, .buy_page_des_hover2:hover {
     opacity: 1;
 }
-.buy_page_des_hover_txt{
+
+.buy_page_des_hover_txt {
     height: 3vw;
     width: 8vw;
     background-color: #fdd000;
@@ -190,35 +186,257 @@
     font-size: 1.5vw;
     font-weight: 600;
 }
-.buy_page_txt{
+
+.buy_page_txt {
     display: grid;
     align-content: flex-start;
-    
 }
-.buy_page_sec img{
+
+.buy_page_sec img {
     width: 100%;
 }
 
-.buy_page_sec h4{
+.buy_page_sec h4 {
     margin: 0;
     font-size: 1.5vw;
     font-weight: 800;
-    margin-bottom:1.5vw;
-    margin-top:2vw;
+    margin-bottom: 1.5vw;
+    margin-top: 2vw;
 }
 
-
-.buy_page_sec p{
+.buy_page_sec p {
     margin: 0;
     font-size: 1.2vw;
     font-weight: 400;
 }
-.buy_page_deco_r,.buy_page_deco_l{
+
+.buy_page_deco_r, .buy_page_deco_l {
     align-self: center;
     height: 50%;
 }
 
-.buy_page_deco_r{
+.buy_page_deco_r {
     justify-self: flex-end;
     transform: rotate(180deg);
+}
+
+@media screen and (max-width: 480px) {
+    .buy_main {
+        position: relative;
+        display: grid;
+        height: 100vh !important;
+        width: 100vw;
+        grid-template-rows: 5fr 4fr;
+        grid-template-columns: 1fr;
+    }
+    .buy_pic {
+        grid-row: 1/2;
+        grid-column: 1/2;
+        background-image: url(../../assets/images/page2_buy/part1/ybg.png);
+        background-size: cover;
+        height: auto;
+        width: 100%;
+    }
+    .buy_text {
+        position: relative;
+        display: grid;
+        padding-top: 4vh;
+        padding-left: 10vw;
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        grid-row-gap: 4vh;
+        justify-content: center;
+        align-content: flex-start;
+    }
+    .buy_text_title {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(2, auto);
+    }
+    .buy_text_title h2 {
+        justify-self: flex-start;
+        margin: 0;
+        font-size: 6vw;
+        border-bottom: solid 1vw #fdd000;
+        letter-spacing: 0.5vw;
+        font-weight: 600;
+    }
+    .buy_icon {
+        align-self: center;
+        width: 13vw;
+        margin-left: 1vw;
+    }
+    .buy_text p {
+        margin: 0;
+        font-size: 4.5vw;
+        letter-spacing: 0.8vw;
+        font-weight: 100;
+        line-height: 8vw;
+    }
+    .buy_deco {
+        z-index: -1;
+        position: absolute;
+        height: 15vw;
+        margin-top: 85.5vh;
+        margin-left: 17vw;
+    }
+    .buy_page_main {
+        position: relative;
+        display: grid;
+        align-content: flex-start;
+        justify-content: center;
+        grid-row-gap: 5vh;
+        height: 100vh !important;
+        width: 100vw;
+        padding-top: 10vh;
+    }
+    .buy_page_main h2 {
+        align-self: center;
+        justify-self: center;
+        border-bottom: solid 1vw #fdd000;
+        margin: 0;
+        font-size: 6vw;
+        font-weight: 400;
+        letter-spacing: 1vw;
+    }
+    .buy_page_des {
+        display: grid;
+        justify-content: center;
+        height: 120%;
+        width: 100%;
+        grid-column-gap: 7vw;
+        grid-row-gap: 5vh;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 4vw 45vw 4vw;
+    }
+    #buy_onSeason {
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+    .buy_page_sec {
+        position: relative;
+        cursor: pointer;
+        align-self: center;
+        height: 100%;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        justify-items: center;
+        align-content: flex-start;
+        border: solid 0.2vw #000;
+        border-radius: 3.5vw;
+    }
+    .buy_page_deco_r {
+        grid-row: 1/3;
+        grid-column: 1/2;
+        align-self: center;
+        height: 30%;
+    }
+    .buy_page_deco_l {
+        grid-row: 1/3;
+        grid-column: 3/4;
+        align-self: center;
+        height: 30%;
+    }
+    .buy_page_txt {
+        display: grid;
+        align-content: center;
+       
+    }
+    .buy_page_sec img {
+        width: 100%;
+    }
+    .buy_page_sec h4 {
+        text-align:center;
+        margin: 0;
+        font-size: 4vw;
+        font-weight: 800;
+        margin-bottom: 1.6vh;
+        margin-top: 2vw;
+        letter-spacing: 0.7vw;
+    }
+    .buy_page_sec p {
+        justify-self:center;
+        margin: 0;
+        font-size: 3vw;
+        font-weight: 400;
+        letter-spacing: 0.7vw;
+    }
+    .buy_page_des_hover1, .buy_page_des_hover2 {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 1.5vw;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+    .buy_page_des_hover_txt {
+        display: grid;
+        align-items: center;
+        height: 8vw;
+        width: 23vw;
+        background-color: #fdd000;
+        border-radius: 50vw;
+        text-align: center;
+        line-height: 3vw;
+        font-size: 5vw;
+        font-weight: 600;
+    }
+    .buy_step_main {
+        padding-top: 14vh;
+        position: relative;
+        display: grid;
+        align-content: flex-start;
+        justify-content: center;
+        grid-row-gap: 5vh;
+        height: 375vw;
+        width: 100vw;
+    }
+    .buy_step_main h2 {
+        align-self: center;
+        justify-self: center;
+        border-bottom: solid 1vw #fdd000;
+        margin: 0;
+        font-size: 7vw;
+        font-weight: 500;
+        letter-spacing: 1vw;
+    }
+    .buy_step_des {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-column-gap: 8vw;
+        grid-row-gap: 8vh;
+        height: 32vw;
+        width: 68vw;
+        padding: 0vw 5vw;
+    }
+    .buy_step_sec {
+        display: grid;
+        justify-content: center;
+        align-content: flex-start;
+        grid-row-gap: 3vh;
+    }
+    .buy_step_sec h4 {
+        justify-self: center;
+        margin: 0;
+        font-size: 6vw;
+        font-weight: 300;
+    }
+    .buy_step_sec h4 img {
+        height: 10vw;
+    }
+    .buy_step_sec :nth-child(3) {
+        margin-top: 0vw;
+        width: 100%;
+    }
+    .buy_step_sec_text {
+        font-size: 4vw;
+        font-weight: 300;
+        letter-spacing: 0.5vw;
+    }
 }
