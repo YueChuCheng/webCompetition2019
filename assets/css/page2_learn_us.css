@@ -262,7 +262,7 @@
     justify-content: center;
     align-items: center;
     font-size: 1vw;
-    border: solid #000 1px;
+    border: solid #000 0.07vw;
     border-radius: 50vw;
     height: 2.5vw;
     width: 5.5vw;
@@ -394,6 +394,7 @@
         grid-template-rows: 20vh 1fr;
     }
     .learn_us_main_sec1 p {
+        padding: 0vw 5vw;
         font-size: 4.5vw !important;
     }
     .learn_us_title {

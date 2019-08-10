@@ -189,7 +189,7 @@
 
 .buy_onSeason_info_main input::placeholder {
     font-size: 1vw;
-    line-height: 1vw;
+    line-height: 6vw;
     padding-left: 1vw;
 }
 
@@ -376,8 +376,9 @@
         font-weight: 500;
     }
     .buy_onSeason_info_main input::placeholder {
-        font-size: 4vw;
-        line-height: 4vw;
+        font-size: 3vw;
+       display: grid;
+       align-items: center;
     }
 
 
@@ -399,7 +400,7 @@
         font-weight: 100;
     }
     #buyOnSeason_remarks {
-        border-radius: 1vw;
+        border-radius: 2vw;
         height: 7vw;
     }
 }

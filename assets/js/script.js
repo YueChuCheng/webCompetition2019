@@ -174,7 +174,7 @@ import onSeason_pick_fruit4 from "../images/page2_buy_onSeason/cri.png";
 import onSeason_pick_fruit5 from "../images/page2_buy_onSeason/ebi.png";
 import onSeason_pick_fruit6 from "../images/page2_buy_onSeason/cbi.png";
 import wflogo from "../images/wflogo.png";
-
+import navwl from "../images/navwl.png";
 
 
 $(".fruit_message_card_off").attr("src", xx);
@@ -183,7 +183,7 @@ $(".title_logo").attr("src", title_logo);
 $(".main_pic").attr("src", bgi);
 $(".nav_logo").attr("src", nav_logo);
 $(".nav_logo_footer").attr("src", wflogo);
-$(".nav_logo_learn").attr("src", wflogo);
+$(".nav_logo_learn").attr("src", navwl);
 $(".main_pic").attr("src", bgi);
 
 $(".g-pa").attr("src", g_pa);
@@ -559,6 +559,8 @@ $(".hm_circle").click(function () {
     $(".nav_main").css("height", "100vh");
     $(".nav_main").css("animation", "nav_hm 0.5s linear forwards");
     $(".nav_btn").css("opacity", "1");
+    $(".hm_circle_black").removeClass("hm_circle_black");
+    $(".hm_dot_black").removeClass("hm_dot_black");
   }
   else {
     $(".nav_sec ").css("display", "none");
@@ -570,6 +572,11 @@ $(".hm_circle").click(function () {
 
     $(".nav_main").css("animation", "nav_hm_back 0.5s linear forwards");
     $(".nav_btn").css("opacity", "0");
+    if ($(".nav_logo").hasClass("nav_logo_block")) { //learn_us page hm_circle color detect
+      $(".hm_circle").addClass("hm_circle_black");
+      $(".hm_dot").addClass("hm_dot_black");
+    }
+
   }
 
 });
@@ -593,11 +600,11 @@ $(document).ready(function () {
     });
     $(`.member_${index} .learn_us_ex_card .learn_us_ex_card_cross`).click(function () {
       $(`.member_${index} .learn_us_ex_card`).addClass("learn_us_display_none");
-      
+
     });
     $(`.learn_us_ex_card_${index} .learn_us_ex_card_cross`).click(function () {
       $(`.learn_us_ex_card_${index}`).addClass("learn_us_display_none");
-      
+
     });
 
   }
@@ -609,7 +616,8 @@ $(document).ready(function () {
     var wdth = $(window).width();
 
     if (wdth > 480) {
-      $(".nav_btn ").css("opacity", "1");
+      $(".nav_btn").css("opacity", "1");
+      $(".nav_sec ").css("display", "block");
     }
 
     if (wdth <= 480 && hm_click % 2 === 1) {

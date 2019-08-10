@@ -27,9 +27,8 @@
     cursor: pointer;
     position: relative;
     width: auto;
-    height: 2.25vw;
-    margin-left:1vw;
-    margin-top:0.5vw;
+    height: 2.3vw;
+   
 }
 .nav_logo {
   
@@ -37,7 +36,8 @@
     cursor: pointer;
     position: relative;
     width: auto;
-    height: 5vw;
+    height: 2.3vw;
+    /* margin-left:5vw; */
 }
 
 .nav_btn {
@@ -93,12 +93,15 @@
     }
     .nav_logo {
         align-self: center;
-        height: 80%;
+        height: 3vw;
     }
 }
 
 @media screen and (max-width: 480px) {
-
+    .nav_logo {
+      
+        height: 6.5vw;
+    }
     
     .nav_logo_learn{
         display: block;
@@ -106,7 +109,8 @@
         cursor: pointer;
         position: relative;
         width: auto;
-        height: 7.5vw;
+        height: 6.5vw;
+        
     }
     .nav_btn {
         opacity: 0;

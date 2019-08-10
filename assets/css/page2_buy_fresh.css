@@ -263,7 +263,7 @@
 
 @media screen and (max-width: 480px) {
     .buy_fresh_main {
-        height: 460vw;
+        height: 500vw;
         width: 100vw;
         grid-row-gap: 10vh;
     }
@@ -271,7 +271,7 @@
     .buy_fresh_main {
         position: relative;
         display: grid;
-        grid-template-rows: 60% repeat(2, 1fr);
+        grid-template-rows: 55% repeat(3, 1fr);
         grid-template-columns: 1fr ;
     }
     
@@ -479,8 +479,10 @@
     }
     
     .buy_fresh_info_main input::placeholder {
-        font-size: 4vw;
-        line-height: 4vw;
+        display: grid;
+        align-items: center;
+        font-size: 3vw;
+        line-height:6vw;
        
     }
     
@@ -529,14 +531,14 @@
     }
     
     #buyfresh_remarks {
-        border-radius: 1vw;
+        border-radius: 2vw;
         height: 7vw;
     }
     
     
     .input{
         padding:0 3vw;
-        font-size: 1.2vw; 
+        font-size: 3vw; 
     }
 }
 
