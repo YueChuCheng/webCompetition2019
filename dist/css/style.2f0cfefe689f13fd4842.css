@@ -694,7 +694,7 @@ body {
     z-index: 1000000000;
     position: absolute;
     display: grid;
-    margin-top:2vw;
+    margin-top:1vw;
     width: 100vw;
     height: 80px;
     text-align: center;
@@ -738,7 +738,7 @@ body {
     align-content: center;
     display: grid;
     grid-template-rows: 50px;
-    grid-template-columns: repeat(4, 7vw);
+    grid-template-columns: repeat(5, 7vw);
     grid-column-gap: 25px;
     grid-row-gap: 0px;
     grid-row: 1/2;
@@ -756,6 +756,9 @@ body {
     font-size: 1.25vw;
     font-weight: 100;
 }
+.display_none{
+    display: none !important;
+}
 .nav_sec:hover {
     color: #4d4d4d;
     border: #4d4d4d solid 0.1vw;
@@ -764,6 +767,7 @@ body {
 }
 @media screen and (max-width: 768px) {
     .nav_main {
+        margin-top:0vw;
         display: grid;
         padding-right: 2vw;
         width: 100vw;
@@ -776,7 +780,7 @@ body {
         font-size: 15px;
     }
     .nav_btn {
-        grid-template-columns: repeat(4, 80px);
+        grid-template-columns: repeat(5, 80px);
         grid-template-rows: auto;
         grid-column-gap: 10px;
     }
@@ -827,7 +831,7 @@ body {
         width: 100vw;
         height: 70px;
         padding-right: 0vw;
-        background-image: url(../images/cellphone_pic/mbs.png);
+        background-image: url(../assets/images/cellphone_pic/mbs.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position-x: 100vw;
@@ -1112,6 +1116,10 @@ body {
         
     }
 }
+.container-fluid{
+    padding-left:0vw !important;
+    padding-right:0vw !important;
+}
 .title_logo {
     position: absolute;
     opacity: 0;
@@ -1199,6 +1207,11 @@ body {
     display: none;
 }
 @media screen and (max-width: 480px) {
+    .container-fluid{
+        padding-left:15px !important;
+        padding-right:15px !important;
+    }
+    
     .home_main {
         padding: 0!important;
         display: grid;
@@ -2491,7 +2504,7 @@ body {
 }
 .carousel-img {
     z-index: 100;
-    margin-left: 22.5%;
+    margin-left: calc(22.5% + 15px);
     width: 50vw;
 }
 li {
@@ -2525,7 +2538,7 @@ li {
     margin: 0 auto;
     padding: 0;
     margin-top: -16.5vw;
-    margin-left: 24vw;
+    margin-left: calc(24vw + 15px);
     width: 47vw;
 }
 .slick-dots li:nth-child(1) button::before {
@@ -4437,6 +4450,23 @@ letter-spacing: 0.8vw; */
 .data_card :nth-child(2) {
     font-size: 1vw;
 }
+@media screen and (max-width: 768px) {
+    .black .nav_sec:hover {
+        border: #4d4d4d solid 1px !important;
+    }
+
+    .learn_us_ex_btn {
+        cursor: pointer;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        font-size: 1vw;
+        border: solid #000 0.06vw;
+        border-radius: 50vw;
+        height: 2.5vw;
+        width: 5.5vw;
+    }
+}
 @media screen and (max-width: 480px) {
     .learn_us_body{
         height:250vh ;
@@ -5908,6 +5938,7 @@ letter-spacing: 0.8vw; */
         width: 100%;
     }
     .buy_step_sec_text {
+        padding:0vw 2vw;
         font-size: 4vw;
         font-weight: 300;
         letter-spacing: 0.5vw;
@@ -6374,7 +6405,7 @@ letter-spacing: 0.8vw; */
         display: grid;
         align-items: center;
         font-size: 3vw;
-       
+        line-height:6vw;
        
     }
     
@@ -6382,7 +6413,7 @@ letter-spacing: 0.8vw; */
         display: grid;
         align-items: center;
         font-size: 3vw;
-       
+        line-height:6vw;
        
     }
     
@@ -6390,7 +6421,7 @@ letter-spacing: 0.8vw; */
         display: grid;
         align-items: center;
         font-size: 3vw;
-       
+        line-height:6vw;
        
     }
     
@@ -6399,7 +6430,6 @@ letter-spacing: 0.8vw; */
         align-items: center;
         font-size: 3vw;
         line-height:6vw;
-       
        
     }
     
@@ -6626,17 +6656,17 @@ letter-spacing: 0.8vw; */
 }
 .buy_onSeason_info_main input::-webkit-input-placeholder {
     font-size: 1vw;
-    line-height: 1vw;
+    line-height: 6vw;
     padding-left: 1vw;
 }
 .buy_onSeason_info_main input:-ms-input-placeholder {
     font-size: 1vw;
-    line-height: 1vw;
+    line-height: 6vw;
     padding-left: 1vw;
 }
 .buy_onSeason_info_main input::-ms-input-placeholder {
     font-size: 1vw;
-    line-height: 1vw;
+    line-height: 6vw;
     padding-left: 1vw;
 }
 .buy_onSeason_info_main input::placeholder {
@@ -6952,5 +6982,244 @@ footer {
         grid-template-rows: 1fr;
         grid-template-columns: auto auto auto;
     }
+}
+.order_fresh_main,.order_onSeason_main {
+    padding-top: 2vw;
+    padding-bottom: 3vw;
+    position: relative;
+    display: grid;
+    grid-template-columns: 60vw;
+    grid-column-gap: 1vw;
+    grid-row-gap: 1vw;
+    justify-content: center;
+
+}
+.order_onSeason_main{
+    display: none;
+}
+.order_card {
+    display: grid;
+    height: 30vw;
+    width: 60vw;
+    background-color: lightblue;
+    border: solid #000 0.15vw;
+    border-radius: 2vw;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 1fr);
+}
+.order_sec1 {
+    display: grid;
+    align-content: center;
+    padding-left:3vw;
+    border-radius: 2vw 0vw 0vw 2vw;
+    background-color: #fff;
+    font-size: 1.5vw;
+    grid-row-gap: 3vw;
+}
+.order_sec2 {
+    position: relative;
+    display: grid;
+    align-content: center;
+    padding-left:3vw;
+    color: #fff;
+    border-radius: 0vw 2vw 2vw 0vw;
+    background-color: #3abfff;
+    font-size: 1vw;
+    grid-row-gap: 2.5vw;
+}
+.order_card_delete {
+    position: absolute;
+    cursor: pointer;
+    background-color: #fff;
+    color: #3abfff;
+    border: none;
+    border-radius: 50vw;
+    font-size: 1.5vw;
+    height: 2.5vw;
+    width: 8vw;
+    right:2vw;
+    bottom:2vw;
+
+}
+.order_main {
+    position: relative;
+    display: grid;
+    width: 100vw;
+    height: auto;
+    padding-top: 8vw;
+   
+}
+.signout {
+    position: relative;
+    justify-self: flex-end;
+    height: 2vw;
+    width: 8vw;
+    font-size: 1.2vw;
+    letter-spacing: 0.2vw;
+    display: grid;
+    justify-items: flex-start;
+    background-color: #fff;
+    border-radius: 50vw;
+    border: solid #000 0.15vw;
+    margin-right: 5vw;
+}
+.order_select_btn {
+    height: 2vw;
+    display: grid;
+    justify-content: flex-start;
+    align-items: center;
+    grid-column-gap: 3vw;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, auto);
+    padding: 0vw 22vw;
+}
+.order_select_fresh_btn{
+    cursor: pointer;
+    font-size: 1.5vw;
+}
+.order_select_onSeason_btn{
+   
+    cursor: pointer;
+    font-size: 1vw;
+   
+}
+.order_select_fresh_btn:hover,.order_select_onSeason_btn:hover{
+    box-sizing: border-box;
+    border-bottom: solid #000 0.1vw;
+    
+}
+@media screen and (max-width: 768px) {
+    .signout {
+        position: relative;
+        justify-self: flex-end;
+        height: 2vw;
+        width: 8vw;
+        font-size: 1.2vw;
+        letter-spacing: 0.2vw;
+        display: grid;
+        justify-items: flex-start;
+        background-color: #fff;
+        border-radius: 50vw;
+        border: solid #000 0.12vw;
+        margin-right: 5vw;
+    }
+    
+
+    .order_main {
+        position: relative;
+        display: grid;
+        width: 100vw;
+        height: auto;
+        padding-top: 13vw;
+       
+    }
+}
+@media screen and (max-width: 480px) {
+  
+    .order_main {
+        position: relative;
+        display: grid;
+        width: 100vw;
+        height: auto;
+        padding-top: 20vh;
+       
+    }
+}
+.login_main{
+    position: relative;
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    justify-items: center;
+    padding-top:10vw;
+}
+.login_card{
+    position: relative;
+    display: grid;
+    background-color: rgb(226, 226, 226);
+    height: 25vw;
+    width: 45vw;
+    border-radius: 2vw;
+    justify-items:center; 
+    align-content: flex-start;
+    padding-top:5vw;
+}
+.login_card h5{
+    font-size: 1.5vw;
+    margin-bottom:2.5vw;
+}
+.login_card_input{
+    font-size: 1vw;
+}
+.login_card_input input{
+    margin-bottom:2vw;
+    margin-left:1vw;
+    border-radius: 50vw;
+    border:none;
+    height: 2.2vw;
+    width: 15vw;
+    padding:0vw 1vw;
+}
+.login_submit{
+    font-size: 1vw;
+    color:#fff;
+    border:none;
+    height: 2vw;
+    width: 6vw;
+    border-radius: 50vw;
+    background-color: rgb(36, 38, 66);
+}
+@media screen and (max-width: 768px) {
+
+    .login_main{
+        position: relative;
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        justify-items: center;
+        padding-top:20vh;
+    }
+    .login_card{
+        position: relative;
+        display: grid;
+        background-color: rgb(226, 226, 226);
+        height: 35vw;
+        width: 60vw;
+        border-radius: 2vw;
+        justify-items:center; 
+        align-content: flex-start;
+        padding-top:5vw;
+    }
+    
+    .login_card h5{
+        font-size: 3vw;
+        margin-bottom:2.5vw;
+    }
+    
+    .login_card_input{
+        font-size: 2vw;
+    }
+    
+    .login_card_input input{
+        margin-bottom:3vw;
+        margin-left:1vw;
+        border-radius: 50vw;
+        border:none;
+        height: 2.2vw;
+        width: 15vw;
+        padding:0vw 1vw;
+    }
+    
+    .login_submit{
+        font-size: 2.5vw;
+        color:#fff;
+        border:none;
+        height: 4vw;
+        width: 13vw;
+        border-radius: 50vw;
+        background-color: rgb(36, 38, 66);
+    }
+    
+
 }
 

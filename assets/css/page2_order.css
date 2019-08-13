@@ -1,0 +1,158 @@
+.order_fresh_main,.order_onSeason_main {
+    padding-top: 2vw;
+    padding-bottom: 3vw;
+    position: relative;
+    display: grid;
+    grid-template-columns: 60vw;
+    grid-column-gap: 1vw;
+    grid-row-gap: 1vw;
+    justify-content: center;
+
+}
+.order_onSeason_main{
+    display: none;
+}
+.order_card {
+    display: grid;
+    height: 30vw;
+    width: 60vw;
+    background-color: lightblue;
+    border: solid #000 0.15vw;
+    border-radius: 2vw;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.order_sec1 {
+    display: grid;
+    align-content: center;
+    padding-left:3vw;
+    border-radius: 2vw 0vw 0vw 2vw;
+    background-color: #fff;
+    font-size: 1.5vw;
+    grid-row-gap: 3vw;
+}
+
+.order_sec2 {
+    position: relative;
+    display: grid;
+    align-content: center;
+    padding-left:3vw;
+    color: #fff;
+    border-radius: 0vw 2vw 2vw 0vw;
+    background-color: #3abfff;
+    font-size: 1vw;
+    grid-row-gap: 2.5vw;
+}
+
+.order_card_delete {
+    position: absolute;
+    cursor: pointer;
+    background-color: #fff;
+    color: #3abfff;
+    border: none;
+    border-radius: 50vw;
+    font-size: 1.5vw;
+    height: 2.5vw;
+    width: 8vw;
+    right:2vw;
+    bottom:2vw;
+
+}
+
+.order_main {
+    position: relative;
+    display: grid;
+    width: 100vw;
+    height: auto;
+    padding-top: 8vw;
+   
+}
+
+.signout {
+    position: relative;
+    justify-self: flex-end;
+    height: 2vw;
+    width: 8vw;
+    font-size: 1.2vw;
+    letter-spacing: 0.2vw;
+    display: grid;
+    justify-items: flex-start;
+    background-color: #fff;
+    border-radius: 50vw;
+    border: solid #000 0.15vw;
+    margin-right: 5vw;
+}
+
+.order_select_btn {
+    height: 2vw;
+    display: grid;
+    justify-content: flex-start;
+    align-items: center;
+    grid-column-gap: 3vw;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, auto);
+    padding: 0vw 22vw;
+}
+
+.order_select_fresh_btn{
+    cursor: pointer;
+    font-size: 1.5vw;
+}
+
+.order_select_onSeason_btn{
+   
+    cursor: pointer;
+    font-size: 1vw;
+   
+}
+
+
+.order_select_fresh_btn:hover,.order_select_onSeason_btn:hover{
+    box-sizing: border-box;
+    border-bottom: solid #000 0.1vw;
+    
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .signout {
+        position: relative;
+        justify-self: flex-end;
+        height: 2vw;
+        width: 8vw;
+        font-size: 1.2vw;
+        letter-spacing: 0.2vw;
+        display: grid;
+        justify-items: flex-start;
+        background-color: #fff;
+        border-radius: 50vw;
+        border: solid #000 0.12vw;
+        margin-right: 5vw;
+    }
+    
+
+    .order_main {
+        position: relative;
+        display: grid;
+        width: 100vw;
+        height: auto;
+        padding-top: 13vw;
+       
+    }
+}
+
+
+
+@media screen and (max-width: 480px) {
+  
+    .order_main {
+        position: relative;
+        display: grid;
+        width: 100vw;
+        height: auto;
+        padding-top: 20vh;
+       
+    }
+}

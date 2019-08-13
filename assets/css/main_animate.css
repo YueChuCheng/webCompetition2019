@@ -1,5 +1,12 @@
 
 
+.container-fluid{
+    padding-left:0vw !important;
+    padding-right:0vw !important;
+}
+
+
+
 .title_logo {
     position: absolute;
     opacity: 0;
@@ -89,6 +96,12 @@
 }
 
 @media screen and (max-width: 480px) {
+    .container-fluid{
+        padding-left:15px !important;
+        padding-right:15px !important;
+    }
+    
+    
     .home_main {
         padding: 0!important;
         display: grid;

@@ -1,0 +1,106 @@
+
+.login_main{
+    position: relative;
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    justify-items: center;
+    padding-top:10vw;
+}
+
+.login_card{
+    position: relative;
+    display: grid;
+    background-color: rgb(226, 226, 226);
+    height: 25vw;
+    width: 45vw;
+    border-radius: 2vw;
+    justify-items:center; 
+    align-content: flex-start;
+    padding-top:5vw;
+}
+
+.login_card h5{
+    font-size: 1.5vw;
+    margin-bottom:2.5vw;
+}
+
+.login_card_input{
+    font-size: 1vw;
+}
+
+.login_card_input input{
+    margin-bottom:2vw;
+    margin-left:1vw;
+    border-radius: 50vw;
+    border:none;
+    height: 2.2vw;
+    width: 15vw;
+    padding:0vw 1vw;
+}
+
+.login_submit{
+    font-size: 1vw;
+    color:#fff;
+    border:none;
+    height: 2vw;
+    width: 6vw;
+    border-radius: 50vw;
+    background-color: rgb(36, 38, 66);
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .login_main{
+        position: relative;
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        justify-items: center;
+        padding-top:20vh;
+    }
+    .login_card{
+        position: relative;
+        display: grid;
+        background-color: rgb(226, 226, 226);
+        height: 35vw;
+        width: 60vw;
+        border-radius: 2vw;
+        justify-items:center; 
+        align-content: flex-start;
+        padding-top:5vw;
+    }
+    
+    .login_card h5{
+        font-size: 3vw;
+        margin-bottom:2.5vw;
+    }
+    
+    .login_card_input{
+        font-size: 2vw;
+    }
+    
+    .login_card_input input{
+        margin-bottom:3vw;
+        margin-left:1vw;
+        border-radius: 50vw;
+        border:none;
+        height: 2.2vw;
+        width: 15vw;
+        padding:0vw 1vw;
+    }
+    
+    .login_submit{
+        font-size: 2.5vw;
+        color:#fff;
+        border:none;
+        height: 4vw;
+        width: 13vw;
+        border-radius: 50vw;
+        background-color: rgb(36, 38, 66);
+    }
+    
+
+}

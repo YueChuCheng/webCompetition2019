@@ -2,7 +2,7 @@
     z-index: 1000000000;
     position: absolute;
     display: grid;
-    margin-top:2vw;
+    margin-top:1vw;
     width: 100vw;
     height: 80px;
     text-align: center;
@@ -47,7 +47,7 @@
     align-content: center;
     display: grid;
     grid-template-rows: 50px;
-    grid-template-columns: repeat(4, 7vw);
+    grid-template-columns: repeat(5, 7vw);
     grid-column-gap: 25px;
     grid-row-gap: 0px;
     grid-row: 1/2;
@@ -66,6 +66,12 @@
     font-weight: 100;
 }
 
+
+.display_none{
+    display: none !important;
+}
+
+
 .nav_sec:hover {
     color: #4d4d4d;
     border: #4d4d4d solid 0.1vw;
@@ -75,6 +81,7 @@
 
 @media screen and (max-width: 768px) {
     .nav_main {
+        margin-top:0vw;
         display: grid;
         padding-right: 2vw;
         width: 100vw;
@@ -87,7 +94,7 @@
         font-size: 15px;
     }
     .nav_btn {
-        grid-template-columns: repeat(4, 80px);
+        grid-template-columns: repeat(5, 80px);
         grid-template-rows: auto;
         grid-column-gap: 10px;
     }

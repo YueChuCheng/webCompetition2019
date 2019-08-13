@@ -343,7 +343,23 @@
 .data_card :nth-child(2) {
     font-size: 1vw;
 }
+@media screen and (max-width: 768px) {
+    .black .nav_sec:hover {
+        border: #4d4d4d solid 1px !important;
+    }
 
+    .learn_us_ex_btn {
+        cursor: pointer;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        font-size: 1vw;
+        border: solid #000 0.06vw;
+        border-radius: 50vw;
+        height: 2.5vw;
+        width: 5.5vw;
+    }
+}
 @media screen and (max-width: 480px) {
     .learn_us_body{
         height:250vh ;

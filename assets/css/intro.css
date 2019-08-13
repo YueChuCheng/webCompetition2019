@@ -68,7 +68,7 @@
 
 .carousel-img {
     z-index: 100;
-    margin-left: 22.5%;
+    margin-left: calc(22.5% + 15px);
     width: 50vw;
 }
 
@@ -108,7 +108,7 @@ li {
     margin: 0 auto;
     padding: 0;
     margin-top: -16.5vw;
-    margin-left: 24vw;
+    margin-left: calc(24vw + 15px);
     width: 47vw;
 }
 

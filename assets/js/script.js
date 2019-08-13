@@ -177,6 +177,7 @@ import wflogo from "../images/wflogo.png";
 import navwl from "../images/navwl.png";
 
 
+
 $(".fruit_message_card_off").attr("src", xx);
 
 $(".title_logo").attr("src", title_logo);
@@ -590,6 +591,29 @@ $(".hm_circle").click(function () {
 
 $(document).ready(function () {
 
+  let order_select_btn = Boolean(true);
+  $(".order_select_fresh_btn").click(function () {
+    if (order_select_btn === false) {
+      $(".order_select_fresh_btn").css("font-size", "1.5vw");
+      $(".order_select_onSeason_btn").css("font-size", "1vw");
+
+      $(".order_fresh_main").css("display", "grid");
+      $(".order_onSeason_main").css("display", "none");
+      order_select_btn = true;
+    }
+  });
+
+  $(".order_select_onSeason_btn").click(function () {
+    if (order_select_btn === true) {
+      $(".order_select_onSeason_btn").css("font-size", "1.5vw");
+      $(".order_select_fresh_btn").css("font-size", "1vw");
+      $(".order_fresh_main").css("display", "none");
+      $(".order_onSeason_main").css("display", "grid");
+      order_select_btn = false;
+    }
+  });
+
+
 
   for (let index = 1; index <= 3; index++) {
 
@@ -861,8 +885,8 @@ $(document).ready(function () {
     $(".fruit_message").addClass('no_show');
   });
 
-  readOrder();//read order's data
-
+  readOrder();//read order_fresh's data
+  readOnSeasonOrder();
 
 
 
@@ -1013,14 +1037,40 @@ $(".buy_fresh_submit").click(function () {
 });
 
 // buy_fresh add data start
+let order_fresh_last = 0;//order_fresh's count
+firebase
+  .firestore().collection("order_fresh").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+
+      order_fresh_last = 0;
+      if (order_fresh_last < parseInt(doc.id.substring(5))) {
+        order_fresh_last = 0;
+        order_fresh_last = parseInt(doc.id.substring(5));
+      }
+    })
+  });
+
 function set() {
+  firebase
+    .firestore().collection("order_fresh").get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        //console.log(doc);
+        order_fresh_last = 0;
+        if (order_fresh_last < parseInt(doc.id.substring(5))) {
+          order_fresh_last = 0;
+          order_fresh_last = parseInt(doc.id.substring(5));
+        }
+
+      })
+    });
   document.getElementById("buyfresh_remarks").defaultValue = "none";//set buyfresh_remarks default value
 
   if (click_count != 1 && click_fruit_cout === 3 && clickPackage_count != 1 && $("input[name='name']").val() && $("input[name='tel']").val() && $("input[name='email']").val() && $("input[name='address']").val()) {
+
     firebase
       .firestore()
-      .collection("order_fresh")
-      .add({
+      .collection("order_fresh").doc(`Order${order_fresh_last + 1}`)
+      .set({
 
         Fruit1: $('.freash_checkFruiteOutline')[0].id,
         Fruit2: $('.freash_checkFruiteOutline')[1].id,
@@ -1040,7 +1090,7 @@ function set() {
 包裝：${$('.freash_checkPackageOutline').attr('id')}`);
 
 
-
+    window.location.reload();
 
   }
   else {
@@ -1058,14 +1108,43 @@ $(".buy_onSeason_submit").click(function () {
 
 
 // buy_onSeason add data start
+
+let order_onSeason_last = 0;//order_fresh's count
+firebase
+  .firestore().collection("order_onSeason").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+
+      order_onSeason_last = 0;
+      if (order_onSeason_last < parseInt(doc.id.substring(5))) {
+        order_onSeason_last = 0;
+        order_onSeason_last = parseInt(doc.id.substring(5));
+      }
+    })
+  });
+
+
+
 function buy_onSeason_setData() {
+
+  firebase
+    .firestore().collection("order_onSeason").get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        //console.log(doc);
+        order_onSeason_last = 0;
+        if (order_onSeason_last < parseInt(doc.id.substring(5))) {
+          order_onSeason_last = 0;
+          order_onSeason_last = parseInt(doc.id.substring(5));
+        }
+
+      })
+    });
   document.getElementById("buyOnSeason_remarks").defaultValue = "none";//set buyfresh_remarks default value
   count_buy_onSeason_pick();
   if (has_buy_count[0] && $('.freash_checkPackageOutline').attr('id') && $("input[name='onSeason_name']").val() && $("input[name='onSeason_tel']").val() && $("input[name='onSeason_email']").val() && $("input[name='onSeason_address']").val()) {
     firebase
       .firestore()
-      .collection("order_onSeason")
-      .add({
+      .collection("order_onSeason").doc(`Order${order_onSeason_last + 1}`)
+      .set({
         buy_list_count: has_buy_count,//quntity to buy
         buy_list_totalPrice: totalprice,//price
         buy_list_name: has_buy_name,// to be bought item's name
@@ -1085,7 +1164,7 @@ function buy_onSeason_setData() {
       "\n包裝：" + $('.freash_checkPackageOutline').attr('id'));
 
 
-
+    window.location.reload();
 
   }
   else {
@@ -1124,26 +1203,92 @@ function count_buy_onSeason_pick() {
 
 //count buy_onSeason_pick_main end
 
-//read data
+//read order_fresh data
 let docs = []; //data array
 let count = 0; //data quantity
-
+let order_fresh_list = [];//data list array
 function readOrder() {
-  $("#test_firestore p").empty();
+  $(".order_fresh_main p").empty();
   firebase
     .firestore().collection("order_fresh").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         docs[count] = doc;//read firestore's data in array
+        order_fresh_list[count] = parseInt(docs[count].id.substring(5));
         count++; //data quantity
-        //console.log(`${doc.id} => ${doc.data().name}`);
-
       });
       for (let index = 0; index < count; index++) {
-        $(".test_firestore").append(`<p>${docs[index].id}</p>`);
+
+        $(".order_fresh_main").append(`
+        <div id="order_card${order_fresh_list[index]}" class="order_card">
+        <div class="order_sec1">
+        <div class="order_card_name">訂購人姓名：${docs[index].data().Name}</div>
+        <div class="order_card_tel">訂購人電話：${docs[index].data().TEL}</div>
+        <div class="order_card_email">訂購人e-mail：${docs[index].data().Email}</div>
+        <div class="order_card_address">訂購人住址：${docs[index].data().Address}</div>
+        </div>
+        
+        <div class="order_sec2">
+        <div class="order_card_fruit">所選水果：${docs[index].data().Fruit1}、${docs[index].data().Fruit2}、${docs[index].data().Fruit3}</div>
+        <div class="order_card_package">所選包裝：${docs[index].data().Package}</div>
+        <div class="order_card_price">總金額：${docs[index].data().Price}</div>
+        <div class="order_card_remarks">備註：${docs[index].data().Remarks}</div>
+        <input  type="button" value="完成訂單" class="order_card_delete" onclick="deltxt(${ order_fresh_list[index]})">
+        </div>
+        
+    </div>
+        
+        `);
       }
 
     });
 }
+
+
+
+//read order_onSeason data
+let onSeason_docs = []; //data array
+let onSeason_count = 0; //data quantity
+let order_onSeason_list = [];//data list array
+function readOnSeasonOrder() {
+
+  firebase
+    .firestore().collection("order_onSeason").get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        onSeason_docs[onSeason_count] = doc;//read firestore's data in array
+        order_onSeason_list[onSeason_count] = parseInt(onSeason_docs[onSeason_count].id.substring(5));
+        onSeason_count++; //data quantity
+      });
+      for (let index = 0; index < onSeason_count; index++) {
+
+        $(".order_onSeason_main").append(`
+        <div id="order_onSeason_card${order_onSeason_list[index]}" class="order_card">
+        <div class="order_sec1">
+        <div class="order_card_onSeason_name">訂購人姓名：${onSeason_docs[index].data().name}</div>
+        <div class="order_card_onSeason_tel">訂購人電話：${onSeason_docs[index].data().TEL}</div>
+        <div class="order_card_onSeason_email">訂購人e-mail：${onSeason_docs[index].data().Email}</div>
+        <div class="order_card_onSeason_address">訂購人住址：${onSeason_docs[index].data().Address}</div>
+        </div>
+        
+        <div class="order_sec2">
+        <div class="order_card_onSeason_fruit">所選水果：${onSeason_docs[index].data().buy_list_name}</div>
+        <div class="order_card_onSeason_count">水果數量：${onSeason_docs[index].data().buy_list_count}</div>
+        <div class="order_card_onSeason_package">所選包裝：${onSeason_docs[index].data().package}</div>
+        <div class="order_card_onSeason_price">總金額：${onSeason_docs[index].data().buy_list_totalPrice}</div>
+        <div class="order_card_onSeason_remarks">備註：${onSeason_docs[index].data().Remarks}</div>
+        <input  type="button" value="完成訂單" class="order_card_delete" onclick="deltxt_onSeason(${ order_onSeason_list[index]})">
+        </div>
+       
+        
+       
+    </div>
+        
+        `);
+      }
+
+    });
+}
+
+
 
 
 
@@ -1179,4 +1324,131 @@ for (let index = 0; index < 6; index++) {
 }
 
 //onSeason pick couter end
+
+
+window.deltxt = function (id) {
+  $("#order_card" + id).remove();
+
+  firebase
+    .firestore().collection("order_fresh").doc("Order" + id).delete().then(function () {
+
+      console.log("Document successfully deleted!");
+    }).catch(function (error) {
+      console.error("Error removing document: ", error);
+    });
+
+
+
+
+}
+
+
+window.deltxt_onSeason = function (id) {
+  $("#order_onSeason_card" + id).remove();
+
+  firebase
+    .firestore().collection("order_onSeason").doc("Order" + id).delete().then(function () {
+
+      console.log("Document successfully deleted!");
+    }).catch(function (error) {
+      console.error("Error removing document: ", error);
+    });
+
+
+
+
+}
+
+
+
+
+//const textEmail = $(".login_email").text();
+//const password = $(".login_password").text();
+
+
+
+
+
+$(".login_submit").click(function () { //login func
+  const textEmail = $('#login_email').val();//get the email value
+  const password = $('#login_password').val();//get the password value
+
+  firebase.auth().signInWithEmailAndPassword(textEmail, password).catch(function (error) {
+    alert("帳號或密碼輸入錯誤");//login failed
+  });
+
+
+  firebase.auth().onAuthStateChanged(firebaseUser => {//login success
+    if (firebaseUser) {
+
+      window.location.assign("./order.html");//load to order page
+
+    }
+    else {
+
+      console.log("not logged in!");
+    }
+  })
+
+});
+
+
+
+window.init_login = function () { //detect if login when load to order.html page
+
+  firebase.auth().onAuthStateChanged(firebaseUser => {
+    if (firebaseUser) {
+      $(".official_sec").addClass("display_none");
+      $(".order_sec").removeClass("display_none");
+
+      console.log(" logged in!");
+
+    }
+    else {
+      window.location.assign("./login.html");//load to login page if hasn't login
+    }
+  })
+
+
+}
+
+
+window.init_login_css = function () { //detect if login when load to order.html page
+
+  firebase.auth().onAuthStateChanged(firebaseUser => {
+    if (firebaseUser) {
+      $(".official_sec").addClass("display_none");
+      $(".order_sec").removeClass("display_none");
+
+      console.log(" logged in!");
+
+    }
+    else {
+      $(".official_sec").removeClass("display_none");
+      $(".order_sec").addClass("display_none");//load to login page if hasn't login
+    }
+  })
+
+
+}
+
+
+
+
+$(".signout").click(function () { //sign out
+  $(".official_sec").css("display ", "grid");
+  $(".order_sec").css("display ", "none");
+  firebase.auth().signOut().then(function () {
+    window.location.assign("./login.html");
+  }).catch(function (error) {
+    // An error happened.
+  });
+
+});
+
+
+
+window.login_init = function () {
+  alert("帳號：official_account@gmail.com \n密碼：2019/8/16");
+}
 
