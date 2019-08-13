@@ -586,32 +586,27 @@ $(".hm_circle").click(function () {
 
 
 
+let order_select_btn = Boolean(true);
+$(".order_select_fresh_btn").click(function () {
+  if (order_select_btn === false) {
 
+    $(".order_fresh_main").css("display", "grid");
+    $(".order_onSeason_main").css("display", "none");
+    order_select_btn = true;
+  }
+});
+
+$(".order_select_onSeason_btn").click(function () {
+  if (order_select_btn === true) {
+
+    $(".order_fresh_main").css("display", "none");
+    $(".order_onSeason_main").css("display", "grid");
+    order_select_btn = false;
+  }
+});
 
 
 $(document).ready(function () {
-
-  let order_select_btn = Boolean(true);
-  $(".order_select_fresh_btn").click(function () {
-    if (order_select_btn === false) {
-      $(".order_select_fresh_btn").css("font-size", "1.5vw");
-      $(".order_select_onSeason_btn").css("font-size", "1vw");
-
-      $(".order_fresh_main").css("display", "grid");
-      $(".order_onSeason_main").css("display", "none");
-      order_select_btn = true;
-    }
-  });
-
-  $(".order_select_onSeason_btn").click(function () {
-    if (order_select_btn === true) {
-      $(".order_select_onSeason_btn").css("font-size", "1.5vw");
-      $(".order_select_fresh_btn").css("font-size", "1vw");
-      $(".order_fresh_main").css("display", "none");
-      $(".order_onSeason_main").css("display", "grid");
-      order_select_btn = false;
-    }
-  });
 
 
 
@@ -1055,7 +1050,7 @@ function set() {
     .firestore().collection("order_fresh").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         //console.log(doc);
-        order_fresh_last = 0;
+       
         if (order_fresh_last < parseInt(doc.id.substring(5))) {
           order_fresh_last = 0;
           order_fresh_last = parseInt(doc.id.substring(5));
@@ -1087,10 +1082,12 @@ function set() {
     alert(`感謝您的購買，您的購買項目為：
 水果種類：${$('.freash_checkFruiteOutline')[0].id}、${$('.freash_checkFruiteOutline')[1].id}、${$('.freash_checkFruiteOutline')[2].id}
 價錢：${$('.freash_checkPriceOutline').attr('id')}
-包裝：${$('.freash_checkPackageOutline').attr('id')}`);
+包裝：${$('.freash_checkPackageOutline').attr('id')}
+*請重新整理切勿重複發單
+`
+);
+   
 
-
-    window.location.reload();
 
   }
   else {
@@ -1114,7 +1111,6 @@ firebase
   .firestore().collection("order_onSeason").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
 
-      order_onSeason_last = 0;
       if (order_onSeason_last < parseInt(doc.id.substring(5))) {
         order_onSeason_last = 0;
         order_onSeason_last = parseInt(doc.id.substring(5));
@@ -1161,10 +1157,11 @@ function buy_onSeason_setData() {
     alert("感謝您的購買，您的購買項目為：\n" +
       has_buy_name +
       "\n總金額為：" + totalprice +
-      "\n包裝：" + $('.freash_checkPackageOutline').attr('id'));
+      "\n包裝：" + $('.freash_checkPackageOutline').attr('id')
+      +"\n*請重新整理切勿重複發單"
+      );
 
 
-    window.location.reload();
 
   }
   else {
