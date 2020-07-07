@@ -84,7 +84,6 @@ li {
     position: relative;
     height: 3vw;
     width: 3vw;
-    background-image: url(../../images/fruit_intro/bl.png);
     background-image: url(../../assets/images/fruit_intro/bl.png);
     background-size: contain;
     background-repeat: no-repeat;

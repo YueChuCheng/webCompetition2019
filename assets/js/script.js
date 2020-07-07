@@ -177,7 +177,6 @@ import wflogo from "../images/wflogo.png";
 import navwl from "../images/navwl.png";
 
 
-
 $(".fruit_message_card_off").attr("src", xx);
 
 $(".title_logo").attr("src", title_logo);

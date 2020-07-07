@@ -831,7 +831,7 @@ body {
         width: 100vw;
         height: 70px;
         padding-right: 0vw;
-        background-image: url(../assets/images/cellphone_pic/mbs.png);
+        background-image: url(../images/cellphone_pic/mbs.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position-x: 100vw;
@@ -1156,7 +1156,7 @@ body {
     width: 100%;
     height: 100%;
     /* 需用絕對路徑否則dist找不到 */
-    background-image: url(../../assets/images/cloud.png);
+    background-image: url(../images/cloud.png);
     -webkit-animation: cloud-ani 10s linear infinite;
             animation: cloud-ani 10s linear infinite;
     background-size: 800px auto;
@@ -1221,7 +1221,7 @@ body {
         justify-content: end;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 100vw;
-        background-image: url(../../assets/images/cellphone_pic/bgli.png);
+        background-image: url(../images/cellphone_pic/bgli.png);
         background-size: cover;
     }
     .main_page {
@@ -1944,7 +1944,7 @@ body {
     position: absolute;
     height: 23%;
     width: 5%;
-    background-image: url(../../assets/images/wave.png);
+    background-image: url(../images/wave.png);
     background-size: auto 130px;
     animation: story_waves 5s linear infinite;
     margin-top: 32%;
@@ -1966,7 +1966,7 @@ body {
 .peach_ani {
     z-index: 1000;
     position: absolute;
-    background-image: url(../../assets/images/main_story/peach.png);
+    background-image: url(../images/main_story/peach.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
     width: 28.6vw;
@@ -2174,7 +2174,7 @@ body {
     position: absolute;
     height: 10vw;
     width: 6%;
-    background-image: url(../../assets/images/wave.png);
+    background-image: url(../images/wave.png);
     background-size: auto 130px;
     -webkit-animation: story_waves 5s linear infinite;
             animation: story_waves 5s linear infinite;
@@ -2493,7 +2493,7 @@ body {
 }
 .intro_bw {
     position: absolute;
-    background-image: url(../../assets/images/wave.png);
+    background-image: url(../images/wave.png);
     background-size: auto 220px;
     height: 15vw;
     width: 12%;
@@ -2517,8 +2517,7 @@ li {
     position: relative;
     height: 3vw;
     width: 3vw;
-    background-image: url(../../images/fruit_intro/bl.png);
-    background-image: url(../../assets/images/fruit_intro/bl.png);
+    background-image: url(../images/fruit_intro/bl.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -2527,7 +2526,7 @@ li {
     position: relative;
     height: 3vw;
     width: 3vw;
-    background-image: url(../../assets/images/fruit_intro/br.png);
+    background-image: url(../images/fruit_intro/br.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -2787,7 +2786,7 @@ letter-spacing: 0.8vw; */
     ;
     height: 5vw;
     width: 4vw;
-    background-image: url(../../assets/images/shop/rl1.png);
+    background-image: url(../images/shop/rl1.png);
     background-size: 100%;
     background-repeat: repeat-y;
     background-size: auto 80px;
@@ -2825,7 +2824,7 @@ letter-spacing: 0.8vw; */
     ;
     height: 6vw;
     width: 4vw;
-    background-image: url(../../assets/images/shop/rl1.png);
+    background-image: url(../images/shop/rl1.png);
     background-size: 130%;
     background-repeat: repeat-y;
     background-size: auto 70px;
@@ -2861,7 +2860,7 @@ letter-spacing: 0.8vw; */
 .shop_wave3 {
     height: 20vw;
     width: 12vw;
-    background-image: url(../../assets/images/shop/bl1.png);
+    background-image: url(../images/shop/bl1.png);
     background-size: auto 220px;
     background-repeat: repeat-y;
     -webkit-animation: shop_waves3 10s linear infinite;
@@ -3733,7 +3732,7 @@ letter-spacing: 0.8vw; */
     display: grid;
     height: 40vw;
     width: 100vw;
-    background-image: url(../../assets/images/page2_intro/bgd.png);
+    background-image: url(../images/page2_intro/bgd.png);
     background-size: 100vw auto;
     background-repeat: no-repeat;
     align-items: center;
@@ -3846,7 +3845,7 @@ letter-spacing: 0.8vw; */
 }
 .allyear {
     position: relative;
-    background-image: url(../../assets/images/page2_intro/all_year/fsbg.jpg);
+    background-image: url(../images/page2_intro/all_year/fsbg.jpg);
     background-size: cover;
     display: grid;
     height: 55vw;
@@ -3992,7 +3991,7 @@ letter-spacing: 0.8vw; */
         display: none;
     }
     .intro_main {
-        background-image: url(../../assets/images/cellphone_intro/fsbg.png);
+        background-image: url(../images/cellphone_intro/fsbg.png);
         background-size: 100vw 65vh;
         background-position: center center;
         background-repeat: no-repeat;
@@ -4020,7 +4019,7 @@ letter-spacing: 0.8vw; */
         font-size: 3vw;
     }
     .allyear {
-        background-image: url(../../assets/images/cellphone_intro/sfp.jpg);
+        background-image: url(../images/cellphone_intro/sfp.jpg);
         background-size: 100vw auto;
         background-repeat: no-repeat;
         background-position: center 15.5vh;
@@ -4731,7 +4730,7 @@ letter-spacing: 0.8vw; */
     position: relative;
     width: 100vw;
     height: 50vw;
-    background-image: url(../../assets/images/page2_story/part1/cbg.png);
+    background-image: url(../images/page2_story/part1/cbg.png);
     background-size: 100vw 50vw;
     background-repeat: no-repeat;
     display: grid;
@@ -4741,7 +4740,7 @@ letter-spacing: 0.8vw; */
     position: absolute;
     width: 100vw;
     height: 40vw;
-    background-image: url(../../assets/images/page2_story/part1/cloud.png);
+    background-image: url(../images/page2_story/part1/cloud.png);
     background-size: auto 376px;
     -webkit-animation: story_main_cloud 25s linear infinite;
             animation: story_main_cloud 25s linear infinite;
@@ -5200,7 +5199,7 @@ letter-spacing: 0.8vw; */
         position: relative;
         width: 100vw;
         height: 100vh;
-        background-image: url(../../assets/images/page2_story/part1/cbg.png);
+        background-image: url(../images/page2_story/part1/cbg.png);
         background-position-y: 55vh;
         background-size: auto 45%;
         background-repeat: no-repeat;
@@ -5537,7 +5536,7 @@ letter-spacing: 0.8vw; */
     grid-template-columns: 1fr 50vw;
 }
 .buy_pic {
-    background-image: url(../../assets/images/page2_buy/part1/ybg.png);
+    background-image: url(../images/page2_buy/part1/ybg.png);
     background-size: cover;
     height: 100%;
 }
@@ -5735,7 +5734,7 @@ letter-spacing: 0.8vw; */
     .buy_pic {
         grid-row: 1/2;
         grid-column: 1/2;
-        background-image: url(../../assets/images/page2_buy/part1/ybg.png);
+        background-image: url(../images/page2_buy/part1/ybg.png);
         background-size: cover;
         height: auto;
         width: 100%;
@@ -7058,7 +7057,7 @@ footer {
     font-size: 1.2vw;
     letter-spacing: 0.2vw;
     display: grid;
-    justify-items: flex-start;
+    justify-items: center;
     background-color: #fff;
     border-radius: 50vw;
     border: solid #000 0.15vw;
